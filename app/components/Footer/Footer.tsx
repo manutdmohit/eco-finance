@@ -200,9 +200,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          {/* End Footer Bottom */}
         </section>
-
-        {/* End Footer Bottom */}
       </div>
     </footer>
   );
