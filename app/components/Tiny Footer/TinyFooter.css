@@ -2,7 +2,6 @@
   background-color: #f8f9fa; /* Set background color */
   color: #6c757d; /* Set text color */
   padding: 10px 0; /* Add padding */
-  margin-left: 1rem;
 }
 
 .tiny-container {
@@ -27,4 +26,8 @@
 
 .tiny-footer a:hover {
   text-decoration: underline; /* Add underline on hover */
+}
+
+.tiny-footer {
+  margin-left: 1rem !important;
 }
