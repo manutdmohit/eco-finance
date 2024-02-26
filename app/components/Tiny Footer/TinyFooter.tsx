@@ -8,7 +8,7 @@ export const TinyFooter = () => {
       <div className="tiny-container">
         <div className="row">
           <div className="col-md-6 col-sm-6 col-xs-6">
-            <p>
+            <p className="mx-2">
               <span>
                 Australian Credit License Number 1 | Credit Representative
                 Number 1
@@ -16,7 +16,7 @@ export const TinyFooter = () => {
             </p>
           </div>
           <div className="col-md-6 col-sm-6 text-right col-xs-6">
-            <p>
+            <p className="mx-2">
               <span>© Copyright {currentYear} | Eco Finance & Home Loans </span>
               <span> |</span>Terms of use | Privacy Policy
             </p>
