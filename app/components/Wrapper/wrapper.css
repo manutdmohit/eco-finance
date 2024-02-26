@@ -1,0 +1,344 @@
+.sticky-wrapper {
+  position: relative;
+}
+
+.header-2 {
+  width: 100%;
+  /* background-color: #15549a; */
+  padding: 10px 0;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.logo img {
+  max-width: 100%;
+  width: auto;
+  height: 70px;
+}
+
+.btn-default {
+  background-color: #c383b9;
+}
+
+.btn-default:hover {
+  background-color: #c23ab0;
+}
+
+/* Add this CSS to style the navigation */
+.navigation-2 {
+  background-color: #15549a; /* Background color */
+  background-color: #168a39 !important;
+}
+
+#navigation {
+  display: flex;
+  justify-content: center; /* Align navigation items to the right */
+}
+
+#navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust spacing between navigation items */
+}
+
+#navigation ul li:last-child {
+  margin-right: 0; /* Remove margin from the last navigation item */
+}
+
+#navigation ul li a {
+  color: #f1f1f1; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+#navigation ul li a:hover {
+  color: #fff; /* Text color on hover */
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+}
+
+.header-action .btn {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.navigation-2 {
+  background-color: #15549a;
+  padding: 10px 0;
+}
+
+#menu-button {
+  display: none;
+}
+
+#mega-menu-wrap-primary {
+  display: flex;
+  align-items: center;
+}
+
+.mega-menu-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.mega-menu-link:hover {
+  color: #410000;
+}
+
+.mega-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu-item {
+  position: relative;
+}
+
+.mega-menu-item:hover .mega-sub-menu {
+  display: block;
+}
+
+.mega-sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #15549a;
+  z-index: 9999;
+  padding: 10px;
+}
+
+.mega-sub-menu li {
+  display: block;
+}
+
+.submenu-button {
+  cursor: pointer;
+}
+
+.mega-indicator {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent #fff;
+  margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+  .col-xs-6 {
+    width: 50%;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .navigation-2 {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mega-menu {
+    position: static;
+    display: none;
+  }
+
+  #menu-button.open + .mega-menu {
+    display: block;
+  }
+}
+
+/* CSS for all submenu items */
+.mega-sub-menu {
+  display: none; /* Hide submenu by default */
+  position: absolute;
+  top: 100%; /* Position submenu below the parent item */
+  left: 0; /* Align submenu with the left edge of the parent item */
+  background-color: #fff; /* Background color of submenu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for the submenu */
+  z-index: 999; /* Ensure submenu appears above other elements */
+  padding: 10px; /* Add padding to submenu items */
+}
+
+.mega-menu-item:hover .mega-sub-menu {
+  display: block; /* Show submenu on parent item hover */
+}
+
+.mega-sub-menu li {
+  margin-bottom: 5px; /* Add margin between submenu items */
+}
+
+.mega-sub-menu li a {
+  display: block;
+  color: #333; /* Text color of submenu items */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 0; /* Add padding to submenu items */
+}
+
+.mega-sub-menu li a:hover {
+  color: #15549a; /* Text color of submenu items on hover */
+}
+
+/* Position submenu items */
+.mega-menu-item {
+  position: relative;
+}
+
+/* Hide submenu by default */
+.mega-sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position submenu below the parent item */
+  left: 0;
+  background-color: #fff; /* Background color of submenu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for the submenu */
+  z-index: 999;
+  padding: 10px; /* Add padding to submenu items */
+}
+
+/* Show submenu on parent item hover */
+.mega-menu-item:hover .mega-sub-menu {
+  display: block;
+}
+
+/* Style submenu items */
+.mega-sub-menu li {
+  margin-bottom: 5px; /* Add margin between submenu items */
+}
+
+.mega-sub-menu li a {
+  display: block;
+  color: #333; /* Text color of submenu items */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 0; /* Add padding to submenu items */
+}
+
+/* Change text color of submenu items on hover */
+.mega-sub-menu li a:hover {
+  color: #15549a;
+}
+
+/* Position submenu items */
+.mega-menu-item {
+  position: relative;
+}
+
+/* Hide submenu by default */
+.mega-sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position submenu below the parent item */
+  left: 0;
+  background-color: #fff; /* Background color of submenu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for the submenu */
+  z-index: 999;
+  padding: 10px; /* Add padding to submenu items */
+  width: auto; /* Adjust width as needed */
+}
+
+/* Show submenu on parent item hover */
+.mega-menu-item:hover .mega-sub-menu {
+  display: block;
+}
+
+/* Style submenu items */
+.mega-sub-menu li {
+  margin-bottom: 5px; /* Add margin between submenu items */
+}
+
+.mega-sub-menu li a {
+  display: block;
+  color: #666; /* Text color of submenu items */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 0; /* Add padding to submenu items */
+}
+
+/* Change text color of submenu items on hover */
+.mega-sub-menu li a:hover {
+  color: #15549a;
+}
+
+/* Adjust position of submenu relative to navigation 2 */
+.navigation-2 {
+  position: relative;
+}
+
+.navigation-2 .mega-sub-menu {
+  top: calc(100% + 15px);
+  /* Position submenu below the bottom border of navigation 2 */
+}
+
+/* CSS for rotating arrow */
+.mega-indicator {
+  transition: transform 0.3s ease; /* Add transition for smooth rotation */
+}
+
+.mega-indicator {
+  transform: rotate(
+    180deg
+  ); /* Rotate the arrow 180 degrees when active class is applied */
+}
+
+#mega-menu-wrap-primary
+  #mega-menu-primary
+  > li.mega-menu-flyout
+  ul.mega-sub-menu
+  li.mega-menu-item
+  a.mega-menu-link {
+  display: block;
+  background: #fff;
+  color: #666;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0px 10px 0px 10px;
+  line-height: 35px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+#mega-menu-wrap-primary
+  #mega-menu-primary
+  > li.mega-menu-flyout
+  ul.mega-sub-menu {
+  left: 0;
+  width: 108%;
+  min-width: 275px;
+}
+
+.header-button {
+  border-radius: 2px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border: none;
+  font-weight: 600;
+  color: #0b3e6b;
+}

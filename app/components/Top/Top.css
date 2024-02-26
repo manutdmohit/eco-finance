@@ -1,0 +1,81 @@
+.top-bar {
+  /* background-color: #4182c3; */
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
+  padding: 5px;
+  background-color: #168a39;
+  font-size: 11px;
+  color: #f1f1f1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.top-text a,
+.top-bar {
+  color: #f1f1f1;
+}
+
+.top-bar .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.mail-text {
+  border-right-color: #4182c3;
+}
+
+/* .mail-text {
+  border-right: 2px solid #1b5ca5;
+  padding-right: 15px;
+  margin-right: 15px;
+} */
+
+.mail-text:last-child {
+  border-right: none;
+}
+
+p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  transition: all 0.3s ease-in-out;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.user agent stylesheet p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.mail-text {
+  color: inherit;
+}
+
+.mail-text a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.top-bar a:hover {
+  color: #fff;
+}

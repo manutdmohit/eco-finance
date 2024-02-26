@@ -1,0 +1,80 @@
+.g-wrapper {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.g-wrapper .inner-container {
+  background-color: #0251a0; /* Background color for the main div */
+  padding: 20px; /* Optional: adds padding inside the main div */
+}
+
+.innerWidth {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flexColCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primaryText {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.secondaryText {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.button {
+  background-color: #1e87dd;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.button:hover {
+  background-color: #4c8ec9;
+}
+
+.email-field {
+  display: flex;
+  align-items: center;
+}
+
+.email-field input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.email-field button {
+  background-color: #1e87dd;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-field button:hover {
+  background-color: #084f8a;
+}

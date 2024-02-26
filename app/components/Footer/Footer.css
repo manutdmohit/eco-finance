@@ -1,0 +1,212 @@
+.footer {
+  background-color: #15549a;
+  color: #fff;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dark-line {
+  border-top: 1px solid #000;
+}
+
+.newsletter-title {
+  color: #fff;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #000;
+}
+
+.newsletter-form button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.widget-text p {
+  color: #fff;
+}
+
+.widget-text a {
+  color: #fff;
+}
+
+.address-text a,
+.call-text a {
+  color: #fff;
+}
+
+.address-text a:hover,
+.call-text a:hover {
+  color: #ccc;
+}
+
+.widget-footer ul li a {
+  color: #fff;
+}
+
+.widget-footer ul li a:hover {
+  color: #ccc;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .widget-footer ul {
+    padding-left: 0;
+  }
+  .widget-footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+}
+
+/* CSS for footer logo */
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS for newsletter title */
+.newsletter-title {
+  color: #fff;
+}
+
+/* CSS for newsletter form */
+.newsletter-form {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #000;
+}
+
+.newsletter-form button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* CSS for input group */
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+/* CSS for email input field */
+.input-group input[type='email'] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* CSS for button */
+.input-group button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* CSS for button hover state */
+.input-group button:hover {
+  background-color: #0056b3;
+}
+
+/* CSS for the widget footer */
+.widget-footer {
+  margin-top: 40px;
+}
+
+/* CSS for the columns inside the widget footer */
+.widget-footer .col-sm-4 {
+  width: 33.33%; /* Each column occupies one-third of the container */
+  float: left;
+  padding-right: 15px; /* Add spacing between columns */
+  padding-left: 15px;
+}
+
+/* CSS for the list items */
+.widget-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* CSS for the list item links */
+.widget-footer ul li a {
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+/* CSS for the social media icons */
+.widget-footer ul li a i {
+  margin-right: 5px;
+}
+
+.widget-text,
+.widget-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; /* Ensure both sections occupy the same height */
+}
+
+.newsletter-title {
+  font-size: 1rem;
+}
+
+.address-text a,
+.call-text a {
+  text-decoration: none;
+}
+
+.listnone li a {
+  color: #fff;
+}
+
+.finance {
+  margin-left: 20px;
+}
