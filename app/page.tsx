@@ -5,9 +5,7 @@ import Processes from './components/Processes/Processes';
 import { TopBar } from './components/Top/top';
 import { Wrapper } from './components/Wrapper/wrapper';
 
-export function Home() {}
-
-export default function Web() {
+export default function WebSite() {
   return (
     <>
       <TopBar />
