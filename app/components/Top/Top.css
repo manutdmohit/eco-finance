@@ -79,3 +79,8 @@ p {
 .top-bar a:hover {
   color: #fff;
 }
+
+#phone,
+#clock {
+  margin-bottom: 3px;
+}

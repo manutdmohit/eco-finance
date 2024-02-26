@@ -1,5 +1,6 @@
 import './Top.css';
 
+import { FaPhoneAlt, FaClock } from 'react-icons/fa';
 export const TopBar = () => {
   return (
     <div className="container-fluid top-bar">
@@ -16,16 +17,14 @@ export const TopBar = () => {
           </div>
           <div className="col-md-3 col-sm-6">
             <p className="mail-text text-center">
-              <a href="tel:0287509780">
-                <i className="icon-phone-call icon-2x icon-default"></i>Call us
-                at 0421561785
+              <a href="tel:0421561785">
+                <FaPhoneAlt id="phone" /> Call us at 0421561785
               </a>
             </p>
           </div>
           <div className="col-md-3 col-sm-6">
             <p className="mail-text text-center">
-              <i className="icon-clock icon-2x icon-default"></i>Mon to Fri
-              10:00 am - 06:00 pm
+              <FaClock id="clock" /> Mon to Fri 10:00 am - 06:00 pm
             </p>
           </div>
           <div className="col-md-2 col-sm-6">
