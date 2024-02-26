@@ -7,13 +7,13 @@ import { Wrapper } from './components/Wrapper/wrapper';
 
 export default function WebSite() {
   return (
-    <>
+    <div>
       <TopBar />
       <Wrapper />
       <Loan />
       <Processes />
       <GetStarted />
       <Footer />
-    </>
+    </div>
   );
 }
