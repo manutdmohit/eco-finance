@@ -1,13 +1,21 @@
 import './Top.css';
 
-import { FaPhoneAlt, FaClock } from 'react-icons/fa';
+import {
+  FaPhoneAlt,
+  FaClock,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+} from 'react-icons/fa';
+
 export const TopBar = () => {
   return (
     <div className="container-fluid top-bar">
       {/* <!-- top-bar --> */}
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 d-none d-lg-block">
             <p className="mail-text">
               <a href="https://www.rba.gov.au/" target="_blank" rel="noopener">
                 <strong>RBA Cash Rate:</strong> 4.35%{' '}
@@ -15,34 +23,31 @@ export const TopBar = () => {
               </a>
             </p>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 d-none d-lg-block">
             <p className="mail-text text-center">
               <a href="tel:0421561785">
                 <FaPhoneAlt id="phone" /> Call us at 0421561785
               </a>
             </p>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 d-none d-lg-block">
             <p className="mail-text text-center">
               <FaClock id="clock" /> Mon to Fri 10:00 am - 06:00 pm
             </p>
           </div>
-          <div className="col-md-2 col-sm-6">
+          <div className="col-md-2 d-none d-lg-block">
             <p className="mail-text text-center">MFAA&nbsp; 673747334</p>
           </div>
-          <div className="col-md-1 d-none d-md-block"></div>{' '}
           {/* Spacer column */}
-          <div className="col-md-6 col-sm-12 text-center d-md-none">
-            <p>
-              <a href="tel:0287509780">
-                <i className="icon-phone-call icon-2x icon-default"></i>
-              </a>
-              <i className="icon-clock icon-2x icon-default"></i>
-              <i className="fa fa-facebook"></i>
-              <i className="fa fa-linkedin"></i>
-              <i className="fa fa-twitter"></i>
-              <i className="fa fa-instagram"></i>
-            </p>
+          <div className="col-md-1 d-none d-lg-block"></div>
+          <div className="col-lg-12 text-center d-lg-none social-icons">
+            {/* Show on devices below lg breakpoint */}
+            <div className="social-icons-container">
+              <FaFacebook className="social-icon" />
+              <FaInstagram className="social-icon" />
+              <FaTwitter className="social-icon" />
+              <FaLinkedin className="social-icon" />
+            </div>
           </div>
         </div>
       </div>
