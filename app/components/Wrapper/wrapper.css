@@ -39,7 +39,7 @@
 
 #navigation {
   display: flex;
-  justify-content: flex-end; /* Align navigation items to the right */
+  justify-content: center; /*align navigation items to the right */
 }
 
 #navigation ul {
@@ -412,5 +412,11 @@
 @media screen and (min-width: 990px) {
   .mega-menu-toggle {
     display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #navigation {
+    justify-content: flex-end; /*align navigation items to the right */
   }
 }

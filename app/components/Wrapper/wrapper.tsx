@@ -1,8 +1,91 @@
+'use client';
+
+import React, { useState } from 'react';
+
 import { CiMenuBurger } from 'react-icons/ci';
+import { MdOutlineArrowDropDown, MdArrowDropUp } from 'react-icons/md';
 
 import './wrapper.css';
 
+interface State {
+  isClicked: boolean;
+  isOpen: boolean;
+  aboutUsOpen: boolean;
+}
+
+const ulElements = ({
+  handleClick,
+  state,
+  handleAboutUsOpen,
+}: {
+  handleClick: () => void;
+  state: State;
+  handleAboutUsOpen: () => void;
+}) => {
+  return (
+    <ul className="d-sm-block d-lg-none">
+      <li>Home</li>
+      <li>
+        Services
+        {state.isClicked ? (
+          <MdArrowDropUp onClick={handleClick} />
+        ) : (
+          <MdOutlineArrowDropDown onClick={handleClick} />
+        )}
+        {state.isClicked && (
+          <ul>
+            <li>Home Loans & Investment Loans</li>
+            <li>Refinance & Construction Loans</li>
+            <li>Business & Commercial Loans</li>
+            <li>Personal & Car Loans</li>
+          </ul>
+        )}
+      </li>
+      <li>
+        About Us{' '}
+        {state.aboutUsOpen ? (
+          <MdArrowDropUp onClick={handleAboutUsOpen} />
+        ) : (
+          <MdOutlineArrowDropDown onClick={handleAboutUsOpen} />
+        )}
+        {state.aboutUsOpen && (
+          <ul>
+            <li>About Us</li>
+            <li>Our Team</li>
+            <li>Testimonials</li>
+          </ul>
+        )}
+      </li>
+      <li>Contact Us</li>
+    </ul>
+  );
+};
+
 export const Navigation = () => {
+  const [state, setState] = useState<State>({
+    isClicked: false,
+    isOpen: false,
+    aboutUsOpen: false,
+  });
+
+  const handleClick = () => {
+    setState((prevState) => ({
+      ...prevState,
+      isClicked: !prevState.isClicked,
+    }));
+  };
+
+  const handleOpen = () => {
+    setState((prevState) => ({ ...prevState, isOpen: !prevState.isOpen }));
+  };
+
+  const handleAboutUsOpen = () => {
+    setState((prevState) => ({
+      ...prevState,
+      aboutUsOpen: !prevState.aboutUsOpen,
+    }));
+  };
+
   return (
     <div className="navigation-2">
       <div className="container">
@@ -12,8 +95,6 @@ export const Navigation = () => {
               <div id="menu-button"></div>
               <div id="mega-menu-wrap-primary" className="mega-menu-wrap">
                 <div className="mega-menu-toggle">
-                  <div className="mega-toggle-blocks-left"></div>
-                  <div className="mega-toggle-blocks-center"></div>
                   <div className="mega-toggle-blocks-right">
                     <div
                       className="mega-toggle-block mega-menu-toggle-block mega-toggle-block-1 "
@@ -25,7 +106,10 @@ export const Navigation = () => {
                         aria-expanded="false"
                       >
                         <span className="mega-toggle-label-closed">MENU</span>
-                        <span className="mega-toggle-label-open">
+                        <span
+                          className="mega-toggle-label-open "
+                          onClick={handleClick}
+                        >
                           <CiMenuBurger />
                         </span>
                       </span>
@@ -285,6 +369,8 @@ export const Navigation = () => {
                 </ul>
               </div>{' '}
             </div>
+            {ulElements({ handleClick, state, handleAboutUsOpen })}
+            {/* Conditionally render ulElements */}
             {/* <!-- /.navigation start--> */}
           </div>
         </div>
