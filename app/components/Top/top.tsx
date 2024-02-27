@@ -11,10 +11,10 @@ import {
 
 export const TopBar = () => {
   return (
-    <div className="container-fluid top-bar">
+    <div className="container-fluid top-bar d-flex justify-content-center align-items-center">
       {/* <!-- top-bar --> */}
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row">
           <div className="col-md-3 d-none d-lg-block">
             <p className="mail-text">
               <a href="https://www.rba.gov.au/" target="_blank" rel="noopener">
@@ -39,7 +39,7 @@ export const TopBar = () => {
             <p className="mail-text text-center">MFAA&nbsp; 673747334</p>
           </div>
           {/* Spacer column */}
-          <div className="col-md-1 d-none d-lg-block"></div>
+          <div className="col-md-1 d-none d-lg-none"></div>
           <div className="col-lg-12 text-center d-lg-none social-icons">
             {/* Show on devices below lg breakpoint */}
             <div className="social-icons-container">

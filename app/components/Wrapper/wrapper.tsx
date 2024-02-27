@@ -208,14 +208,14 @@ export const Navigation = () => {
                       </li>
                     </ul>
                   </li> */}
-                  <li
+                  {/* <li
                     className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1483"
                     id="mega-menu-item-1483"
                   >
                     <a className="mega-menu-link animsition-link" href="/blog/">
                       Blog
                     </a>
-                  </li>
+                  </li> */}
                   <li
                     className="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-6603 has-sub"
                     id="mega-menu-item-6603"
@@ -309,17 +309,17 @@ export const Wrapper = () => {
               </div>
             </div>
             {/* <!-- logo --> */}
-            <div className="col-md-9 text-right hidden-xs d-flex justify-content-end align-items-center">
-              <div className="header-action">
+            <div className="col-md-9 text-right d-flex justify-content-end align-items-center">
+              <div className="header-action ">
                 <a
                   href="/loancalculator/"
-                  className="btn btn-primary header-button"
+                  className="btn btn-primary header-button loan-calc"
                 >
                   Loan Calculators
                 </a>{' '}
                 <a
                   href="/contact-us/"
-                  className="btn btn-default header-button"
+                  className="btn btn-default header-button call-now"
                 >
                   Get A Callback Now
                 </a>{' '}
