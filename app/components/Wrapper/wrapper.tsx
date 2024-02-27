@@ -71,6 +71,7 @@ export const Navigation = () => {
   const handleClick = () => {
     setState((prevState) => ({
       ...prevState,
+      isClicked: !prevState.isClicked,
     }));
   };
 
@@ -81,6 +82,7 @@ export const Navigation = () => {
   const handleAboutUsOpen = () => {
     setState((prevState) => ({
       ...prevState,
+      aboutUsOpen: !prevState.aboutUsOpen,
     }));
   };
 
