@@ -7,52 +7,43 @@ import { MdOutlineArrowDropDown, MdArrowDropUp } from 'react-icons/md';
 
 import './wrapper.css';
 
-interface State {
-  isClicked: boolean;
-  isOpen: boolean;
-  aboutUsOpen: boolean;
-}
-
-const ulElements = ({
-  handleClick,
-  state,
-  handleAboutUsOpen,
-}: {
-  handleClick: () => void;
-  state: State;
-  handleAboutUsOpen: () => void;
-}) => {
+const ulElements = (
+  handleClick: any,
+  isClicked: Boolean,
+  handleAboutUsOpen: any,
+  aboutUsopen: Boolean
+) => {
   return (
     <ul className="d-sm-block d-lg-none">
       <li>Home</li>
       <li>
         Services
-        {state.isClicked ? (
+        {isClicked ? (
           <MdArrowDropUp onClick={handleClick} />
         ) : (
           <MdOutlineArrowDropDown onClick={handleClick} />
         )}
-        {state.isClicked && (
+        {isClicked && (
           <ul>
             <li>Home Loans & Investment Loans</li>
-            <li>Refinance & Construction Loans</li>
-            <li>Business & Commercial Loans</li>
-            <li>Personal & Car Loans</li>
+            <li> Refinance & Construction Loans</li>
+            <li> Business & Commercial Loans</li>
+            <li> Personal & Car Loans</li>
           </ul>
         )}
       </li>
       <li>
         About Us{' '}
-        {state.aboutUsOpen ? (
+        {aboutUsopen ? (
           <MdArrowDropUp onClick={handleAboutUsOpen} />
         ) : (
           <MdOutlineArrowDropDown onClick={handleAboutUsOpen} />
         )}
-        {state.aboutUsOpen && (
+        {aboutUsopen && (
           <ul>
             <li>About Us</li>
             <li>Our Team</li>
-            <li>Testimonials</li>
+            <li>Testinomials</li>
           </ul>
         )}
       </li>
@@ -62,28 +53,22 @@ const ulElements = ({
 };
 
 export const Navigation = () => {
-  const [state, setState] = useState<State>({
-    isClicked: false,
-    isOpen: false,
-    aboutUsOpen: false,
-  });
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
-    setState((prevState) => ({
-      ...prevState,
-      isClicked: !prevState.isClicked,
-    }));
+    setIsClicked((prevState) => !prevState); // Toggle isClicked
   };
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
-    setState((prevState) => ({ ...prevState, isOpen: !prevState.isOpen }));
+    setIsOpen((prevState) => !prevState); // Toggle isClicked
   };
 
+  const [aboutUsOpen, setAboutUsOpen] = useState(false);
+
   const handleAboutUsOpen = () => {
-    setState((prevState) => ({
-      ...prevState,
-      aboutUsOpen: !prevState.aboutUsOpen,
-    }));
+    setAboutUsOpen((prevState) => !prevState);
   };
 
   return (
@@ -369,7 +354,13 @@ export const Navigation = () => {
                 </ul>
               </div>{' '}
             </div>
-            {ulElements({ handleClick, state, handleAboutUsOpen })}
+            {isClicked &&
+              ulElements(
+                handleOpen,
+                isOpen,
+                handleAboutUsOpen,
+                aboutUsOpen
+              )}{' '}
             {/* Conditionally render ulElements */}
             {/* <!-- /.navigation start--> */}
           </div>
