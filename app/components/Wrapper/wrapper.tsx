@@ -1,3 +1,5 @@
+import { CiMenuBurger } from 'react-icons/ci';
+
 import './wrapper.css';
 
 export const Navigation = () => {
@@ -14,25 +16,25 @@ export const Navigation = () => {
                   <div className="mega-toggle-blocks-center"></div>
                   <div className="mega-toggle-blocks-right">
                     <div
-                      className="mega-toggle-block mega-menu-toggle-block mega-toggle-block-1"
+                      className="mega-toggle-block mega-menu-toggle-block mega-toggle-block-1 "
                       id="mega-toggle-block-1"
                     >
-                      {/* <span
-                            className="mega-toggle-label"
-                            role="button"
-                            aria-expanded="false"
-                          >
-                            <span className="mega-toggle-label-closed">
-                              MENU
-                            </span>
-                            <span className="mega-toggle-label-open">MENU</span>
-                          </span> */}
+                      <span
+                        className="mega-toggle-label"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        <span className="mega-toggle-label-closed">MENU</span>
+                        <span className="mega-toggle-label-open">
+                          <CiMenuBurger />
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </div>
                 <ul
                   id="mega-menu-primary"
-                  className="mega-menu max-mega-menu mega-menu-horizontal"
+                  className="mega-menu max-mega-menu mega-menu-horizontal d-none d-lg-block"
                   data-event="hover_intent"
                   data-effect="fade_up"
                   data-effect-speed="200"

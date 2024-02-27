@@ -39,7 +39,7 @@
 
 #navigation {
   display: flex;
-  justify-content: center; /* Align navigation items to the right */
+  justify-content: flex-end; /* Align navigation items to the right */
 }
 
 #navigation ul {
@@ -153,10 +153,6 @@
 
   .hidden-xs {
     display: none !important;
-  }
-
-  .navigation-2 {
-    display: none;
   }
 
   #menu-button {
@@ -404,5 +400,17 @@
     top: 10px;
     width: 150px;
     /* width: 200px; */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .header-action > * {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .mega-menu-toggle {
+    display: none;
   }
 }
