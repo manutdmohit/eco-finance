@@ -4,7 +4,7 @@ export const Loan = () => {
   return (
     <section className="wpb_row vc_row-fluid vc_custom_1482745542542 vc_row-has-fill mt-4 mb-4 border-none">
       <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <div className="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-4">
           <div className="col">
             <div className="rate-custom">
               <div className="rate-counter-block">
