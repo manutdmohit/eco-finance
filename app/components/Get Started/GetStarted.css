@@ -79,3 +79,9 @@
 .email-field button:hover {
   background-color: #084f8a;
 }
+
+@media (max-width: 768px) {
+  .email-field input {
+    width: 60vw;
+  }
+}
