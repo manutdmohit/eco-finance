@@ -1,208 +1,145 @@
+import Link from 'next/link';
+
 import './Footer.css';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// import { facebook } from '@fortawesome/free-solid-svg-icons';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <footer className="footer section-space80 mb-0">
+    <footer className="text-light py-5 footer">
       <div className="container">
-        {/* Footer Top */}
-        {/* <div className="row align-items-center p-4">
-          <div className="col-md-4 col-sm-4 col-xs-12">
-            <div className="footer-logo my-auto">
-              <img src="" alt="Footer Logo" />
-            </div>
+        <div className="row">
+          <div className="col-lg-3 col-md-6">
+            <section className="footer-column mb-4">
+              <h3>About Us</h3>
+              <p id="about-us-desc">
+                Our goal at Eco Finance and Home Loans is to find you the best
+                possible mortgage rates, loan interest and terms in the market.
+                Whether you’re a buyer or business owner looking to purchase,
+                loan or refinance in Australia, contact us to find out about our
+                fixed and variable rate offers today!
+              </p>
+            </section>
           </div>
-          <div className="col-md-8 col-sm-8 col-xs-12">
-            <div className="row align-items-center">
-              <div className="col-md-5 d-flex align-items-center">
-                <h3 className="newsletter-title align-items-center my-auto">
-                  Subscribe To Us
-                </h3>
-              </div>
-              <div className="col-md-7">
-                <div className="newsletter-form my-auto">
-                  <form
-                    action="/"
-                    method="post"
-                    className="d-flex align-items-center"
-                  >
-                    <div className="input-group">
-                      <input
-                        type="email"
-                        className="form-control"
-                        id="newsletter"
-                        placeholder="Your email address"
-                        required
-                        name="ne"
-                      />
-                      <span className="input-group-btn">
-                        <button className="btn btn-default" type="submit">
-                          Join
-                        </button>
-                      </span>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+          <div className="col-lg-3 col-md-6">
+            <section className="footer-column mb-4">
+              <h3>Quick Links</h3>
+              <ul>
+                <li>
+                  <Link href="/" style={{ textDecoration: 'none' }}>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services">Services</Link>
+                </li>
+                <li>
+                  <Link href="/about-us">About Us</Link>
+                </li>
+                <li>
+                  <Link href="/contact-us">Contact Us</Link>
+                </li>
+              </ul>
+            </section>
           </div>
-        </div> */}
-
-        {/* End Footer Top */}
-
-        {/* Divider Line */}
-        <hr className="dark-line" />
-
-        {/* Footer Bottom */}
-        <section className="wpb_row vc_row-fluid">
-          <div className="container">
-            <div className="row">
-              {/* Left Section */}
-              <div className="col-md-6">
-                <div className="widget-text mt40">
-                  <p className="mt-auto">
-                    Our goal at Eco Finance and Home Loans is to find you the
-                    best possible mortgage rates, loan interest and terms in the
-                    market. Whether you’re a buyer or business owner looking to
-                    purchase, loan or refinance in Australia, contact us to find
-                    out about our fixed and variable rate offers today!
-                  </p>
-                  <p className="address-text">
-                    39 George Street, Rockdale NSW 2216
-                  </p>
-                  <p className="call-text">
-                    <a href="tel:0421561785">
-                      <i className="icon-phone-call icon-1x"></i>0421561785
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              {/* Right Section */}
-              <div className="col-md-6">
-                <div className="widget-footer mt40">
-                  <div className="row">
-                    <div className="col-sm-4">
-                      <ul className="listnone">
-                        <li>
-                          <a href="/">
-                            <MdKeyboardArrowRight /> Home
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/loan-products/">
-                            <MdKeyboardArrowRight /> Services
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/about-us/">
-                            <MdKeyboardArrowRight /> About Us
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/blog/">
-                            <MdKeyboardArrowRight /> Blog
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/resources/">
-                            <MdKeyboardArrowRight /> Resources
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/contact-us/">
-                            <MdKeyboardArrowRight /> Contact Us
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-sm-4">
-                      <ul className="listnone">
-                        <li>
-                          <a href="/loan/car-loan/">
-                            <MdKeyboardArrowRight /> Car Loan
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/loan/personal-loan/">
-                            <MdKeyboardArrowRight /> Personal Loan
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/loan/business-loan-2/">
-                            <MdKeyboardArrowRight /> Business Loan
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/loan/home-loan/">
-                            <MdKeyboardArrowRight /> Home Loan
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/loan/equipment-finance/"></a>
-                          <MdKeyboardArrowRight /> Equipment{' '}
-                          <span className="finance">Finance</span>
-                        </li>
-                        <li>
-                          <a href="/loan/low-doc-loan/">
-                            <MdKeyboardArrowRight /> Low Doc Loan
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-sm-4">
-                      <ul className="listnone">
-                        <li>
-                          <a
-                            href="https://www.facebook.com/finconnexloans"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <FaFacebook /> Facebook
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://www.linkedin.com/company/finconnex/"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <FaLinkedin /> Linkedin
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://twitter.com/Finconnex1"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <FaTwitter /> Twitter
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://www.instagram.com/finconnex/"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <FaInstagram /> Instagram
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="col-lg-3 col-md-6">
+            <section className="footer-column mb-4">
+              <h3>Loans</h3>
+              <ul>
+                <li>
+                  <Link href="/home-loans">Home</Link>
+                </li>
+                <li>
+                  <Link href="/investment-loans">Investment</Link>
+                </li>
+                <li>
+                  <Link href="/refinance-loans">Refinance</Link>
+                </li>
+                <li>
+                  <Link href="/construction-loans">Construction</Link>
+                </li>
+                <li>
+                  <Link href="/business-loans">Business</Link>
+                </li>
+                <li>
+                  <Link href="/commerical-loans">Commerical</Link>
+                </li>
+                <li>
+                  <Link href="/personal-loans">Personal</Link>
+                </li>
+                <li>
+                  <Link href="/car-loans">Car</Link>
+                </li>
+              </ul>
+            </section>
           </div>
-          {/* End Footer Bottom */}
-        </section>
+          <div className="col-lg-3 col-md-6">
+            <section className="footer-column mb-4" id="contact">
+              <h3>Contact Us</h3>
+              <p>Address: 39 George Street, Rockdale NSW 2216l</p>
+              <p>
+                <a href="mailto:ecofinance23@gmail.com">
+                  Email: ecofinance23@gmail.com
+                </a>
+              </p>
+              <p>
+                <a href="tel: 0421561785">Phone: 0421561785</a>
+              </p>
+            </section>
+          </div>
+        </div>
       </div>
+
+      {/* Social Icons */}
+      <div className="container mt-4">
+        <div className="row justify-content-center">
+          <div className="col-auto">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaFacebook />
+            </a>
+          </div>
+          <div className="col-auto">
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaTwitter />
+            </Link>
+          </div>
+          <div className="col-auto">
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaInstagram />
+            </Link>
+          </div>
+          <div className="col-auto">
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaLinkedin />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <p className="text-center mt-5">
+        © {new Date().getFullYear()} Eco Finance and Home Loans. All Rights
+        Reserved.
+      </p>
     </footer>
   );
 };
