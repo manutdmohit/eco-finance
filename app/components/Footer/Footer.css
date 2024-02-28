@@ -14,7 +14,6 @@
 
 .footer-column h3 {
   font-size: 18px;
-  font-weight: bold;
 }
 
 .footer-column ul li {
@@ -25,7 +24,7 @@
 #contact p a {
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .footer-bottom {
@@ -44,4 +43,9 @@ ul li {
 
 .footer-link {
   text-decoration: none;
+}
+
+#contact p,
+#about-us-desc {
+  font-size: 1.2rem;
 }
