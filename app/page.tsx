@@ -15,7 +15,7 @@ export default function WebSite() {
       <Processes />
       <GetStarted />
       <Footer />
-      <TinyFooter />
+      {/* <TinyFooter /> */}
     </div>
   );
 }
