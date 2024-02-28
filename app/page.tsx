@@ -1,3 +1,4 @@
+import HomePage from './components/Bank/Bank';
 import Footer from './components/Footer/Footer';
 import GetStarted from './components/Get Started/GetStarted';
 import { Loan } from './components/Loan/Loan';
@@ -13,8 +14,11 @@ export default function WebSite() {
       <Wrapper />
       <Loan />
       <Processes />
+
       <GetStarted />
       <Footer />
+      <HomePage />
+
       {/* <TinyFooter /> */}
     </div>
   );
