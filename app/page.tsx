@@ -2,7 +2,6 @@ import HomePage from './components/Bank/Bank';
 import Footer from './components/Footer/Footer';
 import GetStarted from './components/Get Started/GetStarted';
 import Introduction from './components/Introduction/Introduction';
-import LandingPage from './components/Landing Page/LandingPage';
 import { Loan } from './components/Loan/Loan';
 import Processes from './components/Processes/Processes';
 import Service from './components/Service/Service';
