@@ -29,7 +29,7 @@ const Introduction = () => {
               Welcome to Eco Finance &amp Home Loans
             </h1>
             <p className="hero-text">
-              At Eco Finance & Home Loans, we understand that financial
+              At Eco Finance &amp Home Loans, we understand that financial
               decisions can be overwhelming. That's why we're here to simplify
               the process and empower you to achieve your goals with confidence.
             </p>
