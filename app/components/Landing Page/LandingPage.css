@@ -1,0 +1,154 @@
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* LandingPage.css */
+
+/* Header Section */
+.header-section {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand img {
+  max-height: 60px; /* Adjust the height as needed */
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  color: #333; /* Adjust the color as needed */
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+  color: #333; /* Adjust the color as needed */
+  margin-right: 20px; /* Adjust the spacing between links */
+  font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Adjust the hover color as needed */
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #007bff; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the text color as needed */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 36px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+.hero-section p {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  margin-bottom: 40px; /* Adjust the spacing as needed */
+}
+
+/* Services Section */
+.services-section {
+  background-color: #f8f9fa; /* Adjust the background color as needed */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 36px; /* Adjust the font size as needed */
+  margin-bottom: 40px; /* Adjust the spacing as needed */
+}
+
+.services-section p,
+.about-section,
+.contact-section p {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  text-align: left;
+}
+
+/* About Section */
+.about-section {
+  background-color: #f8f9fa; /* Adjust the background color as needed */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 36px; /* Adjust the font size as needed */
+  margin-bottom: 40px; /* Adjust the spacing as needed */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f8f9fa; /* Adjust the background color as needed */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px; /* Adjust the font size as needed */
+  margin-bottom: 40px; /* Adjust the spacing as needed */
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #333; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the text color as needed */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-section p {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 40px; /* Adjust the height as needed for smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 10px; /* Reduce spacing between links for smaller screens */
+  }
+
+  .hero-section h1 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+
+  .hero-section p {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+
+  .services-section h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: 28px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* LandingPage.css */
+
+/* Hero Section */
+.hero-section {
+  background-color: #007bff; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the text color as needed */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 36px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+.hero-section p {
+  font-size: 18px; /* Adjust the font size as needed */
+  margin-bottom: 40px; /* Adjust the spacing as needed */
+  text-align: left;
+}
