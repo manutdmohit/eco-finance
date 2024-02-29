@@ -30,13 +30,14 @@ const Introduction = () => {
             </h1>
             <p className="hero-text">
               At Eco Finance &amp; Home Loans, we understand that financial
-              decisions can be overwhelming. Thats why we're here to simplify
-              the process and empower you to achieve your goals with confidence.
+              decisions can be overwhelming. Thats why we&apos;re here to
+              simplify the process and empower you to achieve your goals with
+              confidence.
             </p>
             <p className="hero-text">
-              Whether you're dreaming of buying your first home, renovating your
-              current one, or investing in real estate, we offer a wide range of
-              mortgage options tailored to your unique needs.
+              Whether your&apos;e dreaming of buying your first home, renovating
+              your current one, or investing in real estate, we offer a wide
+              range of mortgage options tailored to your unique needs.
             </p>
             <p className="hero-text">
               Our team of experienced professionals is dedicated to providing
