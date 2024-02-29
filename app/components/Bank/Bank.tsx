@@ -1,7 +1,8 @@
 import React from 'react';
 import './Bank.css'; // Import your CSS file for styling
 
-const HomePage = () => {
+const Bank = () => {
+  1;
   // Define an array of image URLs
   const imageUrls = [
     'https://finconnex.com.au/wp-content/uploads/2020/05/Westpac.png',
@@ -31,4 +32,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Bank;

@@ -1,61 +1,41 @@
-.contact-page {
-  max-width: 600px;
-  margin: 50px auto;
+/* styles.css */
+
+/* Add styles for the container to make it look like a card */
+.form-container {
+  /* margin-top: 50px; */
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #dddddd; /* Add border */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(192, 55, 55, 0.1); /* Add shadow for depth */
+  background-color: #fff; /* Add background color */
+  margin: 0 auto; /* Center the card horizontally */
+  margin-bottom: 10px !important;
+  width: 70vw !important;
 }
 
-.contact-page {
-  background-color: #fff;
+/* Update form elements to match the card design */
+.form-group {
+  margin-bottom: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #040506;
+.form-group label {
+  font-weight: 700;
 }
 
-form {
-  padding: 20px;
-  border-radius: 8px;
-  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+/* Update button style */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  margin-bottom: 20px;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='phone'],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
-textarea {
-  height: 150px;
-}
-
-#submit {
-  background: linear-gradient(to right, #007bff, #0056b3);
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-#submit:active {
-  transform: translateY(0);
-  box-shadow: none;
+.connect-with-us {
+  h2 {
+    font-size: 2rem;
+  }
 }
