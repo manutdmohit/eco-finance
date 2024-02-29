@@ -71,16 +71,16 @@ const LandingPage = () => {
           <h1>Welcome to Eco Finance & Home Loans</h1>
           <p>
             At Eco Finance & Home Loans, we understand that financial decisions
-            can be overwhelming. That's why we're here to simplify the process
-            and empower you to achieve your goals with confidence. Whether
-            you're dreaming of buying your first home, renovating your current
-            one, or investing in real estate, we offer a wide range of mortgage
-            options tailored to your unique needs.
+            can be overwhelming. That&apos;s why we&apos;re here to simplify the
+            process and empower you to achieve your goals with confidence.
+            Whether you&apos;re dreaming of buying your first home, renovating
+            your current one, or investing in real estate, we offer a wide range
+            of mortgage options tailored to your unique needs.
           </p>
           <p>
             Our team of experienced professionals is dedicated to providing
             personalized guidance and support at every stage of your journey.
-            From pre-approval to closing, we'll be by your side, ensuring a
+            From pre-approval to closing, we&apos;ll be by your side, ensuring a
             smooth and stress-free experience. With our commitment to
             transparency, integrity, and customer satisfaction, you can trust us
             to help you navigate the complexities of the mortgage market and
@@ -212,10 +212,10 @@ const LandingPage = () => {
                 their financial future.
               </p>
               <p>
-                Whether you're a first-time homebuyer, an investor, or a
-                business owner, we're here to assist you every step of the way.
-                Contact us today to learn more about our services and how we can
-                help you achieve your financial goals.
+                Whether you&apos;re a first-time homebuyer, an investor, or a
+                business owner, we&apos;re here to assist you every step of the
+                way. Contact us today to learn more about our services and how
+                we can help you achieve your financial goals.
               </p>
             </Col>
           </Row>
