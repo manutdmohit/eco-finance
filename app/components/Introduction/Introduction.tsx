@@ -26,10 +26,10 @@ const Introduction = () => {
         <Row>
           <Col md={6}>
             <h1 className="hero-heading">
-              Welcome to Eco Finance &amp Home Loans
+              Welcome to Eco Finance &amp; Home Loans
             </h1>
             <p className="hero-text">
-              At Eco Finance &amp Home Loans, we understand that financial
+              At Eco Finance &amp; Home Loans, we understand that financial
               decisions can be overwhelming. Thats why we're here to simplify
               the process and empower you to achieve your goals with confidence.
             </p>
