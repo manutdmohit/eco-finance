@@ -30,7 +30,7 @@ const Introduction = () => {
             </h1>
             <p className="hero-text">
               At Eco Finance &amp Home Loans, we understand that financial
-              decisions can be overwhelming. That's why we're here to simplify
+              decisions can be overwhelming. Thats why we're here to simplify
               the process and empower you to achieve your goals with confidence.
             </p>
             <p className="hero-text">
