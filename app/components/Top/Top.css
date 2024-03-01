@@ -37,6 +37,10 @@
   font-size: 14px;
 }
 
+.mail-text strong {
+  font-weight: normal;
+}
+
 #phone,
 #clock {
   margin-bottom: 3px;
