@@ -1,6 +1,6 @@
 import React from 'react';
-import { TopBar } from '../components/Top/top';
-import { Wrapper } from '../components/Wrapper/wrapper';
+import TopBar from '../components/Top/top';
+import Wrapper from '../components/Wrapper/wrapper';
 
 export default function Services() {
   return (
