@@ -67,10 +67,10 @@ const LandingPage = () => {
                 their financial future.
               </p>
               <p>
-                Whether you're a first-time homebuyer, an investor, or a
-                business owner, we're here to assist you every step of the way.
-                Contact us today to learn more about our services and how we can
-                help you achieve your financial goals.
+                Whether your&apos;e a first-time homebuyer, an investor, or a
+                business owner, wer&apos;e here to assist you every step of the
+                way. Contact us today to learn more about our services and how
+                we can help you achieve your financial goals.
               </p>
             </Col>
           </Row>
