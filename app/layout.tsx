@@ -9,7 +9,7 @@ import './globals.css';
 
 import BootStrapClient from './components/BootstrapClient';
 import { TopBar as TopBar } from './components/Top/Top';
-import { Wrapper } from './components/Wrapper/wrapper';
+import { Wrapper } from './components/Wrapper/Wrapper';
 import { Loan } from './components/Loan/Loan';
 import Footer from './components/Footer/Footer';
 import Processes from './components/Processes/Processes';

@@ -8,7 +8,7 @@ import Processes from './components/Processes/Processes';
 import Service from './components/Service/Service';
 import { TinyFooter } from './components/Tiny Footer/TinyFooter';
 import { TopBar } from './components/Top/Top';
-import { Wrapper } from './components/Wrapper/wrapper';
+import { Wrapper } from './components/Wrapper/Wrapper';
 
 export default function WebSite() {
   return (
