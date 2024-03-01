@@ -7,7 +7,7 @@ import { Loan } from './components/Loan/Loan';
 import Processes from './components/Processes/Processes';
 import Service from './components/Service/Service';
 import { TinyFooter } from './components/Tiny Footer/TinyFooter';
-import TopBar from './components/Top/top';
+import TopBar from './components/Top/Top';
 import Wrapper from './components/Wrapper/wrapper';
 
 export default function WebSite() {
