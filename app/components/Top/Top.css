@@ -30,14 +30,17 @@
   border-right: none;
 }
 
+.mail-text,
 .mail-text a {
   text-decoration: none;
   color: inherit;
+  font-size: 15px;
 }
 
 #phone,
 #clock {
   margin-bottom: 3px;
+  font-size: 12px;
 }
 
 .social-icons-container {

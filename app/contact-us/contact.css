@@ -55,7 +55,11 @@ select.form-control {
 }
 
 .contact-button {
-  background: linear-gradient(to right, #007bff, #0056b3) !important;
+  background: linear-gradient(
+    270deg,
+    rgb(19, 173, 199) 0%,
+    rgb(148, 93, 214) 100%
+  ) !important;
 }
 
 @media (max-width: 768px) {

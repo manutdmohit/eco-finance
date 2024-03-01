@@ -64,7 +64,11 @@ join-button {
   font-size: 1rem;
   width: 25vw !important;
   outline: none;
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(
+    270deg,
+    rgb(19, 173, 199) 0%,
+    rgb(148, 93, 214) 100%
+  ) !important;
 }
 
 .email-field button {

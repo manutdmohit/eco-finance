@@ -24,7 +24,11 @@
 }
 
 .btn-default {
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(
+    270deg,
+    rgb(19, 173, 199) 0%,
+    rgb(148, 93, 214) 100%
+  ) !important;
   border: 1px solid !important;
 }
 
@@ -61,7 +65,7 @@
 #navigation ul li a {
   color: #f1f1f1; /* Text color */
   text-decoration: none; /* Remove underline */
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 #navigation ul li a:hover {
