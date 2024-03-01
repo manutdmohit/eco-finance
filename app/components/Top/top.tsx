@@ -1,4 +1,4 @@
-import './Top.css';
+import './top.css';
 
 import {
   FaPhoneAlt,
