@@ -8,8 +8,8 @@ import { Questrial } from 'next/font/google';
 import './globals.css';
 
 import BootStrapClient from './components/BootstrapClient';
-import { TopBar as TopBar } from './components/Top/top';
-import { Wrapper } from './components/Wrapper/wrapper';
+import TopBar from './components/Top/Top';
+import Wrapper from './components/Wrapper/wrapper';
 import { Loan } from './components/Loan/Loan';
 import Footer from './components/Footer/Footer';
 import Processes from './components/Processes/Processes';
