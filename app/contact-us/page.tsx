@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 
 import './contact.css';
 
-import TopBar from '../components/Top/Top';
+import TopBar from '../components/Top/top';
 
 import Footer from '../components/Footer/Footer';
-import Wrapper from '../components/Wrapper/Wrapper';
+import Wrapper from '../components/Wrapper/wrapper';
 import Bank from '../components/Bank/Bank';
 
 interface FormData {
