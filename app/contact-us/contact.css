@@ -19,7 +19,7 @@
 }
 
 .form-group label {
-  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 /* Update button style */
@@ -51,6 +51,7 @@ select.form-control {
   padding: 10px; /* Add padding */
   font-size: 16px; /* Increase font size */
   transition: border-color 0.3s; /* Add transition for border color */
+  color: rgb(242, 245, 247);
 }
 
 @media (max-width: 768px) {
