@@ -20,13 +20,13 @@
 }
 
 .primaryText {
-  font-size: 1.5rem;
-  color: #ffffff;
+  font-size: 1.8rem;
+  color: #fff;
   margin-bottom: 20px;
 }
 
 .secondaryText {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #ffffff;
   margin-bottom: 25px;
 }
@@ -56,13 +56,15 @@
   align-items: center;
 }
 
-.email-field input {
-  padding: 10px;
+.email-field input,
+join-button {
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px 0 0 5px;
   font-size: 1rem;
-  width: 25vw;
+  width: 25vw !important;
   outline: none;
+  background: linear-gradient(to right, #007bff, #0056b3);
 }
 
 .email-field button {
@@ -78,6 +80,19 @@
 
 .email-field button:hover {
   background-color: #084f8a;
+}
+
+#email::placeholder {
+  color: white;
+}
+
+.join-button {
+  border: 1px solid !important;
+  background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+.join-button:hover {
+  background-color: #0251a0 !important;
 }
 
 @media (max-width: 768px) {

@@ -24,11 +24,12 @@
 }
 
 .btn-default {
-  background-color: #c383b9;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border: 1px solid !important;
 }
 
 .btn-default:hover {
-  background-color: #c23ab0;
+  background-color: #967391 !important;
 }
 
 /* Add this CSS to style the navigation */
@@ -336,7 +337,6 @@
   text-transform: uppercase;
   padding: 20px 30px;
   border: none;
-  font-weight: 600;
   color: #0b3e6b;
   display: flex;
   flex-direction: column;

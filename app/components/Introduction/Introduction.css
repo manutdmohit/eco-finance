@@ -15,6 +15,10 @@
 
 .hero-button {
   margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 0;
+  width: 30vw;
+  background: linear-gradient(to right, #007bff, #0056b3);
 }
 
 .hero-image {
@@ -26,4 +30,10 @@
   .hero-image {
     margin-top: 50px;
   }
+  .hero-button {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
 }
