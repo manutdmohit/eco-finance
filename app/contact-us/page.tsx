@@ -371,7 +371,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary contact-button">
             Request a Call Back
           </button>
         </form>
