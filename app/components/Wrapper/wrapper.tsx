@@ -370,7 +370,7 @@ export const Navigation = () => {
   );
 };
 
-export const Wrapper = () => {
+const Wrapper = () => {
   return (
     <div id="sticky-wrapper" className="sticky-wrapper">
       <div className="header-2 sticky-header">
@@ -409,3 +409,5 @@ export const Wrapper = () => {
     </div>
   );
 };
+
+export default Wrapper;

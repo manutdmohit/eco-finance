@@ -9,7 +9,7 @@ import {
   FaInstagram,
 } from 'react-icons/fa';
 
-export const TopBar = () => {
+const TopBar = () => {
   return (
     <div className="container-fluid top-bar d-flex justify-content-center align-items-center">
       {/* <!-- top-bar --> */}
@@ -54,3 +54,5 @@ export const TopBar = () => {
     </div>
   );
 };
+
+export default TopBar;
