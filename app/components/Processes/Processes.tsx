@@ -26,7 +26,7 @@ const Processes = () => {
             <div className="vc_column-inner ">
               <div className="wpb_wrapper ">
                 {' '}
-                <div className="bg-white pinside40 number-block outline mb60 bg-boxshadow">
+                <div className="pinside40 number-block outline mb60 bg-boxshadow">
                   <div className="circle">
                     <span className="number">1</span>
                   </div>{' '}
@@ -46,7 +46,7 @@ const Processes = () => {
             <div className="vc_column-inner ">
               <div className="wpb_wrapper ">
                 {' '}
-                <div className="bg-white pinside40 number-block outline mb60 bg-boxshadow">
+                <div className="pinside40 number-block outline mb60 bg-boxshadow">
                   <div className="circle">
                     <span className="number">2</span>
                   </div>{' '}
@@ -67,7 +67,7 @@ const Processes = () => {
             <div className="vc_column-inner ">
               <div className="wpb_wrapper ">
                 {' '}
-                <div className="bg-white pinside40 number-block outline mb60 bg-boxshadow">
+                <div className="pinside40 number-block outline mb60 bg-boxshadow">
                   <div className="circle">
                     <span className="number">3</span>
                   </div>{' '}

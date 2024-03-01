@@ -1,3 +1,4 @@
+import BackgroundAnimation from './components/BackgroundAnimation';
 import HomePage from './components/Bank/Bank';
 import Footer from './components/Footer/Footer';
 import GetStarted from './components/Get Started/GetStarted';
@@ -15,6 +16,7 @@ export default function WebSite() {
       <TopBar />
       <Wrapper />
       <Introduction />
+      {/* <BackgroundAnimation /> */}
       <Service />
       {/* <Loan /> */}
       <Processes />

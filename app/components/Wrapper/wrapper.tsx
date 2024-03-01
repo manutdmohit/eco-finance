@@ -380,10 +380,7 @@ export const Wrapper = () => {
               {/* <!-- logo --> */}
               <div className="logo">
                 <a href="/">
-                  <img
-                    src="https://res.cloudinary.com/drtm8uqcp/image/upload/v1708865040/ECO_FINANCE_LOGO_1_tede1x.png"
-                    alt="Eco Finance And Home Loans"
-                  />
+                  <img src="./logo.png" alt="Eco Finance And Home Loans" />
                 </a>
               </div>
             </div>

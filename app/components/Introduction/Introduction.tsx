@@ -18,6 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import './Introduction.css'; // Import custom CSS for additional styling
+import BackgroundAnimation from '../BackgroundAnimation';
 
 const Introduction = () => {
   return (
@@ -48,7 +49,7 @@ const Introduction = () => {
             </Button>
           </Col>
           <Col md={6}>
-            <img src="/money-3.jpg" alt="Home Loans" className="hero-image" />
+            <BackgroundAnimation />
           </Col>
         </Row>
       </Container>

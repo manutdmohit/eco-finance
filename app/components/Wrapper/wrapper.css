@@ -32,10 +32,10 @@
 }
 
 /* Add this CSS to style the navigation */
-.navigation-2 {
-  background-color: #15549a; /* Background color */
+/* .navigation-2 {
+  background-color: #15549a;
   background-color: #168a39 !important;
-}
+} */
 
 #navigation {
   display: flex;
