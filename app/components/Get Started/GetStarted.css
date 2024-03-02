@@ -101,6 +101,6 @@ join-button {
 
 @media (max-width: 768px) {
   .email-field input {
-    width: 60vw;
+    width: 100% !important;
   }
 }
