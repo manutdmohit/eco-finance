@@ -397,7 +397,7 @@ const Wrapper = () => {
                   href="/contact-us/"
                   className="btn btn-default header-button call-now"
                 >
-                  Get A Callback Now
+                  Get A Callback
                 </a>{' '}
               </div>
               <div className="test"></div>
