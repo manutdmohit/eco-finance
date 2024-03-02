@@ -20,13 +20,22 @@ const Bank = () => {
   ];
 
   return (
-    <div className="container">
-      <div className="image-container">
-        {imageUrls.map((imageUrl, index) => (
-          <div className="image-wrapper" key={index}>
-            <img src={imageUrl} alt={`Image ${index}`} className="img-fluid" />
-          </div>
-        ))}
+    <div className="logos-container">
+      <h2 className="text-center p-4">
+        With over 30+ lenders to chose from including all the major banks
+      </h2>
+      <div className="container">
+        <div className="image-container pb-5">
+          {imageUrls.map((imageUrl, index) => (
+            <div className="image-wrapper" key={index}>
+              <img
+                src={imageUrl}
+                alt={`Image ${index}`}
+                className="img-fluid"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

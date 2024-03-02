@@ -1,7 +1,11 @@
-.container {
-  /* max-width: 1200px; */
-  margin: 0 auto;
+.logos-container {
+  /* max-width: 1200px !important; */
+  /* margin: 0 auto; */
+
   padding: 0 20px;
+  margin-top: 45px;
+  background: #2c3e50 !important;
+  width: 100%;
 }
 
 .image-container {
@@ -19,8 +23,15 @@
   object-fit: cover;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Three equal columns */
+    grid-gap: 10px; /* Gap between grid items */
+  }
+
   .image-wrapper img {
-    height: 65px;
+    width: fit-content;
+    object-fit: cover;
   }
 }
