@@ -38,6 +38,13 @@
   background-color: #f8f9fa; /* Adjust the background color as needed */
   padding: 20px 0;
   text-align: center;
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3498db,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .services-section h2 {
@@ -99,7 +106,7 @@
 
 /* Styles for image container */
 .img-container {
-  width: 200px;
+  width: auto;
 }
 
 /* Styles for service icon */
@@ -111,19 +118,36 @@
 /* Styles for description container */
 .description-container {
   padding-left: 20px; /* Add space between image and text */
+  /* margin-left: 50px; */
 }
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
-  .img-container,
-  .service-icon {
-    width: 60px; /* Reduce width for smaller screens */
-    position: relative;
-    top: 15px;
-  }
-
   .description-container {
     padding-left: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .service-item {
+    height: 230px;
+  }
+
+  .service-icon {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .service-item {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  /* Styles for screens wider than 768px in portrait mode */
+
+  .service-item {
+    height: 300px;
   }
 }
 
@@ -132,12 +156,7 @@
   border: 1px solid #ccc; /* Add border to service items */
   border-radius: 5px; /* Add border radius for better appearance */
   padding: 15px; /* Add padding for spacing */
-  height: 230px;
+  /* height: 230px; */
 }
 
 /* Adjust image width for screens between 768px and 990px */
-@media (min-width: 768px) and (max-width: 990px) {
-  .img-container {
-    width: 100px; /* Set the width of service items */
-  }
-}
