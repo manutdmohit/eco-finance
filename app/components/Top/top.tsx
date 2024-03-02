@@ -16,14 +16,6 @@ const TopBar = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3 d-none d-lg-block">
-            <p className="mail-text">
-              <a href="https://www.rba.gov.au/" target="_blank" rel="noopener">
-                <strong>RBA Cash Rate:</strong> 4.35%{' '}
-                <strong>Inflation:</strong> 4.1%
-              </a>
-            </p>
-          </div>
-          <div className="col-md-3 d-none d-lg-block">
             <p className="mail-text text-center">
               <a href="tel:0421561785">
                 <FaPhoneAlt id="phone" /> Call us at 0421561785
