@@ -45,6 +45,7 @@
     #2c3e50
   ); /* Chrome 10-25, Safari 5.1-6 */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 40px;
 }
 
 .services-section h2 {
@@ -128,11 +129,11 @@
   }
 
   .service-item {
-    height: 230px;
+    height: 300px;
   }
 
   .service-icon {
-    width: 30%;
+    width: 50%;
     margin-bottom: 10px;
   }
 }
@@ -158,5 +159,3 @@
   padding: 15px; /* Add padding for spacing */
   /* height: 230px; */
 }
-
-/* Adjust image width for screens between 768px and 990px */
