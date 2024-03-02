@@ -15,9 +15,9 @@ const Processes = () => {
 
                 <p className="align-center">
                   With so many steps involved, people generally don’t know where
-                  to start when applying for a mortgage. However, here at
-                  Finconnex, we have made the loan application process very
-                  smooth and stress-frees.
+                  to start when applying for a mortgage. However, here at Eco
+                  Finance and Home Loans, we have made the loan application
+                  process very smooth and stress-frees.
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Processes = () => {
                   <h3 className="number-title">Submit to a lender</h3>{' '}
                   <p>
                     Once we find the most suitable loan product for your need,
-                    we submit it to the lender
+                    we submit it to the lender for processing
                   </p>{' '}
                 </div>
               </div>

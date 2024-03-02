@@ -13,10 +13,8 @@
 
 /* Styling for the number block */
 .number-block {
-  background-color: #ffffff; /* Example background color */
-  padding: 40px; /* Example padding */
-
   text-align: center; /* Center-align content within the number block */
+  font-size: 1.1rem;
 }
 
 /* Styling for the circle containing the number */
@@ -29,7 +27,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px; /* Example margin */
-  margin: auto;
+  margin: 10px auto;
 }
 
 /* Styling for the number */
@@ -71,6 +69,7 @@
   border: none;
   font-weight: 600;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .box {
@@ -87,5 +86,22 @@
 }
 
 .process {
-  border-bottom: none !important;
+  /* border-bottom: none !important; */
+  background: #525252; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3d72b4,
+    #525252
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3d72b4,
+    #525252
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin-top: 45px;
+}
+
+.align-center {
+  font-size: 1.2rem;
 }
