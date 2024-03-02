@@ -27,9 +27,7 @@ const TopBar = () => {
               <FaClock id="clock" /> Mon to Fri 10:00 am - 06:00 pm
             </p>
           </div>
-          <div className="col-md-2 d-none d-lg-block">
-            <p className="mail-text text-center">MFAA&nbsp; 673747334</p>
-          </div>
+
           {/* Spacer column */}
           <div className="col-md-1 d-none d-lg-none"></div>
           <div className="col-lg-12 text-center d-lg-none social-icons">
