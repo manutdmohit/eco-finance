@@ -75,7 +75,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
       <div className="service-item">
         <div className="row border-red-100">
           <div className="col-md-4">
-            <div className="image-container">
+            <div className="img-container">
               <img src={image} alt={title} className="service-icon" />
             </div>
           </div>
