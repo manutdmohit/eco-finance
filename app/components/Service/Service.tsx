@@ -71,7 +71,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   description,
 }) => {
   return (
-    <Col md={12}>
+    <Col md={6}>
       <div className="service-item">
         <div className="row border-red-100">
           <div className="col-md-4">

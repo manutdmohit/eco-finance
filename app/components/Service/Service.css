@@ -99,7 +99,7 @@
 
 /* Styles for image container */
 .img-container {
-  width: 300px; /* Set the width */
+  width: 200px;
 }
 
 /* Styles for service icon */
@@ -117,7 +117,9 @@
 @media (max-width: 768px) {
   .img-container,
   .service-icon {
-    width: 150px; /* Reduce width for smaller screens */
+    width: 60px; /* Reduce width for smaller screens */
+    position: relative;
+    top: 15px;
   }
 
   .description-container {
@@ -130,11 +132,12 @@
   border: 1px solid #ccc; /* Add border to service items */
   border-radius: 5px; /* Add border radius for better appearance */
   padding: 15px; /* Add padding for spacing */
+  height: 225px;
 }
 
 /* Adjust image width for screens between 768px and 990px */
 @media (min-width: 768px) and (max-width: 990px) {
-  .imag-container {
-    width: 200px; /* Set the width of service items */
+  .img-container {
+    width: 100px; /* Set the width of service items */
   }
 }
