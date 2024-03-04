@@ -22,7 +22,8 @@ const Bank = () => {
   return (
     <div className="logos-container">
       <h2 className="text-center p-4">
-        With over 30+ lenders to chose from including all the major banks
+        Let us find a suitable loan product from out 40+ Lenders Panel that
+        aligns with your requirements
       </h2>
       <div className="container">
         <div className="image-container pb-5">
