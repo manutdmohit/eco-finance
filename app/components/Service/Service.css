@@ -129,7 +129,7 @@
   }
 
   .img-container img {
-    width: 50% !important; /* Make the image fill the container horizontally */
+    width: 30% !important; /* Make the image fill the container horizontally */
 
     object-fit: cover; /* Scale the image while preserving its aspect ratio */
   }
