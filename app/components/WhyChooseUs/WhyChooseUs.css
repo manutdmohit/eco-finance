@@ -38,7 +38,7 @@
   padding: 50px 0;
 }
 
-.image-container,
+.why-choose-us-image-container,
 .solution-container {
   width: 100%;
   display: flex;
@@ -47,7 +47,7 @@
   overflow: hidden; /* Ensure the image doesn't overflow */
 }
 
-.image-container img,
+.why-choose-us-image-container img,
 .solution-container img {
   width: 100%;
   height: auto;
@@ -59,16 +59,8 @@
   height: 60vh;
 }
 
-@media (max-width: 415px) {
-  .image-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-  }
-}
-
 @media (max-width: 768px) {
-  .image-container {
+  .why-choose-us-image-container {
     margin-bottom: 20px; /* Add some space between image sections on smaller screens */
   }
 }

@@ -12,7 +12,7 @@ const WhyChooseUsSection: React.FC = () => {
         <h2>&quot;Why Choose Us&quot;</h2>
         <Row>
           <Col md={6}>
-            <div className="image-container">
+            <div className="why-choose-us-image-container">
               <img
                 src="/assets/why-choose-us-1.jpg"
                 alt="Image 1"
@@ -37,7 +37,7 @@ const WhyChooseUsSection: React.FC = () => {
         </Row>
         <Row>
           <Col md={6}>
-            <div className="image-container">
+            <div className="why-choose-us-image-container">
               <img
                 src="/assets/why-choose-us-2.jpg"
                 alt="Image 2"
