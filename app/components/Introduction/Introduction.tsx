@@ -31,18 +31,23 @@ const Introduction = () => {
             </h1>
             <p className="hero-text">
               At Eco Finance &amp; Home Loans, we understand that financial
-              decisions can be overwhelming. Thats why we&apos;re here to
-              simplify the process and empower you to achieve your goals with
-              confidence.
+              decisions can be overwhelming. Our aim is to simplify the process
+              and help you achieve your goals confidently.
             </p>
             <p className="hero-text">
-              Whether your&apos;e dreaming of buying your first home, renovating
-              your current one, or investing in real estate, we offer a wide
-              range of mortgage options tailored to your unique needs.
+              We strive to make home financing easier to understand so you can
+              make informed decisions about your financial future. Our services
+              are tailored to meet your needs, offering various home loan
+              options such as residential, first home buyer, refinancing,
+              property investment, house and land packages, commercial loans,
+              and vehicle financing. We also provide advice on self-managed
+              super funds invested in properties. Additionally, we provide
+              complimentary services like property research, inspections, and
+              negotiation assistance to our clients.
             </p>
             <p className="hero-text">
-              Our team of experienced professionals is dedicated to providing
-              personalized guidance and support at every stage of your journey.
+              Our experienced team provides personalized support and guidance at
+              every step of your journey.
             </p>
             <Button variant="primary" size="lg" className="hero-button">
               Contact Us
