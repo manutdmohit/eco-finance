@@ -78,8 +78,8 @@ const Footer = () => {
               <h3>Contact Us</h3>
               <p>Address: 39 George Street, Rockdale NSW 2216l</p>
               <p>
-                <a href="mailto:ecofinance23@gmail.com">
-                  Email: ecofinance23@gmail.com
+                <a href="mailto:info@ecofinanceandhomeloans.com.au">
+                  Email: info@ecofinanceandhomeloans.com.au
                 </a>
               </p>
               <p>
