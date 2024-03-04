@@ -32,6 +32,9 @@ const Service: React.FC = () => {
               title="Refinance Loans"
               description="Refinance your existing mortgage to lower your monthly payments or take advantage of lower interest rates."
             />
+          </Row>
+
+          <Row>
             <ServiceItem
               image="./assets/construction-loans.jpg
           "
@@ -48,6 +51,9 @@ const Service: React.FC = () => {
               title="Commercial Loans"
               description="Obtain financing for commercial properties, real estate projects, and more."
             />
+          </Row>
+
+          <Row>
             <ServiceItem
               image="./assets/personal-loans.jpg"
               title="Personal Loans"
@@ -56,6 +62,11 @@ const Service: React.FC = () => {
             <ServiceItem
               image="./assets/car-loans.jpg"
               title="Car Loans"
+              description="Finance your next car purchase with our competitive auto loan options."
+            />
+            <ServiceItem
+              image="./assets/smsf-home-loans.jpg"
+              title="SMSF Home Loans"
               description="Finance your next car purchase with our competitive auto loan options."
             />
           </Row>
@@ -71,15 +82,15 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   description,
 }) => {
   return (
-    <Col md={6}>
+    <Col xs={12} md={12} xl={4} className="mb-5 services">
       <div className="service-item">
-        <div className="row border-red-100">
-          <div className="col-md-4">
+        <div className="">
+          <div className="">
             <div className="img-container">
-              <img src={image} alt={title} className="service-icon" />
+              <img src={image} alt={title} className="service-icon w-1" />
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="">
             <div className="description-container">
               <h3>{title}</h3>
               <p>{description}</p>
