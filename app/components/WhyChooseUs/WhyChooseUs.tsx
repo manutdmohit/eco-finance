@@ -9,7 +9,7 @@ const WhyChooseUsSection: React.FC = () => {
   return (
     <section className="why-choose-us-section">
       <Container>
-        <h2>"Why Choose Us"</h2>
+        <h2>&quot;Why Choose Us&quot;</h2>
         <Row>
           <Col md={6}>
             <div className="image-container">
