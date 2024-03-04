@@ -59,6 +59,14 @@
   height: 60vh;
 }
 
+@media (max-width: 415px) {
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .image-container {
     margin-bottom: 20px; /* Add some space between image sections on smaller screens */
