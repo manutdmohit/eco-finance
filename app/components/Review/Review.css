@@ -37,31 +37,11 @@
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-/*
-=============== 
-Global Styles
-===============
-*/
 
 .images-container p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-
-/*  global classes */
-
-/* section */
-
-/*
-=============== 
-Reviews
-===============
-*/
-
-/* .title {
-  text-align: center;
-  margin-bottom: 4rem;
-} */
 
 .review h2 {
   font-size: 2rem;
@@ -69,7 +49,6 @@ Reviews
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  /* margin-bottom: 0.75rem; */
 }
 
 .underline {
@@ -101,6 +80,7 @@ Reviews
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
+
 .person-img {
   width: 100%;
   display: block;
@@ -109,6 +89,7 @@ Reviews
   border-radius: 50%;
   position: relative;
 }
+
 .quote-icon {
   position: absolute;
   top: 0;
@@ -142,39 +123,18 @@ Reviews
   font-size: 1.2rem;
   text-align: left;
 }
+
 .prev-btn,
 .next-btn {
   color: var(--clr-primary-7);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
-  background-color: var(--clr-primary-5);
-  border-radius: 1px solid red !important;
 }
 .prev-btn:hover,
 .next-btn:hover {
   color: var(--clr-primary-5);
-}
-.random-btn {
-  margin-top: 0.5rem;
-  background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
-  padding: 0.25rem 0.5rem;
-  text-transform: capitalize;
-  border-radius: var(--radius);
-  transition: var(--transition);
-  border-color: transparent;
-  cursor: pointer;
-}
-.random-btn:hover {
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-1);
-}
-
-.icon {
-  font-size: 4rem;
-  color: red;
 }

@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import people from './Data';
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+import { FaQuoteRight } from 'react-icons/fa';
+
+import { FcPrevious, FcNext } from 'react-icons/fc';
 
 import './Review.css';
 
@@ -50,10 +52,10 @@ const Review: React.FC = () => {
       <p className="info">{text}</p>
       <div className="button-container">
         <button className="prev-btn" onClick={prevPerson}>
-          <FaChevronLeft />
+          <FcPrevious />
         </button>
         <button className="next-btn" onClick={nextPerson}>
-          <FaChevronRight />
+          <FcNext />
         </button>
       </div>
     </article>
