@@ -2,7 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import people from './Data';
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
+import { FaQuoteRight } from 'react-icons/fa';
+
+import { FcPrevious, FcNext } from 'react-icons/fc';
+
 import './Review.css';
 
 interface Person {
@@ -19,7 +22,7 @@ const Review: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % people.length);
-    }, 2000); // Change image every 2 seconds
+    }, 5000); // Change image every 2 seconds
 
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, []); // Empty dependency array to run once when mounted
@@ -49,10 +52,10 @@ const Review: React.FC = () => {
       <p className="info">{text}</p>
       <div className="button-container">
         <button className="prev-btn" onClick={prevPerson}>
-          <FaChevronLeft />
+          <FcPrevious />
         </button>
         <button className="next-btn" onClick={nextPerson}>
-          <FaChevronRight />
+          <FcNext />
         </button>
       </div>
     </article>

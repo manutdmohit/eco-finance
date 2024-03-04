@@ -13,7 +13,7 @@ const reviews = [
     job: 'Computer Engineer ',
     image:
       'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg',
-    text: 'I had a great experience with the Lenders. They offered me a competitive interest rate and flexible repayment options. The application process was straightforward, and I received the funds in no time. Thank you for your excellent service!',
+    text: 'I had a great experience with the company. They offered me a competitive interest rate and flexible repayment options. The application process was straightforward, and I received the funds in no time. Thank you for your excellent service!',
   },
   {
     id: 3,
