@@ -1,0 +1,77 @@
+.why-choose-us-section {
+  background: #da4453; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #89216b,
+    #da4453
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #89216b,
+    #da4453
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.why-choose-us-section {
+  margin-top: 35px;
+}
+
+.why-choose-us-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+
+.why-choose-us-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.equal-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.why-choose-us-section {
+  padding: 50px 0;
+}
+
+.image-container,
+.solution-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.image-container img,
+.solution-container img {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensure the image doesn't leave whitespace below */
+  object-fit: contain; /* Make the image fit within its container while preserving aspect ratio */
+}
+
+.solution-container img {
+  height: 60vh;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    margin-bottom: 20px; /* Add some space between image sections on smaller screens */
+  }
+}
+
+.why-choose-us-section ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+}
+
+.why-choose-us-section ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
