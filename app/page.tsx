@@ -1,3 +1,4 @@
+import AssistanceSection from './components/Assist/Assist';
 import BackgroundAnimation from './components/BackgroundAnimation';
 import HomePage from './components/Bank/Bank';
 import Footer from './components/Footer/Footer';
@@ -9,6 +10,7 @@ import ReviewsSection from './components/Review/Review';
 import Service from './components/Service/Service';
 import { TinyFooter } from './components/Tiny Footer/TinyFooter';
 import TopBar from './components/Top/top';
+import WhyChooseUsSection from './components/WhyChooseUs/WhyChooseUs';
 import Wrapper from './components/Wrapper/wrapper';
 
 export default function WebSite() {
@@ -18,6 +20,9 @@ export default function WebSite() {
       <Wrapper />
       <Introduction />
       {/* <BackgroundAnimation /> */}
+
+      <AssistanceSection />
+      <WhyChooseUsSection />
       <Service />
       {/* <Loan /> */}
       <Processes />
