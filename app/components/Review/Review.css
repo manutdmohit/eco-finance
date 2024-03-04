@@ -88,6 +88,7 @@ Reviews
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   text-align: center;
+  height: 500px;
 }
 .review:hover {
   box-shadow: var(--dark-shadow);
@@ -150,6 +151,8 @@ Reviews
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
+  background-color: var(--clr-primary-5);
+  border-radius: 1px solid red !important;
 }
 .prev-btn:hover,
 .next-btn:hover {
