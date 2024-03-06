@@ -26,7 +26,7 @@ export default function WebSite() {
       {/* <Loan /> */}
       <Processes />
 
-      <ReviewsSection />
+      {/* <ReviewsSection /> */}
 
       <GetStarted />
 
