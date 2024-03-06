@@ -185,8 +185,7 @@ const Footer = () => {
             © {new Date().getFullYear()}{' '}
             <a href="">
               <span>Eco Finance and Home Loans</span>
-            </a>
-            .{' '}
+            </a>{' '}
           </strong>
           <div className="credits">All Rights Reserved</div>
         </div>
