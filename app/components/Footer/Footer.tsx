@@ -54,9 +54,7 @@ const Footer = () => {
                 <div className="menu-footer-two-container">
                   <ul id="menu-footer-two" className="menu">
                     <li id="menu-item-153" className="menu-item">
-                      <a href="/wp-content/uploads/2023/05/Website-Credit-Guide-v.2.pdf">
-                        Credit Guide
-                      </a>
+                      <a href="/credit-guide">Credit Guide</a>
                     </li>
                     <li
                       id="menu-item-150"
