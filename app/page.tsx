@@ -1,6 +1,5 @@
 import AssistanceSection from './components/Assist/Assist';
-import BackgroundAnimation from './components/BackgroundAnimation';
-import HomePage from './components/Bank/Bank';
+import Bank from './components/Bank/Bank';
 import Footer from './components/Footer/Footer';
 import GetStarted from './components/Get Started/GetStarted';
 import Introduction from './components/Introduction/Introduction';
@@ -31,8 +30,8 @@ export default function WebSite() {
 
       <GetStarted />
 
+      <Bank />
       <Footer />
-      <HomePage />
 
       {/* <TinyFooter /> */}
 

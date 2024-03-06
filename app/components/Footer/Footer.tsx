@@ -1,91 +1,134 @@
-import Link from 'next/link';
+import React from 'react';
 
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="text-light py-5 footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <section className="footer-column mb-4">
-              <h3>About Us</h3>
-              <p id="about-us-desc">
-                Our goal at Eco Finance and Home Loans is to find you the best
-                possible mortgage rates, loan interest and terms in the market.
-                Whether you’re a buyer or business owner looking to purchase,
-                loan or refinance in Australia, contact us to find out about our
-                fixed and variable rate offers today!
+    <footer id="footer">
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
+            {/* <div className="col-lg-3 col-md-6">
+              <div className="footer-info">
+                <div className="social-links mt-3">
+                  <a
+                    href="https://www.facebook.com/MustHomePtyLtd/"
+                    className="facebook"
+                  >
+                    <i className="bx bxl-facebook"></i>
+                  </a>{' '}
+                  <a
+                    href="https://www.linkedin.com/company/must-home/"
+                    className="facebook"
+                  >
+                    <i className="bx bxl-linkedin"></i>
+                  </a>{' '}
+                </div>
+              </div>
+            </div> */}
+            <div className="col-lg-3 col-md-6 footer-links">
+              <section id="nav_menu-2" className="widget widget_nav_menu">
+                <div className="menu-footer-one-container">
+                  <ul id="menu-footer-one" className="menu">
+                    <li id="menu-item-143" className="menu-item">
+                      <a rel="privacy-policy" href="/privacy-policy/">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li id="menu-item-144" className="menu-item ">
+                      <a href="/complaints-and-concerns/">
+                        Complaints and Concerns
+                      </a>
+                    </li>
+                    <li id="menu-item-197" className="menu-item ">
+                      <a href="/locations/">Locations</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>{' '}
+            </div>
+            <div className="col-lg-3 col-md-6 footer-links">
+              <section id="nav_menu-3" className="widget widget_nav_menu">
+                <div className="menu-footer-two-container">
+                  <ul id="menu-footer-two" className="menu">
+                    <li id="menu-item-153" className="menu-item">
+                      <a href="/wp-content/uploads/2023/05/Website-Credit-Guide-v.2.pdf">
+                        Credit Guide
+                      </a>
+                    </li>
+                    <li
+                      id="menu-item-150"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"
+                    >
+                      <a href="/disclaimer/">Disclaimer</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>{' '}
+            </div>
+            <div className="col-lg-3 col-md-6 footer-links">
+              <section id="nav_menu-4" className="widget widget_nav_menu">
+                <div className="menu-footer-three-container">
+                  <ul id="menu-footer-three" className="menu">
+                    <li
+                      id="menu-item-151"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"
+                    >
+                      <a href="/terms-and-conditions/">Terms and Conditions</a>
+                    </li>
+                    <li
+                      id="menu-item-152"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
+                    >
+                      <a href="/dispute-resolution/">Dispute Resolution</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>{' '}
+            </div>
+            <div className="col-lg-3 col-md-6 footer-links">
+              <section id="nav_menu-4" className="widget widget_nav_menu">
+                <div className="menu-footer-three-container">
+                  <ul id="menu-footer-three" className="menu">
+                    <li
+                      id="menu-item-151"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151 address"
+                    >
+                      <p>39 George Street, Rockdale NSW 2216</p>
+                    </li>
+                    <li
+                      id="menu-item-152"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
+                    >
+                      <p>
+                        <a href="mailto:info@ecofinanceandhomeloans.com.au">
+                          info@ecofinanceandhomeloans.com.au
+                        </a>
+                      </p>
+                    </li>
+                    <li
+                      id="menu-item-152"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
+                    >
+                      <p>
+                        <a href="tel: 0421561785">0421561785</a>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </section>{' '}
+            </div>
+            <div className="col-lg-12 col-md-12">
+              <p className="text-white" id="description">
+                Anil Poudel (Credit Representative Number 555483) and
+                Eco-Finance & Home Loans Pty Ltd ABN 11673747334 (Credit
+                Representative Number 555484) are credit representatives of
+                Purple Circle Financial Services Pty Ltd ABN 21611305170
+                Australian Credit License Number 486112.
               </p>
-            </section>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <section className="footer-column mb-4">
-              <h3>Quick Links</h3>
-              <ul>
-                <li>
-                  <Link href="/" style={{ textDecoration: 'none' }}>
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services">Services</Link>
-                </li>
-                <li>
-                  <Link href="/about-us">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/contact-us">Contact Us</Link>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <section className="footer-column mb-4">
-              <h3>Loans</h3>
-              <ul>
-                <li>
-                  <Link href="/home-loans">Home</Link>
-                </li>
-                <li>
-                  <Link href="/investment-loans">Investment</Link>
-                </li>
-                <li>
-                  <Link href="/refinance-loans">Refinance</Link>
-                </li>
-                <li>
-                  <Link href="/construction-loans">Construction</Link>
-                </li>
-                <li>
-                  <Link href="/business-loans">Business</Link>
-                </li>
-                <li>
-                  <Link href="/commerical-loans">Commerical</Link>
-                </li>
-                <li>
-                  <Link href="/personal-loans">Personal</Link>
-                </li>
-                <li>
-                  <Link href="/car-loans">Car</Link>
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <section className="footer-column mb-4" id="contact">
-              <h3>Contact Us</h3>
-              <p>Address: 39 George Street, Rockdale NSW 2216l</p>
-              <p>
-                <a href="mailto:info@ecofinanceandhomeloans.com.au">
-                  Email: info@ecofinanceandhomeloans.com.au
-                </a>
-              </p>
-              <p>
-                <a href="tel: 0421561785">Phone: 0421561785</a>
-              </p>
-            </section>
+            </div>
           </div>
         </div>
       </div>
@@ -136,10 +179,18 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-center mt-5">
-        © {new Date().getFullYear()} Eco Finance and Home Loans. All Rights
-        Reserved.
-      </p>
+      <div className="container">
+        <div className="copyright">
+          <strong>
+            © {new Date().getFullYear()}{' '}
+            <a href="">
+              <span>Eco Finance and Home Loans</span>
+            </a>
+            .{' '}
+          </strong>
+          <div className="credits">All Rights Reserved</div>
+        </div>
+      </div>
     </footer>
   );
 };
