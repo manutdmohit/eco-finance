@@ -122,8 +122,8 @@ const Footer = () => {
             </div>
             <div className="col-lg-12 col-md-12">
               <p className="text-white" id="description">
-                Anil Poudel (Credit Representative Number 555483) and
-                Eco-Finance & Home Loans Pty Ltd ABN 11673747334 (Credit
+                Anil Poudel (Credit Representative Number 555483) and Eco
+                Finance & Home Loans Pty Ltd ABN 11673747334 (Credit
                 Representative Number 555484) are credit representatives of
                 Purple Circle Financial Services Pty Ltd ABN 21611305170
                 Australian Credit License Number 486112.
