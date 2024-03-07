@@ -387,12 +387,12 @@ const Wrapper = () => {
             {/* <!-- logo --> */}
             <div className="col-md-9 text-right d-flex justify-content-end align-items-center">
               <div className="header-action ">
-                {/* <a
-                  href="/loancalculator/"
-                  className="btn btn-primary header-button loan-calc"
+                <a
+                  href="/loan-calculator/"
+                  className="btn btn-default header-button loan-calc"
                 >
                   Loan Calculators
-                </a> */}
+                </a>
                 <a
                   href="/contact-us/"
                   className="btn btn-default header-button call-now"

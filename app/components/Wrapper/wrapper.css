@@ -147,19 +147,7 @@
   margin-left: 5px;
 }
 
-@media (max-width: 767px) {
-  .col-xs-6 {
-    width: 50%;
-  }
-
-  .text-right {
-    text-align: center;
-  }
-
-  .hidden-xs {
-    display: none !important;
-  }
-
+@media (max-width: 768px) {
   #menu-button {
     display: block;
     cursor: pointer;
@@ -173,9 +161,42 @@
   #menu-button.open + .mega-menu {
     display: block;
   }
+
+  .header-action {
+    position: relative;
+    top: -75px;
+    left: 20px;
+  }
+
+  .header-action .btn {
+    padding: 20px 10px;
+  }
 }
 
-/* CSS for all submenu items */
+@media (max-width: 530px) {
+  .header-action .btn {
+    padding: 15px 0;
+    /* width: 125px; */
+    /* left: 20px; */
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .call-now {
+    position: absolute;
+    top: 40px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-action .btn {
+    width: 150px;
+    font-size: 13px;
+  }
+}
+
+/*CSS for all submenu items */
 .mega-sub-menu {
   display: none; /* Hide submenu by default */
   position: absolute;
@@ -347,71 +368,6 @@
 }
 
 /* Add these styles to the wrapper.css file */
-@media screen and (max-width: 768px) {
-  .header-buttons-container {
-    display: flex;
-    flex-direction: column !important; /* Display items in a column layout */
-    align-items: center; /* Align items to the end (right) of the container */
-  }
-
-  .header-button {
-    margin-bottom: 10px; /* Add some spacing between buttons */
-  }
-
-  .header-button {
-    border-radius: 2px;
-    line-height: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 20px 20px;
-    border: none;
-    font-weight: 600;
-    color: #0b3e6b;
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-end;
-    font-size: 0.8rem;
-    margin-bottom: -45px;
-  }
-
-  /* .loan-calc {
-    position: absolute;
-    top: 25px;
-    width: 200px;
-    } */
-
-  .call-now {
-    position: relative;
-    top: -75px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header-action > * {
-    font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-inline: 8px;
-    padding-block: 19px;
-  }
-
-  /* .loan-calc {
-    right: 50px;
-    width: 150px;
-   }  */
-
-  /* .call-now {
-    right: 35px;
-    top: 10px;
-    width: 150px;
-  } */
-}
-
-@media screen and (min-width: 768px) and (max-width: 990px) {
-  .header-action > * {
-    font-size: 15px;
-  }
-}
 
 @media screen and (min-width: 990px) {
   .mega-menu-toggle {
