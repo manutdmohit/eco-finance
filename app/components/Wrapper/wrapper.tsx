@@ -125,7 +125,7 @@ export const Navigation = () => {
                   >
                     <a
                       className="mega-menu-link animsition-link"
-                      href="/"
+                      href="/home"
                       aria-current="page"
                     >
                       Home
