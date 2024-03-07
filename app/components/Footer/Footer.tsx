@@ -10,28 +10,17 @@ const Footer = () => {
       <div className="footer-top">
         <div className="container">
           <div className="row">
-            {/* <div className="col-lg-3 col-md-6">
-              <div className="footer-info">
-                <div className="social-links mt-3">
-                  <a
-                    href="https://www.facebook.com/MustHomePtyLtd/"
-                    className="facebook"
-                  >
-                    <i className="bx bxl-facebook"></i>
-                  </a>{' '}
-                  <a
-                    href="https://www.linkedin.com/company/must-home/"
-                    className="facebook"
-                  >
-                    <i className="bx bxl-linkedin"></i>
-                  </a>{' '}
-                </div>
-              </div>
-            </div> */}
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-4 col-md-4 footer-links">
+              {' '}
+              {/* Updated to col-md-4 */}
               <section id="nav_menu-2" className="widget widget_nav_menu">
                 <div className="menu-footer-one-container">
                   <ul id="menu-footer-one" className="menu">
+                    <li id="menu-item-143" className="menu-item">
+                      <a rel="home" href="/home/">
+                        Home
+                      </a>
+                    </li>
                     <li id="menu-item-143" className="menu-item">
                       <a rel="privacy-policy" href="/privacy-policy/">
                         Privacy Policy
@@ -42,17 +31,22 @@ const Footer = () => {
                         Complaints and Concerns
                       </a>
                     </li>
-                    <li id="menu-item-197" className="menu-item ">
-                      <a href="/locations/">Locations</a>
-                    </li>
                   </ul>
                 </div>
-              </section>{' '}
+              </section>
             </div>
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-3 col-md-4 footer-links">
+              {' '}
+              {/* Updated to col-md-4 */}
               <section id="nav_menu-3" className="widget widget_nav_menu">
                 <div className="menu-footer-two-container">
                   <ul id="menu-footer-two" className="menu">
+                    <li
+                      id="menu-item-151"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"
+                    >
+                      <a href="/terms-and-conditions/">Terms and Conditions</a>
+                    </li>
                     <li id="menu-item-153" className="menu-item">
                       <a href="/credit-guide">Credit Guide</a>
                     </li>
@@ -64,29 +58,12 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-              </section>{' '}
+              </section>
             </div>
-            <div className="col-lg-3 col-md-6 footer-links">
-              <section id="nav_menu-4" className="widget widget_nav_menu">
-                <div className="menu-footer-three-container">
-                  <ul id="menu-footer-three" className="menu">
-                    <li
-                      id="menu-item-151"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"
-                    >
-                      <a href="/terms-and-conditions/">Terms and Conditions</a>
-                    </li>
-                    <li
-                      id="menu-item-152"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
-                    >
-                      <a href="/dispute-resolution/">Dispute Resolution</a>
-                    </li>
-                  </ul>
-                </div>
-              </section>{' '}
-            </div>
-            <div className="col-lg-3 col-md-6 footer-links">
+
+            <div className="col-lg-3 col-md-4 footer-links">
+              {' '}
+              {/* Updated to col-md-4 */}
               <section id="nav_menu-4" className="widget widget_nav_menu">
                 <div className="menu-footer-three-container">
                   <ul id="menu-footer-three" className="menu">
@@ -116,7 +93,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-              </section>{' '}
+              </section>
             </div>
             <div className="col-lg-12 col-md-12">
               <p className="text-white" id="description">
