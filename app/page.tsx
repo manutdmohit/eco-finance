@@ -20,7 +20,7 @@ export default function WebSite() {
       <Introduction />
       {/* <BackgroundAnimation /> */}
 
-      <AssistanceSection />
+      {/* <AssistanceSection /> */}
       <WhyChooseUsSection />
       <Service />
       {/* <Loan /> */}
