@@ -1,5 +1,9 @@
 .privacy-policy-container {
-  background: #2c3e50;
+  /* background: #2c3e50; */
   padding: 20px 0;
   margin-top: 25px;
+}
+
+.capitalize-first-letter::first-letter {
+  text-transform: capitalize;
 }
