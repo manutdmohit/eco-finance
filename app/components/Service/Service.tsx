@@ -26,19 +26,19 @@ const Service: React.FC = () => {
               image="./assets/home-loans.jpg"
               title="Home Loans"
               description="Explore our range of mortgage options to find the perfect solution for your home financing needs."
-              link="/home-loans"
+              link="/contact-us"
             />
             <ServiceItem
               image="./assets/investment-loans.jpg"
               title="Investment Loans"
               description="Discover investment opportunities and grow your wealth with our investment services."
-              link="/home-loans"
+              link="/contact-us"
             />
             <ServiceItem
               image="./assets/refinance-loans.jpg"
               title="Refinance Loans"
               description="Refinance your existing mortgage to lower your monthly payments or take advantage of lower interest rates."
-              link="/home-loans"
+              link="/contact-us"
             />
           </Row>
 
@@ -48,19 +48,19 @@ const Service: React.FC = () => {
           "
               title="Construction Loans "
               description="Secure financing for your construction project and turn your dream home into a reality."
-              link="/home-loans"
+              link="/contact-us"
             />
             <ServiceItem
               image="./assets/business-loans.jpg"
               title="Business Loans"
               description="Explore financing options for your business and fuel its growth and expansion."
-              link="/home-loans"
+              link="/contact-us"
             />
             <ServiceItem
               image="./assets/commerical-loans.jpg"
               title="Commercial Loans"
               description="Obtain financing for commercial properties, real estate projects, and more."
-              link="/home-loans"
+              link="/contact-us"
             />
           </Row>
 
@@ -69,19 +69,19 @@ const Service: React.FC = () => {
               image="./assets/personal-loans.jpg"
               title="Personal Loans"
               description="Get personalized financial advice and solutions tailored to your individual needs and goals."
-              link="/home-loans"
+              link="/contact-us"
             />
             <ServiceItem
               image="./assets/car-loans.jpg"
               title="Car Loans"
               description="Finance your next car purchase with our competitive auto loan options."
-              link="/home-loans"
+              link="/contact-us"
             />
             <ServiceItem
               image="./assets/smsf-home-loans.jpg"
               title="SMSF Home Loans"
               description="Finance your next car purchase with our competitive auto loan options."
-              link="/home-loans"
+              link="/contact-us"
             />
           </Row>
         </Container>
