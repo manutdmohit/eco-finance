@@ -12,7 +12,6 @@ const Home = () => {
       <Wrapper />
       <Introduction />
       <AssistanceSection />
-
       <Footer />
     </div>
   );
