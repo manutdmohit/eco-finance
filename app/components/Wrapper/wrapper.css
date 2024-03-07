@@ -176,8 +176,6 @@
 @media (max-width: 530px) {
   .header-action .btn {
     padding: 15px 0;
-    /* width: 125px; */
-    /* left: 20px; */
     width: 200px;
     font-size: 1rem;
   }
