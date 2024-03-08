@@ -105,3 +105,157 @@
 .align-center {
   font-size: 1.2rem;
 }
+
+/* ProcessSection.css */
+.process-section {
+  padding: 50px 0;
+  background: linear-gradient(90deg, #3d72b4, #525252);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #004d2d;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 18px;
+  /* color: #fff; */
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  /* background-color: #fff; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 500px;
+  color: #fff;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #3c3b3f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #605c3c,
+    #3c3b3f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #605c3c,
+    #3c3b3f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #5a3f37; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c7744,
+    #5a3f37
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c7744,
+    #5a3f37
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #1e130c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #9a8478,
+    #1e130c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #9a8478,
+    #1e130c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #485563; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #29323c,
+    #485563
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #29323c,
+    #485563
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.step-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  /* color: black; */
+}
+
+.step-details {
+  /* list-style: none; */
+  padding-left: 5px;
+  font-size: 1.1rem;
+  /* color: black; */
+}
+
+.section-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.view-loans-btn {
+  background: linear-gradient(270deg, #13adc7, #945dd6) !important;
+  border: 1px solid !important;
+  font-size: 20px;
+  border-radius: 2px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border: none;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .process-step {
+    width: 425px;
+  }
+}
+
+@media (max-width: 992px) {
+  .process-step {
+    max-width: 325px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-step {
+    max-width: 500px;
+  }
+}
