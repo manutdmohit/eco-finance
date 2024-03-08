@@ -140,54 +140,6 @@
   margin: 10px;
   width: 500px;
   color: #fff;
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: #3c3b3f; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #605c3c,
-    #3c3b3f
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #605c3c,
-    #3c3b3f
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: #5a3f37; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c7744,
-    #5a3f37
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2c7744,
-    #5a3f37
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: #1e130c; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #9a8478,
-    #1e130c
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #9a8478,
-    #1e130c
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   background: #485563; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
