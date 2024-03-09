@@ -31,6 +31,9 @@ const Footer = () => {
                         Complaints and Concerns
                       </a>
                     </li>
+                    <li id="menu-item-145" className="menu-item ">
+                      <a href="/faqs/">Faqs</a>
+                    </li>
                   </ul>
                 </div>
               </section>
