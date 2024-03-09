@@ -120,10 +120,6 @@
   .accordionItemPanel p {
     font-size: 1.1rem; /* Adjusts font size for tablets and smaller desktops */
   }
-
-  .faq-image img {
-    width: 50%;
-  }
 }
 
 /* Responsive Image */
