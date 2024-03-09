@@ -1,0 +1,139 @@
+.faq-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  background: #c33764; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.faq-content,
+.faq-image {
+  flex: 1;
+  min-width: 300px; /* Adjust as needed */
+  margin-bottom: 20px; /* Add margin to ensure space between items */
+}
+
+/* Responsive Image */
+.faq-image img {
+  max-width: 60%;
+}
+
+.faq-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.accordionItemButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ddd;
+  background: #005df1;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.accordionItemButton:hover {
+  background-color: #473838;
+}
+
+.accordionItemPanel {
+  padding: 10px;
+  background-color: rgb(11, 22, 22);
+  color: white;
+}
+
+.accordionItemPanel p {
+  font-size: 1.1rem;
+  color: aqua;
+}
+
+.faq-content,
+.faq-image {
+  margin-bottom: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .faq-section {
+    flex-direction: column;
+  }
+
+  .faq-content,
+  .faq-image {
+    min-width: 100%; /* Ensures they take full width on smaller screens */
+    margin-bottom: 20px; /* Ensure space between items on smaller screens */
+  }
+
+  .accordionItemButton {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .accordionItemPanel p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Adjustments for 768px to 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+  .faq-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .faq-content,
+  .faq-image {
+    min-width: 45%; /* Adjusts the width for tablets and smaller desktops */
+    margin-bottom: 20px; /* Ensure space between items on tablets and smaller desktops */
+  }
+
+  .accordionItemButton {
+    font-size: 1.1rem; /* Adjusts font size for tablets and smaller desktops */
+  }
+
+  .accordionItemPanel p {
+    font-size: 1.1rem; /* Adjusts font size for tablets and smaller desktops */
+  }
+
+  .faq-image img {
+    width: 50%;
+  }
+}
+
+/* Responsive Image */
+.faq-image img {
+  max-width: 75%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.faq-intro {
+  font-size: 1.2rem;
+}
