@@ -9,7 +9,7 @@ const FirstHomeSection = () => {
         <Row>
           <Col lg={6}>
             <img
-              src="./assets/are_you_ready.png"
+              src="./assets/image.png"
               alt="First Home"
               className="img-fluid"
             />
