@@ -12,7 +12,7 @@ const data = [
   {
     question: 'Is it better to apply for a mortgage through a broker?',
     answer:
-      'Using a mortgage broker for your home loan has numerous benefits with no downside. We provide personalized care and access to top loan products from a wide range of lenders. In case of complex applications, our expertise ensures a thorough assessment and finding the ideal loan for you',
+      'Using a mortgage broker for your home loan has numerous benefits with no downside. We provide personalized care and access to top loan products from a wide range of lenders. In case of complex applications, our expertise ensures a thorough assessment and finding the ideal loan for you.',
   },
 ];
 
