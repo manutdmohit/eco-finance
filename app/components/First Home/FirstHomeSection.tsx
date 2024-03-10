@@ -15,7 +15,9 @@ const FirstHomeSection = () => {
             />
           </Col>
           <Col lg={6}>
-            <h2>Are You Ready to Purchase Your First Home?</h2>
+            <h2 className="text-black">
+              Are You Ready to Purchase Your First Home?
+            </h2>
             <p className="text-black">
               Purchasing your first home is a significant milestone. It's an
               opportunity to start a new chapter in your life. Whether you're a
