@@ -17,3 +17,9 @@
   background-color: #007bff;
   border-color: #007bff;
 }
+
+@media (max-width: 768px) {
+  .question {
+    margin-top: 5px;
+  }
+}

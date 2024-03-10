@@ -15,7 +15,7 @@ const FirstHomeSection = () => {
             />
           </Col>
           <Col lg={6}>
-            <h2 className="text-black mt-5">
+            <h2 className="text-black question">
               Are You Ready to Purchase Your First Home?
             </h2>
             <p className="text-black">
