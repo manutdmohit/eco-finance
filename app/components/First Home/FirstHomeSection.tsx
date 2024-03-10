@@ -7,14 +7,14 @@ const FirstHomeSection = () => {
     <section className="first-home-section">
       <Container>
         <Row>
-          <Col lg={6}>
+          <Col lg={6} md={6} sm={12} xs={12}>
             <img
               src="./assets/image.png"
               alt="First Home"
               className="img-fluid"
             />
           </Col>
-          <Col lg={6}>
+          <Col lg={6} md={6} sm={12} xs={12}>
             <h2 className="text-black question">
               Are You Ready to Purchase Your First Home?
             </h2>
