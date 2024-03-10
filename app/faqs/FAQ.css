@@ -1,10 +1,4 @@
-.faq-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 20px;
+.faq-container {
   background: #c33764; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -16,6 +10,20 @@
     #1d2671,
     #c33764
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.faq-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faq-intro {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  color: black;
 }
 
 .faq-content,
@@ -55,12 +63,12 @@
 }
 
 .accordionItemButton:hover {
-  background-color: #473838;
+  background-color: #1d1313;
 }
 
 .accordionItemPanel {
   padding: 10px;
-  background-color: rgb(11, 22, 22);
+  background-color: #00000061;
   color: white;
 }
 
