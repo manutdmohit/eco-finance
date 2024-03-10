@@ -1,5 +1,6 @@
 import AssistanceSection from './components/Assist/Assist';
 import Bank from './components/Bank/Bank';
+import FirstHomeSection from './components/First Home/FirstHomeSection';
 import Footer from './components/Footer/Footer';
 import GetStarted from './components/Get Started/GetStarted';
 import Introduction from './components/Introduction/Introduction';
@@ -22,6 +23,8 @@ export default function WebSite() {
 
       {/* <AssistanceSection /> */}
       <WhyChooseUsSection />
+      <FirstHomeSection />
+
       <Service />
       {/* <Loan /> */}
       <Processes />
