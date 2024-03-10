@@ -1,0 +1,61 @@
+.about-us-section {
+  padding: 50px 0;
+  background: #cc2b5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #753a88,
+    #cc2b5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #753a88,
+    #cc2b5e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 25px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Large title */
+}
+
+.section-description {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Slightly smaller than the title */
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds a shadow effect to the cards */
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+}
+
+.card-img-top {
+  width: 100%; /* Ensures the image takes up the full width of the card */
+  height: auto; /* Maintains the aspect ratio of the image */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Larger title for the card */
+  color: #343a40; /* Dark text for contrast */
+}
+
+.card-text {
+  font-size: 1rem; /* Slightly smaller text for the card description */
+  color: #6c757d; /* Slightly lighter text for readability */
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title on smaller screens */
+  }
+
+  .section-description {
+    font-size: 1rem; /* Smaller text on smaller screens */
+  }
+}
