@@ -65,7 +65,7 @@ const FAQ = () => {
 
       <section className="faq-section">
         <div className="faq-image">
-          <img src="./assets/home-loans.jpg" alt="FAQ Image" height={'auto'} />
+          <img src="./assets/home-loans.jpg" alt="FAQ Image" />
         </div>
 
         <div className="faq-content">
