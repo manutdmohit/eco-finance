@@ -62,8 +62,7 @@ select.form-control {
   padding: 10px; /* Add padding */
   font-size: 16px; /* Increase font size */
   transition: border-color 0.3s; /* Add transition for border color */
-  color: white;
-  background: #0f0f0e !important; /* fallback for old browsers */
+  color: black;
 }
 
 .contact-button {
@@ -72,6 +71,10 @@ select.form-control {
     rgb(19, 173, 199) 0%,
     rgb(148, 93, 214) 100%
   ) !important;
+}
+
+option {
+  color: black;
 }
 
 @media (max-width: 768px) {
