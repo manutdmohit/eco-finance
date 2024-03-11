@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 
 import { CiMenuBurger } from 'react-icons/ci';
+import { IoMdClose } from 'react-icons/io';
 import { MdOutlineArrowDropDown, MdArrowDropUp } from 'react-icons/md';
 
 import './wrapper.css';
@@ -90,12 +91,21 @@ export const Navigation = () => {
                         role="button"
                         aria-expanded="false"
                       >
-                        <span className="mega-toggle-label-closed">MENU</span>
+                        <span
+                          className="mega-toggle-label-closed "
+                          onClick={handleClick}
+                        >
+                          MENU
+                        </span>
                         <span
                           className="mega-toggle-label-open "
                           onClick={handleClick}
                         >
-                          <CiMenuBurger />
+                          {isClicked ? (
+                            <IoMdClose className="close-icon" />
+                          ) : (
+                            <CiMenuBurger className="open-icon" />
+                          )}
                         </span>
                       </span>
                     </div>
