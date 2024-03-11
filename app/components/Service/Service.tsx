@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './Service.css';
-import { link } from 'fs';
 
 interface ServiceItemProps {
   image: string; // Change the type to string
