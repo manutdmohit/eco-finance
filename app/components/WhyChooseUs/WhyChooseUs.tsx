@@ -118,8 +118,15 @@ const WhyChooseUsSection: React.FC = () => {
               </p>
               <p>
                 Before providing any personal information on this website,
-                please check our credit guide and privacy policy (please attach
-                link)
+                please check our credit guide{' '}
+                <a href="/credit-guide" className="text-white">
+                  link
+                </a>{' '}
+                and privacy policy{' '}
+                <a href="/privacy-policy" className="text-white">
+                  link
+                </a>
+                .
               </p>
             </div>
           </Col>
