@@ -29,6 +29,7 @@ const ulElements = (
             <li> Refinance & Construction Loans</li>
             <li> Business & Commercial Loans</li>
             <li> Personal & Car Loans</li>
+            <li> SMSF Home Loans</li>
           </ul>
         )}
       </li>
@@ -43,7 +44,6 @@ const ulElements = (
           <ul>
             <li>About Us</li>
             <li>Our Team</li>
-            <li>Testinomials</li>
           </ul>
         )}
       </li>
@@ -138,7 +138,7 @@ export const Navigation = () => {
                     <span className="submenu-button"></span>
                     <a
                       className="mega-menu-link animsition-link"
-                      href="/smsf-property-investment/"
+                      href="/services"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
@@ -150,7 +150,7 @@ export const Navigation = () => {
                     </a>
                     <ul className="mega-sub-menu">
                       <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604 w-100"
                         id="mega-menu-item-6604"
                       >
                         <a
@@ -191,6 +191,17 @@ export const Navigation = () => {
                           href="/smsf-property-investment/"
                         >
                           Personal & Car Loans
+                        </a>
+                      </li>
+                      <li
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
+                        id="mega-menu-item-6604"
+                      >
+                        <a
+                          className="mega-menu-link animsition-link"
+                          href="/smsf-home-loans"
+                        >
+                          SMSF Home Loans
                         </a>
                       </li>
                     </ul>
@@ -306,18 +317,18 @@ export const Navigation = () => {
                     </a>
                     <ul className="mega-sub-menu">
                       <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604 w-100"
                         id="mega-menu-item-6604"
                       >
                         <a
                           className="mega-menu-link animsition-link"
-                          href="/smsf-property-investment/"
+                          href="/about-us"
                         >
                           About Us
                         </a>
                       </li>
                       <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604 w-100"
                         id="mega-menu-item-6604"
                       >
                         <a
@@ -327,7 +338,7 @@ export const Navigation = () => {
                           Our Team
                         </a>
                       </li>
-                      <li
+                      {/* <li
                         className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
                         id="mega-menu-item-6604"
                       >
@@ -337,7 +348,7 @@ export const Navigation = () => {
                         >
                           Testimonials
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li
