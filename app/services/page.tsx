@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './Service.css';
+import TopBar from '../components/Top/top';
+import Wrapper from '../components/Wrapper/wrapper';
+import Footer from '../components/Footer/Footer';
 
 interface ServiceItemProps {
   image: string;
@@ -16,9 +19,50 @@ interface ServiceItemProps {
 const Service: React.FC = () => {
   return (
     <div>
+      <TopBar />
+      <Wrapper />
+
       <section id="services" className="services-section">
         <Container>
-          <h2>Our Services</h2>
+          <h2 className="text-black">Our Services</h2>
+          <p className="services-description">
+            At our financial institution, we pride ourselves on offering a wide
+            array of services tailored to meet the unique financial needs of
+            individuals and businesses alike. Our comprehensive range of
+            financial services is designed to support you at every stage of your
+            financial journey, from securing your dream home to expanding your
+            business, and from planning for your retirement to managing your
+            investments.
+          </p>
+          <p className="services-description">
+            Whether you're looking for a home loan to finance your dream home,
+            an investment loan to explore new opportunities, or a refinance loan
+            to lower your monthly payments, we have the expertise and resources
+            to help you find the perfect solution. Our team of financial
+            advisors is committed to providing personalized advice and
+            solutions, ensuring that you have the tools and information you need
+            to make informed decisions about your financial future.
+          </p>
+          <p className="services-description">
+            Beyond home and investment loans, we also offer a variety of other
+            services to cater to different needs. From construction loans to
+            business loans, commercial loans to personal loans, and car loans to
+            SMSF home loans, our services are designed to support a wide range
+            of financial goals. We believe in empowering our clients with the
+            knowledge and tools they need to achieve their financial objectives,
+            whether they're short-term or long-term.
+          </p>
+          <p className="services-description">
+            At our financial institution, we're not just about providing loans;
+            we're about building relationships. We understand that financial
+            decisions are personal, and we're here to support you every step of
+            the way. Our goal is to make the financial process as smooth and
+            stress-free as possible, so you can focus on what's important to
+            you. Whether you're a first-time homebuyer, a small business owner,
+            or someone looking to secure a loan for a major purchase, we're here
+            to help.
+          </p>
+
           <Row>
             <ServiceItem
               image="/assets/home-loans.jpg"
@@ -81,6 +125,7 @@ const Service: React.FC = () => {
           </Row>
         </Container>
       </section>
+      <Footer />
     </div>
   );
 };

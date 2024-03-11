@@ -34,6 +34,11 @@
   }
 }
 
+.service-item p {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
 .img-container {
   width: 100%;
   height: auto;
@@ -47,6 +52,12 @@
   max-height: 175px;
   object-fit: cover;
   margin-bottom: 25px;
+}
+
+.services-description {
+  color: black;
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 /* Responsive Adjustments */
