@@ -201,29 +201,35 @@ const ContactForm = () => {
             <div className="col-md-12 mb-3">
               {/* Residency Status */}
               <div className="form-group">
-                <label htmlFor="visaResidencyStatus">
-                  What is your Visa/Residency status in Australia? (Required)
+                <label htmlFor="primaryOccupation">
+                  What is your primary occupation type? (Required)
                 </label>
                 <select
                   className="form-control"
-                  id="visaResidencyStatus"
-                  name="visaResidencyStatus"
-                  value={formData.visaResidencyStatus}
+                  id="primaryOccupation"
+                  name="primaryOccupation"
+                  value={formData.primaryOccupation}
                   onChange={handleSelectChange}
                   required
                 >
-                  <option value="">Please Select</option>
-                  <option value="Australian Citizen or Permanent Resident">
-                    Australian Citizen or Permanent Resident
+                  <option value="">Select Enquiry Type</option>
+                  <option value="Medical Doctor or other specific health professional">
+                    Medical Doctor or Other Specific Health Professional
                   </option>
-                  <option value="Applied for permanent residency (on bridging Visa now)">
-                    Applied for permanent residency (on bridging Visa now)
+                  <option value="Registered Nurses">Registered Nurses</option>
+                  <option value="Engineer or IT Professional">
+                    Engineer or IT Professional
                   </option>
-                  <option value="Temporary Residency Visa (491, 482, 489 etc)">
-                    Temporary Residency Visa (491, 482, 489 etc)
+                  <option value="Health Service Workers (Aged Care, Disability Care support etc)">
+                    Health Service Workers (Aged Care, Disability Care support
+                    etc)
                   </option>
-                  <option value="Non-resident or Living in overseas">
-                    Non-resident or Living in overseas
+                  <option value="Hospitality Professional">
+                    Hospitality Professional
+                  </option>
+                  <option value="Self Employed (working as a Company Director, or Sole Trader)">
+                    Self Employed (working as a Company Director, or Sole
+                    Trader)
                   </option>
                 </select>
               </div>
