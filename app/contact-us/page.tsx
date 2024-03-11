@@ -378,7 +378,6 @@ const ContactForm = () => {
         </form>
       </div>
       <Footer />
-      <Bank />
     </div>
   );
 };
