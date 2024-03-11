@@ -25,7 +25,7 @@ interface FormData {
   message: string;
 }
 
-const ContactForm = () => {
+export const Form = () => {
   const [formData, setFormData] = useState<FormData>({
     experience: '',
     situation: '',
@@ -65,10 +65,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="connect-with-us">
-      <TopBar />
-      <Wrapper />
-      <h2 className="text-center mt-5">Connect With Us</h2>
+    <div className="">
+      <h2 className="text-black text-center mt-5 font-bold">Connect With Us</h2>
       <div className="container mt-5 form-container">
         <form onSubmit={handleSubmit}>
           <div className="row">
@@ -383,6 +381,16 @@ const ContactForm = () => {
           </button>
         </form>
       </div>
+    </div>
+  );
+};
+
+const ContactForm = () => {
+  return (
+    <div className="connect-with-us">
+      <TopBar />
+      <Wrapper />
+      <Form />
       <Footer />
     </div>
   );
