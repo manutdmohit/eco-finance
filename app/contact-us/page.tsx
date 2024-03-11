@@ -104,7 +104,7 @@ const ContactForm = () => {
             <div className="col-md-6 mb-3">
               <div className="form-group">
                 <label htmlFor="situation">
-                  What is your situation? (Required)
+                  What best describes your situation? (Required)
                 </label>
                 <select
                   className="form-control"
