@@ -6,7 +6,7 @@ const Process = () => {
     <section className="process-section">
       <div className="container">
         <h2 className="section-title text-white mb-2">
-          How Eco Finance & Home Loans Work?
+          How Eco Finance & Home Loans Works?
         </h2>
 
         <div className="process-steps">
