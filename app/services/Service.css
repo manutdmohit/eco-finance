@@ -1,0 +1,80 @@
+/* Service.css */
+
+/* Services Section */
+.services-section {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Service Item */
+.service-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item .description-container {
+  h3,
+  p {
+    color: black;
+  }
+}
+
+.img-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon {
+  max-width: 100%;
+  max-height: 175px;
+  object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 24px;
+  }
+
+  .service-item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .services-section h2 {
+    font-size: 30px;
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-section h2 {
+    font-size: 36px;
+  }
+
+  .service-item {
+    margin-bottom: 20px;
+  }
+}
