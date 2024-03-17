@@ -1,0 +1,27 @@
+.refinance {
+  margin-right: 10px !important;
+}
+
+@media (max-width: 992px) {
+  .refinance-buy-home {
+    flex-direction: column;
+  }
+
+  .refinance {
+    width: 50vw;
+    margin: auto !important;
+  }
+
+  .buy-home {
+    margin-top: 20px !important;
+    width: 50vw;
+    margin: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .refinance,
+  .buy-home {
+    width: 80vw !important;
+  }
+}

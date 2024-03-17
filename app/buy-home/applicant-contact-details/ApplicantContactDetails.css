@@ -1,0 +1,36 @@
+.contact-form__form {
+  width: 100%;
+  /* max-width: 500px; */
+  max-width: 50vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+.input-control {
+  width: auto !important;
+}
+
+.contact-form__form .form-label {
+  width: 50vw;
+}
+
+.contact-form__form #phone {
+  font-size: 1rem !important;
+}
+
+.contact-form__submit-btn {
+  width: 100%;
+}
+
+.contact-form__submit-btn {
+  max-width: 400px !important;
+  padding: 10px;
+}

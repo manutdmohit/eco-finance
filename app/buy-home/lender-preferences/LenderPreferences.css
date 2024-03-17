@@ -1,0 +1,23 @@
+.loan-preference-form-container {
+  background-color: rgba(18, 19, 26, 0.479);
+}
+
+.lender-preference {
+  width: 50vw;
+}
+
+.form-check-label {
+  color: black;
+  font-size: 1.4rem;
+}
+
+.form-check-input {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  /* .options {
+    width: 50vw !important;
+    margin: auto;
+  } */
+}

@@ -397,16 +397,21 @@ const Wrapper = () => {
       <div className="header-2 sticky-header">
         <div className="container">
           <div className="row">
-            <div className="col-md-3 col-sm-12 col-xs-6">
+            <div className="col-md-2 col-sm-12 col-xs-6">
               {/* <!-- logo --> */}
               <div className="logo">
                 <a href="/">
-                  <img src="./logo.png" alt="Eco Finance And Home Loans" />
+                  <img
+                    src="
+                  https://res.cloudinary.com/manutdmohit/image/upload/ECO_FINANCE_LOGO_ryqruv.png
+                  "
+                    alt="Eco Finance And Home Loans"
+                  />
                 </a>
               </div>
             </div>
             {/* <!-- logo --> */}
-            <div className="col-md-9 text-right d-flex justify-content-end align-items-center">
+            <div className="col-md-10 text-right d-flex justify-content-end align-items-center">
               <div className="header-action ">
                 <a
                   href="/contact-us/"
@@ -421,10 +426,10 @@ const Wrapper = () => {
                   Get A Callback
                 </a>{' '}
               </div>
-              <div className="test"></div>
             </div>
           </div>
         </div>
+
         <Navigation />
       </div>
     </div>

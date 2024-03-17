@@ -1,0 +1,18 @@
+.loan-amount-placeholder {
+  width: 50vw !important;
+  margin: auto;
+  outline: none;
+}
+
+.btn-loan-amount {
+  width: 50vw !important;
+  margin: auto;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .loan-amount-placeholder,
+  .btn-loan-amount {
+    width: 25vw !important;
+  }
+}

@@ -1,0 +1,82 @@
+.contact-form__form {
+  width: 100%;
+  /* max-width: 500px; */
+  max-width: 50vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+.input-control {
+  width: auto !important;
+}
+
+.contact-form__form .form-label {
+  width: 50vw;
+}
+
+.contact-form__form #phone {
+  font-size: 1rem !important;
+}
+
+.contact-form__submit-btn {
+  width: 100%;
+}
+
+.contact-form__submit-btn {
+  max-width: 400px !important;
+  padding: 10px;
+}
+
+/* Customize the toast container */
+.Toastify__toast-container {
+  top: 20px; /* Adjust the position from the top */
+  right: 20px; /* Adjust the position from the right */
+  bottom: auto; /* Ensure it doesn't stick to the bottom */
+  left: auto; /* Ensure it doesn't stick to the left */
+}
+
+/* Customize the toast itself */
+.Toastify__toast {
+  background-color: #4caf50; /* Change the background color */
+  color: white; /* Change the text color */
+  border-radius: 5px; /* Adjust the border radius */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+/* Customize the progress bar */
+.Toastify__progress-bar {
+  background: #fff; /* Change the progress bar color */
+}
+
+/* Customize the close button */
+.Toastify__close-button {
+  color: #fff; /* Change the close button color */
+}
+
+/* Customize the success toast */
+.Toastify__toast--success {
+  background-color: #4caf50; /* Change the background color for success toasts */
+}
+
+/* Customize the error toast */
+.Toastify__toast--error {
+  background-color: #f44336; /* Change the background color for error toasts */
+}
+
+/* Customize the info toast */
+.Toastify__toast--info {
+  background-color: #2196f3; /* Change the background color for info toasts */
+}
+
+/* Customize the warning toast */
+.Toastify__toast--warning {
+  background-color: #ff9800; /* Change the background color for warning toasts */
+}

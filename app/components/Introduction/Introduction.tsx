@@ -19,13 +19,14 @@ import {
 
 import './Introduction.css'; // Import custom CSS for additional styling
 import BackgroundAnimation from '../BackgroundAnimation';
+import RefinanceAndBuyHome from '../RefinanceAndBuyHome/RefinanceAndBuyHome';
 
 const Introduction = () => {
   return (
     <section id="home" className="hero-section">
       <Container>
         <Row>
-          <Col md={6}>
+          <Col md={7}>
             <h1 className="hero-heading">
               Welcome to Eco Finance &amp; Home Loans
             </h1>
@@ -49,11 +50,9 @@ const Introduction = () => {
               Our experienced team provides personalized support and guidance at
               every step of your journey.
             </p>
-            <Button variant="primary" size="lg" className="hero-button">
-              Contact Us
-            </Button>
+            <RefinanceAndBuyHome />
           </Col>
-          <Col md={6}>
+          <Col md={5} className="m-auto">
             <BackgroundAnimation />
           </Col>
         </Row>

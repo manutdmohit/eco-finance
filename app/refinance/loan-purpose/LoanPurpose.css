@@ -1,0 +1,12 @@
+.btn-purpose {
+  width: 50vw !important;
+  margin: auto !important;
+  padding: 1rem !important;
+  overflow: hidden;
+}
+
+@media (max-width: 525px) {
+  .btn-purpose {
+    width: 80vw !important;
+  }
+}

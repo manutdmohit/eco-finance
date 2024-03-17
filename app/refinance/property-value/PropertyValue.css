@@ -1,0 +1,22 @@
+.property-amount-placeholder {
+  width: 50vw !important;
+  margin: auto;
+  outline: none;
+}
+
+.btn-property-amount {
+  width: 50vw !important;
+  margin: auto;
+  outline: none;
+}
+
+.message {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  .property-amount-placeholder,
+  .btn-property-amount {
+    width: 25vw !important;
+  }
+}
