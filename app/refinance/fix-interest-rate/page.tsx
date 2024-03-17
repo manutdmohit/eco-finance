@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { Switch } from 'antd';
@@ -11,6 +11,21 @@ import Wrapper from '@/app/components/Wrapper/wrapper';
 import Footer from '@/app/components/Footer/Footer';
 
 const YourRateForm: React.FC = () => {
+  return (
+    <div>
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const [loanAmount, setLoanAmount] = useState<string>('');
@@ -70,9 +85,7 @@ const YourRateForm: React.FC = () => {
   };
 
   return (
-    <div>
-      <TopBar />
-      <Wrapper />
+    <>
       <div className="main-container">
         <form onSubmit={handleSubmit} className="refinance-fix-interest-rate">
           <div className="container py-16 mx-auto max-w-[50%] sm:max-w-[66.6667%] md:max-w-[75%] lg:max-w-[60%] xl:max-w-[50%]">
@@ -180,8 +193,7 @@ const YourRateForm: React.FC = () => {
           </div>
         </form>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
+import React, { Suspense } from 'react';
+
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { Row, Col, Button } from 'react-bootstrap';
@@ -13,6 +13,21 @@ import Footer from '@/app/components/Footer/Footer';
 import '../../refinance/loan-purpose/LoanPurpose.css';
 
 const EmploymentType = () => {
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const params = useSearchParams();
@@ -26,11 +41,8 @@ const EmploymentType = () => {
   const propertyUse = params.get('propertyUse');
   const choosingALender = params.get('choosingALender');
   const creditHistory = params.get('creditHistory');
-
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
+    <>
       <h1 className="text-center text-black mt-4">
         What is your employment type?
       </h1>
@@ -93,9 +105,7 @@ const EmploymentType = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

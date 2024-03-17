@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import '../../refinance/loan-amount/LoanAmount.css';
@@ -10,6 +10,21 @@ import Wrapper from '@/app/components/Wrapper/wrapper';
 import Footer from '@/app/components/Footer/Footer';
 
 const PurchaseAmountForm: React.FC = () => {
+  return (
+    <div>
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const params = useSearchParams();
@@ -33,11 +48,8 @@ const PurchaseAmountForm: React.FC = () => {
     // Use router.push with the constructed URL:
     router.push(url);
   };
-
   return (
-    <div className="">
-      <TopBar />
-      <Wrapper />
+    <>
       <form className="bg-light py-4 px-3 px-md-5" onSubmit={handleSubmit}>
         <div className="container">
           <div className="text-center mb-3">
@@ -62,8 +74,7 @@ const PurchaseAmountForm: React.FC = () => {
           </div>
         </div>
       </form>
-      <Footer />
-    </div>
+    </>
   );
 };
 

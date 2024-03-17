@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import { Button, Row, Col } from 'react-bootstrap';
 
@@ -12,6 +12,21 @@ import Footer from '@/app/components/Footer/Footer';
 import './LoanPurpose.css';
 
 const LoanPurpose = () => {
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const params = useSearchParams();
@@ -23,10 +38,7 @@ const LoanPurpose = () => {
   const expiryDate = params.get('expiryDate');
 
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
+    <>
       <h1 className="text-center text-black">Why are you refinancing? </h1>
       <Row className="justify-content-center overflow-hidden">
         <Col
@@ -105,9 +117,7 @@ const LoanPurpose = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

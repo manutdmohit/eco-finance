@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Row, Col, Button, Form } from 'react-bootstrap';
 
@@ -12,6 +12,21 @@ import Footer from '@/app/components/Footer/Footer';
 import './LenderPreferences.css';
 
 const LenderPreferences: React.FC = () => {
+  return (
+    <div className="overflow-hidden ">
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
   const params = useSearchParams();
 
@@ -22,16 +37,6 @@ const LenderPreferences: React.FC = () => {
   const expiryDate = params.get('expiryDate');
   const purpose = params.get('purpose');
   const propertyUse = params.get('propertyUse');
-
-  console.log({
-    type,
-    loanAmount,
-    rate,
-    selectedOption,
-    expiryDate,
-    purpose,
-    propertyUse,
-  });
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
@@ -56,9 +61,7 @@ const LenderPreferences: React.FC = () => {
   };
 
   return (
-    <div className="overflow-hidden ">
-      <TopBar />
-      <Wrapper />
+    <>
       <h2 className="text-center text-black mt-4">
         Are any of the following important to you when choosing a lender?
       </h2>
@@ -109,9 +112,7 @@ const LenderPreferences: React.FC = () => {
           </Row>
         </Form>
       </div>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
