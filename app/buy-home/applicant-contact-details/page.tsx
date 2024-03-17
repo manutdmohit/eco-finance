@@ -21,7 +21,9 @@ const ContactForm: React.FC = () => {
       <TopBar />
       <Wrapper />
 
-      <SearchParamsProvider />
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
 
       <Footer />
     </div>
