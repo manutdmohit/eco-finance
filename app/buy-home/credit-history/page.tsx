@@ -1,7 +1,7 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import Link from 'next/link';
+
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import { Row, Col, Button } from 'react-bootstrap';
@@ -61,16 +61,14 @@ const SearchParamsProvider = () => {
           <Button
             variant="primary"
             className="btn-purpose"
-            onClick={() => (
-              <Suspense>
-                router.push( `/buy-home/employment-type?type=${type}
+            onClick={() =>
+              router.push(`/buy-home/employment-type?type=${type}
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
                 &buyingSituation=${buyingSituation}&firstHomeBuyer=$
                 {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
                 {propertyUse}&choosingALender=${choosingALender}&creditHistory=
-                Excellent - No issues` )
-              </Suspense>
-            )}
+                Excellent - No issues`)
+            }
           >
             Excellent - No issues
           </Button>
@@ -85,16 +83,14 @@ const SearchParamsProvider = () => {
           <Button
             variant="primary"
             className="btn-purpose"
-            onClick={() => (
-              <Suspense>
-                router.push( `/buy-home/employment-type?type=${type}
+            onClick={() =>
+              router.push(`/buy-home/employment-type?type=${type}
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
                 &buyingSituation=${buyingSituation}&firstHomeBuyer=$
                 {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
                 {propertyUse}&choosingALender=${choosingALender}
-                &creditHistory=Average - Paid default` )
-              </Suspense>
-            )}
+                &creditHistory=Average - Paid default`)
+            }
           >
             Average - Paid default
           </Button>
@@ -109,16 +105,14 @@ const SearchParamsProvider = () => {
           <Button
             variant="primary"
             className="btn-purpose"
-            onClick={() => (
-              <Suspense>
-                router.push( `/buy-home/employment-type?type=${type}
+            onClick={() =>
+              router.push(`/buy-home/employment-type?type=${type}
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
                 &buyingSituation=${buyingSituation}&firstHomeBuyer=$
                 {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
                 {propertyUse}&choosingALender=${choosingALender}&creditHistory=
-                Fair - Let's talk` )
-              </Suspense>
-            )}
+                Fair - Let's talk`)
+            }
           >
             Fair - Let's talk
           </Button>
@@ -133,16 +127,14 @@ const SearchParamsProvider = () => {
           <Button
             variant="primary"
             className="btn-purpose"
-            onClick={() => (
-              <Suspense>
-                router.push( `/buy-home/employment-type?type=${type}
+            onClick={() =>
+              router.push(`/buy-home/employment-type?type=${type}
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
                 &buyingSituation=${buyingSituation}&firstHomeBuyer=$
                 {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
                 {propertyUse}&choosingALender=${choosingALender}&creditHistory=I
-                don't know` )
-              </Suspense>
-            )}
+                don't know`)
+            }
           >
             I don't know
           </Button>
