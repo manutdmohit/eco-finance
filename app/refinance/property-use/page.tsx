@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -13,6 +13,20 @@ import Footer from '@/app/components/Footer/Footer';
 import '../loan-purpose/LoanPurpose.css';
 
 const PropertyUse = () => {
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+      <Suspense fallback={<div>Loading...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const params = useSearchParams();
@@ -24,9 +38,7 @@ const PropertyUse = () => {
   const expiryDate = params.get('expiryDate');
 
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
+    <>
       <h1 className="text-center text-black">
         How will this property be used?
       </h1>
@@ -70,9 +82,7 @@ const PropertyUse = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
