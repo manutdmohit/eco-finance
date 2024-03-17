@@ -1,19 +1,31 @@
 'use client';
 
-import React from 'react';
-
+import React, { Suspense } from 'react';
 import { Button, Row, Col } from 'react-bootstrap';
-
 import { useRouter, useSearchParams } from 'next/navigation';
 import TopBar from '@/app/components/Top/top';
 import Wrapper from '@/app/components/Wrapper/wrapper';
 import Footer from '@/app/components/Footer/Footer';
-
 import '../../refinance/loan-purpose/LoanPurpose.css';
 
 const BuyingPurpose = () => {
   const router = useRouter();
 
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+      <Suspense fallback={<div>Loading...</div>}>
+        {/* Wrap useSearchParams in a Suspense boundary */}
+        <SearchParamsProvider />
+      </Suspense>
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
+  const router = useRouter();
   const params = useSearchParams();
 
   const type = params.get('type');
@@ -22,10 +34,7 @@ const BuyingPurpose = () => {
   const buyingSituation = params.get('buyingSituation');
 
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
+    <>
       <h1 className="text-center text-black mt-4">
         Are you a first home buyer?
       </h1>
@@ -68,9 +77,7 @@ const BuyingPurpose = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
