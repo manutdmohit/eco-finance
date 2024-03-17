@@ -1,19 +1,29 @@
 'use client';
 
-import React from 'react';
-
+import React, { Suspense } from 'react';
 import { Button, Row, Col } from 'react-bootstrap';
-
 import { useRouter, useSearchParams } from 'next/navigation';
 import TopBar from '@/app/components/Top/top';
 import Wrapper from '@/app/components/Wrapper/wrapper';
 import Footer from '@/app/components/Footer/Footer';
-
 import '../../refinance/loan-purpose/LoanPurpose.css';
 
 const PropertyStatus = () => {
-  const router = useRouter();
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+      <Suspense fallback={<div>Loading...</div>}>
+        {/* Wrap useSearchParams in a Suspense boundary */}
+        <SearchParamsProvider />
+      </Suspense>
+      <Footer />
+    </div>
+  );
+};
 
+const SearchParamsProvider = () => {
+  const router = useRouter();
   const params = useSearchParams();
 
   const type = params.get('type');
@@ -23,10 +33,7 @@ const PropertyStatus = () => {
   const firstHomeBuyer = params.get('firstHomeBuyer');
 
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
+    <>
       <h1 className="text-center text-black mt-4">
         What kind of property are you looking to buy?
       </h1>
@@ -61,9 +68,7 @@ const PropertyStatus = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/buy-home/property-use?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}
-                propertyStatus=Established Home
-                `
+                `/buy-home/property-use?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=Established Home`
               )
             }
           >
@@ -82,9 +87,7 @@ const PropertyStatus = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/buy-home/property-use?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}
-                propertyStatus=Vacant land to build on
-                `
+                `/buy-home/property-use?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=Vacant land to build on`
               )
             }
           >
@@ -92,9 +95,7 @@ const PropertyStatus = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
