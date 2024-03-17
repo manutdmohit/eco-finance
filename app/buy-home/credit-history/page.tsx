@@ -27,99 +27,117 @@ const CreditHistory = () => {
   const choosingALender = params.get('choosingALender');
 
   return (
-    <Suspense>
-      <div className="overflow-hidden">
-        <TopBar />
-        <Wrapper />
-        <h1 className="text-center text-black mt-4">
-          What's your credit history?
-        </h1>
-        <p className="text-center text-black">
-          {' '}
-          This helps us match the best loan for your scenario
-        </p>
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+      <h1 className="text-center text-black mt-4">
+        What's your credit history?
+      </h1>
+      <p className="text-center text-black">
+        {' '}
+        This helps us match the best loan for your scenario
+      </p>
 
-        <Row className="justify-content-center overflow-hidden mt-4">
-          <Col
-            xs={12}
-            md={12}
-            lg={12}
-            className="mb-3 d-flex align-items-stretch"
+      <Row className="justify-content-center overflow-hidden mt-4">
+        <Col
+          xs={12}
+          md={12}
+          lg={12}
+          className="mb-3 d-flex align-items-stretch"
+        >
+          <Button
+            variant="primary"
+            className="btn-purpose"
+            onClick={() => (
+              <Suspense>
+                router.push( `/buy-home/employment-type?type=${type}
+                &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
+                &buyingSituation=${buyingSituation}&firstHomeBuyer=$
+                {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
+                {propertyUse}&choosingALender=${choosingALender}&creditHistory=
+                Excellent - No issues` )
+              </Suspense>
+            )}
           >
-            <Button
-              variant="primary"
-              className="btn-purpose"
-              onClick={() =>
-                router.push(
-                  `/buy-home/employment-type?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=  Excellent - No issues`
-                )
-              }
-            >
-              Excellent - No issues
-            </Button>
-          </Col>
+            Excellent - No issues
+          </Button>
+        </Col>
 
-          <Col
-            xs={12}
-            md={12}
-            lg={12}
-            className="mb-3 d-flex align-items-stretch"
+        <Col
+          xs={12}
+          md={12}
+          lg={12}
+          className="mb-3 d-flex align-items-stretch"
+        >
+          <Button
+            variant="primary"
+            className="btn-purpose"
+            onClick={() => (
+              <Suspense>
+                router.push( `/buy-home/employment-type?type=${type}
+                &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
+                &buyingSituation=${buyingSituation}&firstHomeBuyer=$
+                {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
+                {propertyUse}&choosingALender=${choosingALender}
+                &creditHistory=Average - Paid default` )
+              </Suspense>
+            )}
           >
-            <Button
-              variant="primary"
-              className="btn-purpose"
-              onClick={() =>
-                router.push(
-                  `/buy-home/employment-type?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=Average - Paid default`
-                )
-              }
-            >
-              Average - Paid default
-            </Button>
-          </Col>
+            Average - Paid default
+          </Button>
+        </Col>
 
-          <Col
-            xs={12}
-            md={12}
-            lg={12}
-            className="mb-3 d-flex align-items-stretch"
+        <Col
+          xs={12}
+          md={12}
+          lg={12}
+          className="mb-3 d-flex align-items-stretch"
+        >
+          <Button
+            variant="primary"
+            className="btn-purpose"
+            onClick={() => (
+              <Suspense>
+                router.push( `/buy-home/employment-type?type=${type}
+                &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
+                &buyingSituation=${buyingSituation}&firstHomeBuyer=$
+                {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
+                {propertyUse}&choosingALender=${choosingALender}&creditHistory=
+                Fair - Let's talk` )
+              </Suspense>
+            )}
           >
-            <Button
-              variant="primary"
-              className="btn-purpose"
-              onClick={() =>
-                router.push(
-                  `/buy-home/employment-type?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory= Fair - Let's talk`
-                )
-              }
-            >
-              Fair - Let's talk
-            </Button>
-          </Col>
+            Fair - Let's talk
+          </Button>
+        </Col>
 
-          <Col
-            xs={12}
-            md={12}
-            lg={12}
-            className="mb-3 d-flex align-items-stretch"
+        <Col
+          xs={12}
+          md={12}
+          lg={12}
+          className="mb-3 d-flex align-items-stretch"
+        >
+          <Button
+            variant="primary"
+            className="btn-purpose"
+            onClick={() => (
+              <Suspense>
+                router.push( `/buy-home/employment-type?type=${type}
+                &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
+                &buyingSituation=${buyingSituation}&firstHomeBuyer=$
+                {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
+                {propertyUse}&choosingALender=${choosingALender}&creditHistory=I
+                don't know` )
+              </Suspense>
+            )}
           >
-            <Button
-              variant="primary"
-              className="btn-purpose"
-              onClick={() =>
-                router.push(
-                  `/buy-home/employment-type?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=I don't know`
-                )
-              }
-            >
-              I don't know
-            </Button>
-          </Col>
-        </Row>
+            I don't know
+          </Button>
+        </Col>
+      </Row>
 
-        <Footer />
-      </div>
-    </Suspense>
+      <Footer />
+    </div>
   );
 };
 
