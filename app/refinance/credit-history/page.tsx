@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -13,6 +13,21 @@ import Footer from '@/app/components/Footer/Footer';
 import '../loan-purpose/LoanPurpose.css';
 
 const CreditHistory = () => {
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const params = useSearchParams();
@@ -25,11 +40,8 @@ const CreditHistory = () => {
   const purpose = params.get('purpose');
   const propertyUse = params.get('propertyUse');
   const choosingALender = params.get('choosingALender');
-
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
+    <>
       <h1 className="text-center text-black mt-4">
         What's your credit history?
       </h1>
@@ -116,9 +128,7 @@ const CreditHistory = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,10 +1,10 @@
 'use client';
 'use strict'; // Use 'use strict' for better JavaScript error handling
 
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Ensure the CSS is imported for toast styling
 
 import Footer from '@/app/components/Footer/Footer';
@@ -14,6 +14,21 @@ import Wrapper from '@/app/components/Wrapper/wrapper';
 import './ApplicantContactDetails.css';
 
 const ContactForm: React.FC = () => {
+  return (
+    <div className="contact-form overflow-hidden">
+      <ToastContainer />
+
+      <TopBar />
+      <Wrapper />
+
+      <SearchParamsProvider />
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const [name, setName] = useState<string>('');
@@ -50,11 +65,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="contact-form overflow-hidden">
-      <ToastContainer />
-
-      <TopBar />
-      <Wrapper />
+    <>
       <div className="container mt-4">
         <h2 className="text-center text-black">
           One last thing, please provide the following details
@@ -120,8 +131,7 @@ const ContactForm: React.FC = () => {
           </button>
         </form>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

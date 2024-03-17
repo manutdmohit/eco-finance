@@ -13,6 +13,21 @@ import Footer from '@/app/components/Footer/Footer';
 import '../../refinance/loan-purpose/LoanPurpose.css';
 
 const CreditHistory = () => {
+  return (
+    <div className="overflow-hidden">
+      <TopBar />
+      <Wrapper />
+
+      <Suspense fallback={<div>Loading ...</div>}>
+        <SearchParamsProvider />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SearchParamsProvider = () => {
   const router = useRouter();
 
   const params = useSearchParams();
@@ -27,9 +42,7 @@ const CreditHistory = () => {
   const choosingALender = params.get('choosingALender');
 
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
+    <>
       <h1 className="text-center text-black mt-4">
         What's your credit history?
       </h1>
@@ -135,9 +148,7 @@ const CreditHistory = () => {
           </Button>
         </Col>
       </Row>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

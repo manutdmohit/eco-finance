@@ -8,8 +8,6 @@ import Wrapper from '@/app/components/Wrapper/wrapper';
 import Footer from '@/app/components/Footer/Footer';
 
 const DepositAmountForm: React.FC = () => {
-  const router = useRouter();
-
   return (
     <div className="">
       <TopBar />
