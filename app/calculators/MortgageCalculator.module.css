@@ -26,6 +26,7 @@
 .inputGroup {
   display: flex; /* Added */
   align-items: center; /* Added */
+  flex-wrap: wrap;
   margin-bottom: 15px;
 }
 
