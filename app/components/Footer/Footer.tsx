@@ -21,11 +21,6 @@ const Footer = () => {
                         Home
                       </a>
                     </li>
-                    <li id="menu-item-143" className="menu-item">
-                      <a rel="privacy-policy" href="/privacy-policy/">
-                        Privacy Policy
-                      </a>
-                    </li>
                     <li id="menu-item-144" className="menu-item ">
                       <a href="/complaints-and-concerns/">
                         Complaints and Concerns
@@ -51,7 +46,9 @@ const Footer = () => {
                       <a href="/terms-and-conditions/">Terms and Conditions</a>
                     </li>
                     <li id="menu-item-153" className="menu-item">
-                      <a href="/credit-guide">Credit Guide</a>
+                      <a href="/credit-guide-and-privacy-policy">
+                        Credit Guide and Privacy Policy
+                      </a>
                     </li>
                     <li
                       id="menu-item-150"
