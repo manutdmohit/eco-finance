@@ -34,3 +34,9 @@
   max-width: 400px !important;
   padding: 10px;
 }
+
+@media (max-width: 575px) {
+  .form-group {
+    width: 80vw;
+  }
+}

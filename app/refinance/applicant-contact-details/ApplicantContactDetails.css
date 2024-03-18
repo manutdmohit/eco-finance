@@ -80,3 +80,9 @@
 .Toastify__toast--warning {
   background-color: #ff9800; /* Change the background color for warning toasts */
 }
+
+@media (max-width: 575px) {
+  .form-group {
+    width: 80vw;
+  }
+}
