@@ -24,7 +24,7 @@
   }
 
   .btn-submit {
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: 1rem !important;
+    padding: 1rem !important;
   }
 }
