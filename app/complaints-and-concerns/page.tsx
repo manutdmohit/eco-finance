@@ -44,8 +44,8 @@ const ComplaintsAndConcerns = () => {
                 </p>
                 <p className="text-black">
                   You can email feedback to us at{' '}
-                  <a href="mailto:ecofinance23@gmail.com">
-                    ecofinance23@gmail.com
+                  <a href="mailto:info@ecofinanceandhomeloans.com.au">
+                    info@ecofinanceandhomeloans.com.au
                   </a>{' '}
                   and we would be delighted to hear from you.
                 </p>
@@ -71,8 +71,8 @@ const ComplaintsAndConcerns = () => {
                   <li className="text-black">Mobile: 0421561785</li>
                   <li className="text-black">
                     Email:{' '}
-                    <a href="mailto:ecofinance23@gmail.com">
-                      ecofinance23@gmail.com
+                    <a href="mailto:info@ecofinanceandhomeloans.com.au">
+                      info@ecofinanceandhomeloans.com.au
                     </a>
                   </li>
                 </ul>
