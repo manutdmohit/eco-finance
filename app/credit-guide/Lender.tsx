@@ -13,12 +13,14 @@ const Lenders = () => {
       {data.map((item, index) => (
         <Row
           key={index}
-          className="border-top border-bottom border-white d-flex justify-content-center align-items-center row"
+          className="border-top border-bottom border-black d-flex justify-content-center align-items-center row"
         >
-          <Col className="text-center">{item.company}</Col>
-          <Col className="text-center">{item.bank}</Col>
-          <Col className="text-center">{item.direct_bank}</Col>
-          <Col className="text-center">{item.assistance}</Col>
+          <Col className="text-center lenders-list-text">{item.company}</Col>
+          <Col className="text-center lenders-list-text">{item.bank}</Col>
+          <Col className="text-center lenders-list-text">
+            {item.direct_bank}
+          </Col>
+          <Col className="text-center lenders-list-text">{item.assistance}</Col>
         </Row>
       ))}
     </Container>

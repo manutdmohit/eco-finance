@@ -6,7 +6,6 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './CreditGuide.css';
 import TopBar from '../components/Top/top';
 import Wrapper from '../components/Wrapper/wrapper';
-import Footer from '../components/Footer/Footer';
 import Lenders from './Lender';
 
 const CreateGuidePage = () => {
@@ -45,12 +44,12 @@ const CreateGuidePage = () => {
               </p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">AUTHORIZED CREDIT REPRESENTATIVE</p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Advisor Name</p>
             </Col>
@@ -58,7 +57,7 @@ const CreateGuidePage = () => {
               <p className="my-auto">Anil Poudel</p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Authorized Credit Representative Number</p>
             </Col>
@@ -66,7 +65,7 @@ const CreateGuidePage = () => {
               <p className="my-auto">555483</p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Email</p>
             </Col>
@@ -74,7 +73,7 @@ const CreateGuidePage = () => {
               <p className="my-auto">ecofinance23@gmail.com</p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Phone</p>
             </Col>
@@ -82,7 +81,7 @@ const CreateGuidePage = () => {
               <p className="my-auto">+61 421 561 785</p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white mb-4 d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black mb-4 d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Address</p>
             </Col>
@@ -92,12 +91,12 @@ const CreateGuidePage = () => {
               </p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <h4 className="my-auto">CREDIT LICENSE DETAILS</h4>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Licensee Name</p>
             </Col>
@@ -107,7 +106,7 @@ const CreateGuidePage = () => {
               </p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center ">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center ">
             <Col>
               <p className="my-auto">Australian Credit License Number (ACL)</p>
             </Col>
@@ -116,7 +115,7 @@ const CreateGuidePage = () => {
               <p className="my-auto">486112</p>
             </Col>
           </Row>
-          <Row className="border-top border-bottom border-white d-flex justify-content-center align-items-center">
+          <Row className="border-top border-bottom border-black d-flex justify-content-center align-items-center">
             <Col>
               <p className="my-auto">Licensee ABN</p>
             </Col>
@@ -274,7 +273,7 @@ const CreateGuidePage = () => {
             the broker is unable to provide information in respect to the
             previous year's top 6 lenders.
           </p>
-          <Row className="border-top border-bottom  border-white ">
+          <Row className="border-top border-bottom  border-black ">
             <Col>
               <h5 className="text-center mb-0">LENDERS</h5>
             </Col>
@@ -396,8 +395,6 @@ const CreateGuidePage = () => {
           </p>
         </Container>
       </div>
-
-      <Footer />
     </div>
   );
 };
