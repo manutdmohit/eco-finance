@@ -95,7 +95,7 @@ const SearchParamsProvider = () => {
             {selectedOptions.length > 0 ? (
               <Button
                 variant="primary"
-                className="mt-3 mb-4 p-3 fs-4 w-2"
+                className="mt-3 mb-4 p-4 fs-5 w-2 btn-submit"
                 onClick={handleSubmit}
               >
                 NEXT
@@ -103,7 +103,7 @@ const SearchParamsProvider = () => {
             ) : (
               <Button
                 variant="primary"
-                className="mt-3 mb-4 p-3 fs-4"
+                className="mt-3 mb-4 p-4 fs-5 btn-submit"
                 onClick={handleSubmit}
               >
                 No Thanks, NEXT

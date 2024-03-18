@@ -1,5 +1,5 @@
 .loan-preference-form-container {
-  background-color: rgba(18, 19, 26, 0.479);
+  background-color: rgb(134 138 167 / 48%);
   height: 70vh;
   padding: 10px;
   margin-top: 25px;
@@ -19,8 +19,12 @@
 }
 
 @media (max-width: 768px) {
-  /* .options {
-    width: 50vw !important;
-    margin: auto;
-  } */
+  .loan-preference-form-container {
+    height: 100vh;
+  }
+
+  .btn-submit {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
