@@ -1,3 +1,9 @@
+.loan-amount-container {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
 .loan-amount-placeholder {
   width: 50vw !important;
   margin: auto;
