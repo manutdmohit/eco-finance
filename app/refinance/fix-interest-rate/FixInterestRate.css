@@ -1,28 +1,7 @@
-/* .refinance-fix-interest-rate {
-  background-color: black;
-} */
-
-/* .provide-rate {
-  color: red !important;
+.main-container {
+  height: 60vh;
+  overflow: none;
 }
-
-.button-toggle {
-  border: none;
-}
-
-.button-toggle .toggle-button {
-  color: red;
-  font-size: 2rem;
-
-  border: none;
-  color: green !important;
-
-  fill: green !important;
-} */
-
-/* FixInterestRate.css */
-
-/* General styles */
 
 .form-control {
   padding: 0.5rem;

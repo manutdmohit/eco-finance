@@ -12,7 +12,7 @@ import Footer from '@/app/components/Footer/Footer';
 
 const YourRateForm: React.FC = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <TopBar />
       <Wrapper />
 
@@ -113,7 +113,6 @@ const SearchParamsProvider = () => {
 
                   <div className="d-flex align-items-center">
                     <Switch onChange={onChange} />
-
                     <p className="text-black skip">skip</p>
                   </div>
                   {!skip && submitted && !rate && (
@@ -152,14 +151,14 @@ const SearchParamsProvider = () => {
                     No
                   </label>
                 </div>
-                <button
+                {/* <button
                   type="button"
                   className="flex items-center mt-2 mb-4 text-[#00c0a5]"
                 >
                   <div className="ml-1 text-sm font-bold text-black">
                     Why do we ask this?
                   </div>
-                </button>
+                </button> */}
 
                 {submitted && !selectedOption && (
                   <p className="provide-rate">Please select interest rate</p>
@@ -185,7 +184,7 @@ const SearchParamsProvider = () => {
             <div className="mt-16 flex flex-col items-center gap-y-6">
               <button
                 type="submit"
-                className="w-full sm:w-[66%] btn btn-primary submit-button"
+                className="w-full sm:w-[66%] btn btn-primary submit-button mt-4"
               >
                 Next
               </button>

@@ -61,7 +61,7 @@ const SearchParamsProvider = () => {
   };
 
   return (
-    <>
+    <div className="loan-preference-form-container">
       <h2 className="text-center text-black mt-4">
         Are any of the following important to you when choosing a lender?
       </h2>
@@ -69,7 +69,7 @@ const SearchParamsProvider = () => {
         You can choose one or more options or can skip
       </p>
 
-      <div className="loan-preference-form-container d-flex flex-row justify-content-center ">
+      <div className="d-flex flex-row justify-content-center ">
         <Form onSubmit={handleSubmit}>
           <Row className=" mt-4 lender-preference">
             {['Offset/Redraw', 'Fixed rate', 'Major lender', 'Mobile app'].map(
@@ -112,7 +112,7 @@ const SearchParamsProvider = () => {
           </Row>
         </Form>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -11,7 +11,7 @@ import Footer from '@/app/components/Footer/Footer';
 
 const LoanAmountForm: React.FC = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <TopBar />
       <Wrapper />
       <Suspense fallback={<div>Loading ...</div>}>

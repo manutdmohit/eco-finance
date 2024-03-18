@@ -1,4 +1,6 @@
-.loan-amount-container {
+.loan-amount-container,
+.purchase-price-container,
+.deposit-container {
   height: 50vh;
   display: flex;
   align-items: center;

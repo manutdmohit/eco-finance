@@ -62,7 +62,10 @@ const SearchParamsProvider: React.FC = () => {
   };
 
   return (
-    <form className="bg-light py-4 px-3 px-md-5" onSubmit={handleSubmit}>
+    <form
+      className="bg-light py-4 px-3 px-md-5 property-value-container"
+      onSubmit={handleSubmit}
+    >
       <div className="container">
         <div className="text-center mb-3">
           <h2 className="fw-bold text-black">
@@ -84,7 +87,7 @@ const SearchParamsProvider: React.FC = () => {
             property value should be greater than the loan amount
           </p>
         )}
-        <p className="text-black text-center">Why do we ask this?</p>
+        {/* <p className="text-black text-center">Why do we ask this?</p> */}
         <div className="d-grid gap-2">
           <button type="submit" className="btn btn-primary btn-property-amount">
             Next

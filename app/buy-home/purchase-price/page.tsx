@@ -50,7 +50,10 @@ const SearchParamsProvider = () => {
   };
   return (
     <>
-      <form className="bg-light py-4 px-3 px-md-5" onSubmit={handleSubmit}>
+      <form
+        className="bg-light py-4 px-3 px-md-5 purchase-price-container"
+        onSubmit={handleSubmit}
+      >
         <div className="container">
           <div className="text-center mb-3">
             <h2 className="fw-bold text-black">

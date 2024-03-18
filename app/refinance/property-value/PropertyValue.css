@@ -1,3 +1,9 @@
+.property-value-container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
 .property-amount-placeholder {
   width: 50vw !important;
   margin: auto;

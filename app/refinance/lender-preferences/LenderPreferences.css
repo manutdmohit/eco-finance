@@ -1,5 +1,8 @@
 .loan-preference-form-container {
   background-color: rgba(18, 19, 26, 0.479);
+  height: 70vh;
+  padding: 10px;
+  margin-top: 25px;
 }
 
 .lender-preference {
@@ -13,11 +16,4 @@
 
 .form-check-input {
   font-size: 1.4rem;
-}
-
-@media (max-width: 768px) {
-  /* .options {
-    width: 50vw !important;
-    margin: auto;
-  } */
 }
