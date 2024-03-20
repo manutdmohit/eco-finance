@@ -35,6 +35,7 @@ const SearchParamsProvider = () => {
   const rate = params.get('rate');
   const selectedOption = params.get('selectedOption');
   const expiryDate = params.get('expiryDate');
+  const propertyValue = params.get('propertyValue');
   const purpose = params.get('purpose');
   const propertyUse = params.get('propertyUse');
 
@@ -54,7 +55,7 @@ const SearchParamsProvider = () => {
     e.preventDefault();
 
     router.push(
-      `/refinance/credit-history?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=${selectedOptions.join(
+      `/refinance/credit-history?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=${selectedOptions.join(
         ', '
       )}`
     );

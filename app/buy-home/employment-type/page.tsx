@@ -41,6 +41,9 @@ const SearchParamsProvider = () => {
   const propertyUse = params.get('propertyUse');
   const choosingALender = params.get('choosingALender');
   const creditHistory = params.get('creditHistory');
+
+  console.log({ propertyUse });
+
   return (
     <>
       <h1 className="text-center text-black mt-4">

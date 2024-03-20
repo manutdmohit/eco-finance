@@ -36,6 +36,7 @@ const SearchParamsProvider = () => {
   const rate = params.get('rate');
   const selectedOption = params.get('selectedOption');
   const expiryDate = params.get('expiryDate');
+  const propertyValue = params.get('propertyValue');
 
   return (
     <>
@@ -55,7 +56,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/lender-preferences?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Decrease repayments&propertyUse=I will live there`
+                `/refinance/lender-preferences?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=Decrease repayments&propertyUse=I will live there`
               )
             }
           >
@@ -74,7 +75,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/lender-preferences?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Decrease repayments&propertyUse=It's an investment`
+                `/refinance/lender-preferences?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=Decrease repayments&propertyUse=It's an investment`
               )
             }
           >

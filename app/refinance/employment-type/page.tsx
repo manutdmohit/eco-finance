@@ -41,6 +41,8 @@ const SearchParamsProvider = () => {
   const choosingALender = params.get('choosingALender');
   const creditHistory = params.get('creditHistory');
 
+  console.log(choosingALender);
+
   return (
     <>
       <h1 className="text-center text-black mt-4">

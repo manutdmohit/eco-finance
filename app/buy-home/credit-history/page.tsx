@@ -64,10 +64,7 @@ const SearchParamsProvider = () => {
             onClick={() =>
               router.push(`/buy-home/employment-type?type=${type}
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
-                &buyingSituation=${buyingSituation}&firstHomeBuyer=$
-                {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
-                {propertyUse}&choosingALender=${choosingALender}&creditHistory=
-                Excellent - No issues`)
+                &buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=Excellent - No issues`)
             }
           >
             Excellent - No issues
@@ -110,8 +107,7 @@ const SearchParamsProvider = () => {
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
                 &buyingSituation=${buyingSituation}&firstHomeBuyer=$
                 {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
-                {propertyUse}&choosingALender=${choosingALender}&creditHistory=
-                Fair - Let's talk`)
+                {propertyUse}&choosingALender=${choosingALender}&creditHistory=Fair - Let's talk`)
             }
           >
             Fair - Let's talk
@@ -130,10 +126,7 @@ const SearchParamsProvider = () => {
             onClick={() =>
               router.push(`/buy-home/employment-type?type=${type}
                 &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
-                &buyingSituation=${buyingSituation}&firstHomeBuyer=$
-                {firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=$
-                {propertyUse}&choosingALender=${choosingALender}&creditHistory=I
-                don't know`)
+                &buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=I don't know`)
             }
           >
             I don't know

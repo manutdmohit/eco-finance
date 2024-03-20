@@ -36,6 +36,7 @@ const SearchParamsProvider = () => {
   const rate = params.get('rate');
   const selectedOption = params.get('selectedOption');
   const expiryDate = params.get('expiryDate');
+  const propertyValue = params.get('propertyValue');
 
   return (
     <>
@@ -52,7 +53,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Decrease repayments`
+                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=Decrease repayments`
               )
             }
           >
@@ -71,7 +72,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Pay off loan faster`
+                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=$&propertyValue=${propertyValue}&purpose=Pay off loan faster`
               )
             }
           >
@@ -90,7 +91,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Consolidate debt / get cash out`
+                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=$&propertyValue=${propertyValue}&purpose=Consolidate debt / get cash out`
               )
             }
           >
@@ -109,7 +110,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Build on my land or property`
+                `/refinance/property-use?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=$&propertyValue=${propertyValue}&purpose=Build on my land or property`
               )
             }
           >

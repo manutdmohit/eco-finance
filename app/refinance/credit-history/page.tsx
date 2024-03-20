@@ -37,9 +37,11 @@ const SearchParamsProvider = () => {
   const rate = params.get('rate');
   const selectedOption = params.get('selectedOption');
   const expiryDate = params.get('expiryDate');
+  const propertyValue = params.get('propertyValue');
   const purpose = params.get('purpose');
   const propertyUse = params.get('propertyUse');
   const choosingALender = params.get('choosingALender');
+
   return (
     <>
       <h1 className="text-center text-black mt-4">
@@ -62,7 +64,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=
+                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=
                 ${choosingALender}&creditHistory=Excellent - No issues`
               )
             }
@@ -82,7 +84,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=Average - Paid default`
+                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=Average - Paid default`
               )
             }
           >
@@ -101,7 +103,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=Fair - Let's talk`
+                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=Fair - Let's talk`
               )
             }
           >
@@ -120,7 +122,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&choosingALender=I don't know`
+                `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=I don't know`
               )
             }
           >
