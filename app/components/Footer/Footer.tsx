@@ -1,7 +1,13 @@
 import React from 'react';
 
 import './Footer.css';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaTiktok,
+} from 'react-icons/fa';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -112,14 +118,14 @@ const Footer = () => {
       <div className="container mt-4">
         <div className="row justify-content-center">
           <div className="col-auto">
-            <a
-              href="#"
+            <Link
+              href="https://www.facebook.com/profile.php?id=61555013854956"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
             >
               <FaFacebook />
-            </a>
+            </Link>
           </div>
           <div className="col-auto">
             <Link
@@ -143,12 +149,12 @@ const Footer = () => {
           </div>
           <div className="col-auto">
             <Link
-              href="#"
+              href="https://www.tiktok.com/@ecofinanceandhomeloans"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
             >
-              <FaLinkedin />
+              <FaTiktok />
             </Link>
           </div>
         </div>

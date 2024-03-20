@@ -1,3 +1,6 @@
+import React from 'react';
+import Link from 'next/link';
+
 import './Top.css';
 
 import {
@@ -7,6 +10,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaInstagram,
+  FaTiktok,
 } from 'react-icons/fa';
 
 const TopBar = () => {
@@ -33,10 +37,22 @@ const TopBar = () => {
           <div className="col-lg-12 text-center d-lg-none social-icons">
             {/* Show on devices below lg breakpoint */}
             <div className="social-icons-container">
-              <FaFacebook className="social-icon" />
+              <Link
+                href="https://www.facebook.com/profile.php?id=61555013854956"
+                target="_blank"
+                className="text-decoration-none"
+              >
+                <FaFacebook className="social-icon" />
+              </Link>
               <FaInstagram className="social-icon" />
               <FaTwitter className="social-icon" />
-              <FaLinkedin className="social-icon" />
+              <Link
+                href="https://www.tiktok.com/@ecofinanceandhomeloans"
+                target="_blank"
+                className="text-decoration-none"
+              >
+                <FaTiktok className="social-icon" />
+              </Link>
             </div>
           </div>
         </div>
