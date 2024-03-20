@@ -62,9 +62,9 @@ const SearchParamsProvider = () => {
             variant="primary"
             className="btn-purpose"
             onClick={() =>
-              router.push(`/buy-home/employment-type?type=${type}
-                &purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}
-                &buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=Excellent - No issues`)
+              router.push(
+                `/buy-home/employment-type?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=Excellent - No issues`
+              )
             }
           >
             Excellent - No issues
