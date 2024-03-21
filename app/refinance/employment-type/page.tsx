@@ -36,6 +36,7 @@ const SearchParamsProvider = () => {
   const rate = params.get('rate');
   const selectedOption = params.get('selectedOption');
   const expiryDate = params.get('expiryDate');
+  const propertyValue = params.get('propertyValue');
   const purpose = params.get('purpose');
   const propertyUse = params.get('propertyUse');
   const choosingALender = params.get('choosingALender');
@@ -61,7 +62,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/applicant-contact-details?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=
+                `/refinance/applicant-contact-details?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=
                 ${choosingALender}&creditHistory=${creditHistory}&employmentType=Employee`
               )
             }
@@ -81,7 +82,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/applicant-contact-details?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=Pay off loan faster&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employment_type=Self-employed`
+                `/refinance/applicant-contact-details?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=Pay off loan faster&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employment_type=Self-employed`
               )
             }
           >
@@ -100,7 +101,7 @@ const SearchParamsProvider = () => {
             className="btn-purpose"
             onClick={() =>
               router.push(
-                `/refinance/applicant-contact-details?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employmentType=Other`
+                `/refinance/applicant-contact-details?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employmentType=Other`
               )
             }
           >
