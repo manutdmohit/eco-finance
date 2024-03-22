@@ -25,8 +25,18 @@ const MortgageCalculator: React.FC = () => {
     const r =
       parseFloat(interestRate) /
       100 /
-      (paymentFrequency === 'monthly' ? 12 : 26);
-    const n = parseFloat(loanTerm) * (paymentFrequency === 'monthly' ? 12 : 26);
+      (paymentFrequency === 'monthly'
+        ? 12
+        : paymentFrequency === 'weekly'
+        ? 52
+        : 26);
+    const n =
+      parseFloat(loanTerm) *
+      (paymentFrequency === 'monthly'
+        ? 12
+        : paymentFrequency === 'weekly'
+        ? 52
+        : 26);
 
     // Check for negative values
     if (p < 0 || r < 0 || n < 0) {
@@ -51,7 +61,7 @@ const MortgageCalculator: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <TopBar />
       <Wrapper />
 
@@ -138,6 +148,18 @@ const MortgageCalculator: React.FC = () => {
               />
               <label className={styles.radioOption} htmlFor="fortnightly">
                 Fortnightly
+              </label>
+            </div>
+            <div className={styles.radio}>
+              <input
+                type="radio"
+                id="weekly"
+                value="weekly"
+                checked={paymentFrequency === 'weekly'}
+                onChange={() => handleFrequencyChange('weekly', 'Weekly')}
+              />
+              <label className={styles.radioOption} htmlFor="weekly">
+                Weekly
               </label>
             </div>
           </div>
