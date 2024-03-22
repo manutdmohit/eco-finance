@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 import { CiMenuBurger } from 'react-icons/ci';
 import { IoMdClose } from 'react-icons/io';
@@ -16,8 +17,11 @@ const ulElements = (
 ) => {
   return (
     <ul className="d-sm-block d-lg-none">
-      <li>Home</li>
-      <li>
+      <Link href="/" className="text-decoration-none fs-5 text-white">
+        Home
+      </Link>{' '}
+      <br />
+      <Link href="/services" className="text-decoration-none fs-5 text-white">
         Services
         {isClicked ? (
           <MdArrowDropUp onClick={handleClick} />
@@ -26,29 +30,22 @@ const ulElements = (
         )}
         {isClicked && (
           <ul>
-            <li>Home Loans & Investment Loans</li>
-            <li> Refinance & Construction Loans</li>
-            <li> Business & Commercial Loans</li>
-            <li> Personal & Car Loans</li>
-            <li> SMSF Home Loans</li>
+            <li className="fs-5">Home Loans & Investment Loans</li>
+            <li className="fs-5">Refinance & Construction Loans</li>
+            <li className="fs-5">Business & Commercial Loans</li>
+            <li className="fs-5">Personal & Car Loans</li>
+            <li className="fs-5">SMSF Home Loans</li>
           </ul>
         )}
-      </li>
-      <li>
-        About Us{' '}
-        {aboutUsopen ? (
-          <MdArrowDropUp onClick={handleAboutUsOpen} />
-        ) : (
-          <MdOutlineArrowDropDown onClick={handleAboutUsOpen} />
-        )}
-        {aboutUsopen && (
-          <ul>
-            <li>About Us</li>
-            <li>Our Team</li>
-          </ul>
-        )}
-      </li>
-      <li>Contact Us</li>
+      </Link>{' '}
+      <br />
+      <Link href="/about-us" className="text-decoration-none fs-5 text-white">
+        About Us
+      </Link>{' '}
+      <br />
+      <Link href="/contact-us" className="text-decoration-none fs-5 text-white">
+        Contact Us
+      </Link>
     </ul>
   );
 };
@@ -216,98 +213,7 @@ export const Navigation = () => {
                       </li>
                     </ul>
                   </li>
-                  {/* <li
-                    className="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-6603 has-sub"
-                    id="mega-menu-item-6603"
-                  >
-                    <span className="submenu-button"></span>
-                    <a
-                      className="mega-menu-link animsition-link"
-                      href="/smsf-property-investment/"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      SMSF
-                      <span
-                        className="mega-indicator"
-                        data-has-click-event="true"
-                      ></span>
-                    </a>
-                    <ul className="mega-sub-menu">
-                      <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
-                        id="mega-menu-item-6604"
-                      >
-                        <a
-                          className="mega-menu-link animsition-link"
-                          href="/smsf-property-investment/"
-                        >
-                          SMSF Property Investment
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li
-                    className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1792"
-                    id="mega-menu-item-1792"
-                  >
-                    <a
-                      className="mega-menu-link animsition-link"
-                      href="/resources/"
-                    >
-                      Resources
-                    </a>
-                  </li>
-                  <li
-                    className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-1653 has-sub"
-                    id="mega-menu-item-1653"
-                  >
-                    <span className="submenu-button"></span>
-                    <a
-                      className="mega-menu-link animsition-link"
-                      href="/loancalculator/"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Loan Calculators
-                      <span
-                        className="mega-indicator"
-                        data-has-click-event="true"
-                      ></span>
-                    </a>
-                    <ul className="mega-sub-menu">
-                      <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1479"
-                        id="mega-menu-item-1479"
-                      >
-                        <a
-                          className="mega-menu-link animsition-link"
-                          href="/monthly-repayment-calculator/"
-                        >
-                          EMI Calculator
-                        </a>
-                      </li>
-                      <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1506"
-                        id="mega-menu-item-1506"
-                      >
-                        <a
-                          className="mega-menu-link animsition-link"
-                          href="/loan-eligibility-calculator/"
-                        >
-                          Borrowing Power Calculator
-                        </a>
-                      </li>
-                    </ul>
-                  </li> */}
-                  {/* <li
-                    className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1483"
-                    id="mega-menu-item-1483"
-                  >
-                    <a className="mega-menu-link animsition-link" href="/blog/">
-                      Blog
-                    </a>
-                  </li> */}
+
                   <li
                     className="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-6603 has-sub"
                     id="mega-menu-item-6603"
@@ -320,46 +226,7 @@ export const Navigation = () => {
                       aria-expanded="false"
                     >
                       About Us
-                      <span
-                        className="mega-indicator"
-                        data-has-click-event="true"
-                      ></span>
                     </a>
-                    <ul className="mega-sub-menu">
-                      <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604 w-100"
-                        id="mega-menu-item-6604"
-                      >
-                        <a
-                          className="mega-menu-link animsition-link"
-                          href="/about-us"
-                        >
-                          About Us
-                        </a>
-                      </li>
-                      <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604 w-100"
-                        id="mega-menu-item-6604"
-                      >
-                        <a
-                          className="mega-menu-link animsition-link"
-                          href="/our-team/"
-                        >
-                          Our Team
-                        </a>
-                      </li>
-                      {/* <li
-                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
-                        id="mega-menu-item-6604"
-                      >
-                        <a
-                          className="mega-menu-link animsition-link"
-                          href="/testimonials/"
-                        >
-                          Testimonials
-                        </a>
-                      </li> */}
-                    </ul>
                   </li>
                   <li
                     className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1486"
