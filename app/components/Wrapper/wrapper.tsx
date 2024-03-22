@@ -213,7 +213,98 @@ export const Navigation = () => {
                       </li>
                     </ul>
                   </li>
-
+                  {/* <li
+                    className="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-6603 has-sub"
+                    id="mega-menu-item-6603"
+                  >
+                    <span className="submenu-button"></span>
+                    <a
+                      className="mega-menu-link animsition-link"
+                      href="/smsf-property-investment/"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      SMSF
+                      <span
+                        className="mega-indicator"
+                        data-has-click-event="true"
+                      ></span>
+                    </a>
+                    <ul className="mega-sub-menu">
+                      <li
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-6604"
+                        id="mega-menu-item-6604"
+                      >
+                        <a
+                          className="mega-menu-link animsition-link"
+                          href="/smsf-property-investment/"
+                        >
+                          SMSF Property Investment
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1792"
+                    id="mega-menu-item-1792"
+                  >
+                    <a
+                      className="mega-menu-link animsition-link"
+                      href="/resources/"
+                    >
+                      Resources
+                    </a>
+                  </li>
+                  <li
+                    className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-1653 has-sub"
+                    id="mega-menu-item-1653"
+                  >
+                    <span className="submenu-button"></span>
+                    <a
+                      className="mega-menu-link animsition-link"
+                      href="/loancalculator/"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Loan Calculators
+                      <span
+                        className="mega-indicator"
+                        data-has-click-event="true"
+                      ></span>
+                    </a>
+                    <ul className="mega-sub-menu">
+                      <li
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1479"
+                        id="mega-menu-item-1479"
+                      >
+                        <a
+                          className="mega-menu-link animsition-link"
+                          href="/monthly-repayment-calculator/"
+                        >
+                          EMI Calculator
+                        </a>
+                      </li>
+                      <li
+                        className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1506"
+                        id="mega-menu-item-1506"
+                      >
+                        <a
+                          className="mega-menu-link animsition-link"
+                          href="/loan-eligibility-calculator/"
+                        >
+                          Borrowing Power Calculator
+                        </a>
+                      </li>
+                    </ul>
+                  </li> */}
+                  {/* <li
+                    className="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-1483"
+                    id="mega-menu-item-1483"
+                  >
+                    <a className="mega-menu-link animsition-link" href="/blog/">
+                      Blog
+                    </a>
+                  </li> */}
                   <li
                     className="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-6603 has-sub"
                     id="mega-menu-item-6603"
@@ -260,7 +351,7 @@ export const Navigation = () => {
 
 const Wrapper = () => {
   return (
-    <div id="sticky-wrapper" className="sticky-wrapper overflow-hidden">
+    <div id="sticky-wrapper" className="sticky-wrapper">
       <div className="header-2 sticky-header">
         <div className="container">
           <div className="row">
