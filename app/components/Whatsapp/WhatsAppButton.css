@@ -12,8 +12,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .whatsapp-button {
-    width: 40vw;
+    width: 45vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .whatsapp-button {
+    width: 50vw !important;
   }
 }

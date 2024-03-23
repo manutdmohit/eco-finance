@@ -13,7 +13,7 @@ const WhatsappButton = () => {
   return (
     <Link
       href={waLink}
-      className="whatsapp-button text-decoration-none font-bold"
+      className="whatsapp-button text-decoration-none font-bold overflow-hidden"
     >
       <p className="">
         <img
