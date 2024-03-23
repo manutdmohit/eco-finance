@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
@@ -13,6 +15,7 @@ import Wrapper from './components/Wrapper/wrapper';
 import { Loan } from './components/Loan/Loan';
 import Footer from './components/Footer/Footer';
 import Processes from './components/Processes/Processes';
+import WhatsappButton from './components/Whatsapp/WhatsappButton';
 
 const barlow = Questrial({ weight: '400', subsets: ['latin'] });
 
@@ -29,10 +32,11 @@ export default function RootLayout({
       <body className={barlow.className}>
         {/* <TopBar />
         <Wrapper />
-        <Loan />
-        <Processes />
         <Footer /> */}
-        {children}
+        <main>{children}</main>
+
+        <WhatsappButton />
+
         <BootStrapClient />
       </body>
     </html>

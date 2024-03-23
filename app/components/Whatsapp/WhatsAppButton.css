@@ -1,0 +1,19 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: green !important;
+  width: 15vw;
+}
+
+@media (max-width: 992px) {
+  .whatsapp-button {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .whatsapp-button {
+    width: 40vw;
+  }
+}
