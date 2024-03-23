@@ -351,7 +351,7 @@ export const Navigation = () => {
 
 const Wrapper = () => {
   return (
-    <div id="sticky-wrapper" className="sticky-wrapper">
+    <div id="sticky-wrapper" className="sticky-wrapper overflow-hidden">
       <div className="header-2 sticky-header">
         <div className="container">
           <div className="row">
