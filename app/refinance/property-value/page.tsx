@@ -63,16 +63,16 @@ const SearchParamsProvider: React.FC = () => {
 
   return (
     <form
-      className="bg-light py-4 px-3 px-md-5 property-value-container"
+      className="bg-light py-4 px-3 px-md-5 mt-4 property-value-container"
       onSubmit={handleSubmit}
     >
       <div className="container">
-        <div className="text-center mb-3">
+        <div className="text-center mb-4">
           <h2 className="fw-bold text-black">
             Approximately how much is your property worth?
           </h2>
         </div>
-        <div className="mb-3">
+        <div className="mb-4">
           <input
             type="number"
             className="form-control property-amount-placeholder "
@@ -89,7 +89,10 @@ const SearchParamsProvider: React.FC = () => {
         )}
         {/* <p className="text-black text-center">Why do we ask this?</p> */}
         <div className="d-grid gap-2">
-          <button type="submit" className="btn btn-primary btn-property-amount">
+          <button
+            type="submit"
+            className="btn btn-primary btn-property-amount fs-4"
+          >
             Next
           </button>
         </div>

@@ -40,11 +40,11 @@ const SearchParamsProvider = () => {
 
   return (
     <>
-      <h1 className="text-center text-black">
+      <h1 className="text-center text-black mt-4">
         How will this property be used?
       </h1>
 
-      <Row className="justify-content-center overflow-hidden">
+      <Row className="justify-content-center overflow-hidden mt-4">
         <Col
           xs={12}
           md={12}

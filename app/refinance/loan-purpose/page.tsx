@@ -40,7 +40,7 @@ const SearchParamsProvider = () => {
 
   return (
     <>
-      <h1 className="text-center text-black">Why are you refinancing? </h1>
+      <h1 className="text-center text-black mt-4">Why are you refinancing? </h1>
       <Row className="justify-content-center overflow-hidden">
         <Col
           xs={12}

@@ -10,7 +10,7 @@ const PropertyUse = () => {
 
   return (
     <div>
-      <h1 className="text-center text-black">
+      <h1 className="text-center text-black mt-4">
         How will this property be used?
       </h1>
       <ul>

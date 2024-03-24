@@ -51,14 +51,14 @@ const SearchParamsProvider = () => {
   return (
     <>
       <form
-        className="bg-light py-4 px-3 px-md-5 loan-amount-container"
+        className="bg-light py-4 px-3 px-md-5 loan-amount-container mt-4"
         onSubmit={handleSubmit}
       >
         <div className="container">
           <div className="text-center mb-3">
-            <h2 className="fw-bold text-black">Enter Your Loan Amount</h2>
+            <h2 className="fw-bold text-black mb-5">Enter Your Loan Amount</h2>
           </div>
-          <div className="mb-3">
+          <div className="mb-5">
             <input
               type="number"
               className="form-control loan-amount-placeholder "
@@ -69,7 +69,10 @@ const SearchParamsProvider = () => {
             />
           </div>
           <div className="d-grid gap-2">
-            <button type="submit" className="btn btn-primary btn-loan-amount">
+            <button
+              type="submit"
+              className="btn btn-primary btn-loan-amount fs-4"
+            >
               Next
             </button>
           </div>
