@@ -57,7 +57,7 @@ const CalculatorPage = () => {
             {/* Button for accessing repayment calculator */}
 
             <Link
-              href="/calculators/repayment-calculatoe"
+              href="/calculators/repayment-calculator"
               className="text-decoration-none"
             >
               <button className="btn btn-default btn-lg btn-block text-white fs-4 d-flex justify-content-center align-items-center m-auto">
