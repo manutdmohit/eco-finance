@@ -55,7 +55,6 @@ const CalculatorPage = () => {
           {/* Repayment calculator button */}
           <div className="col-sm-4 col-md-4 mb-4">
             {/* Button for accessing repayment calculator */}
-
             <Link
               href="/calculators/repayment-calculator"
               className="text-decoration-none"
