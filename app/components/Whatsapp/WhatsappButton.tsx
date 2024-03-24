@@ -14,7 +14,7 @@ const WhatsappButton = () => {
       className="whatsapp-button text-decoration-none font-bold"
     >
       <img
-        src="./whatsapp.png"
+        src="https://res.cloudinary.com/drtm8uqcp/image/upload/whatsapp_l9ulbp.png"
         alt="whatsapp"
         className="img-fluid whatsapp-button"
       />
