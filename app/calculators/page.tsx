@@ -1,182 +1,76 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Link from 'next/link';
+
 import TopBar from '../components/Top/top';
 import Wrapper from '../components/Wrapper/wrapper';
 import Footer from '../components/Footer/Footer';
-import styles from './MortgageCalculator.module.css';
 
-const MortgageCalculator: React.FC = () => {
-  const [principal, setPrincipal] = useState<string>('');
-  const [interestRate, setInterestRate] = useState<string>('');
-  const [loanTerm, setLoanTerm] = useState<string>('');
-  const [paymentFrequency, setPaymentFrequency] = useState<string>('monthly');
-  const [paymentFrequencyLabel, setPaymentFrequencyLabel] =
-    useState<string>('Monthly');
-  const [paymentResult, setPaymentResult] = useState<number | null>(null);
-  const [error, setError] = useState<string | null>(null); // State for error message
-
-  useEffect(() => {
-    calculateMortgage();
-  }, [principal, interestRate, loanTerm, paymentFrequency]);
-
-  const calculateMortgage = () => {
-    const p = parseFloat(principal);
-    const r =
-      parseFloat(interestRate) /
-      100 /
-      (paymentFrequency === 'monthly'
-        ? 12
-        : paymentFrequency === 'weekly'
-        ? 52
-        : 26);
-    const n =
-      parseFloat(loanTerm) *
-      (paymentFrequency === 'monthly'
-        ? 12
-        : paymentFrequency === 'weekly'
-        ? 52
-        : 26);
-
-    // Check for negative values
-    if (p < 0 || r < 0 || n < 0) {
-      setError('Input values cannot be negative');
-      setPaymentResult(null);
-      return;
-    }
-
-    if (!isNaN(p) && !isNaN(r) && !isNaN(n) && p > 0 && r > 0 && n > 0) {
-      const monthlyPayment = (p * r) / (1 - Math.pow(1 + r, -n));
-      setPaymentResult(monthlyPayment);
-      setError(null); // Clear error if no negative values
-    } else {
-      setPaymentResult(null);
-      setError('Please enter valid numbers');
-    }
-  };
-
-  const handleFrequencyChange = (frequency: string, label: string) => {
-    setPaymentFrequency(frequency);
-    setPaymentFrequencyLabel(label);
-  };
-
+const CalculatorPage = () => {
   return (
-    <div className="overflow-hidden">
+    <>
+      {/* Top navigation bar */}
       <TopBar />
+      {/* Main content wrapper */}
       <Wrapper />
+      {/* Calculator options */}
+      <div className="container mt-5">
+        {/* Heading */}
+        <h2 className="text-center mb-4 text-black">Mortgage Options</h2>
+        {/* Description */}
+        <p className="text-left mb-4 text-black fs-4">
+          Welcome to our mortgage options page! Whether you're considering
+          refinancing your existing mortgage, purchasing a new home, or simply
+          exploring repayment options, we've got you covered. Take a moment to
+          review the choices below and select the option that best fits your
+          needs. Our goal is to provide you with the information and tools
+          necessary to make informed decisions about your mortgage.
+        </p>
+        <div className="row">
+          {/* Refinance button */}
+          <div className="col-sm-4 col-md-4 mb-4">
+            <Link
+              href="/refinance/loan-amount?type=refinance"
+              className="text-decoration-none"
+            >
+              {/* Button for refinancing */}
+              <button className="btn btn-default btn-lg btn-block text-white fs-4 d-flex justify-content-center align-items-center m-auto">
+                I Want To Refinance
+              </button>
+            </Link>
+          </div>
+          {/* Buy Home button */}
+          <div className="col-sm-4 col-md-4 mb-4">
+            <Link
+              href="/buy-home/purchase-price?type=buy-home"
+              className="text-decoration-none"
+            >
+              {/* Button for buying a home */}
+              <button className="btn btn-default btn-lg btn-block text-white fs-4 d-flex justify-content-center align-items-center m-auto">
+                I Want To Buy Home
+              </button>
+            </Link>
+          </div>
+          {/* Repayment calculator button */}
+          <div className="col-sm-4 col-md-4 mb-4">
+            {/* Button for accessing repayment calculator */}
 
-      <div className={styles.container}>
-        <h2 className={styles.heading}>Mortgage Calculator</h2>
-        <div className={styles.calculator}>
-          <div className={styles.inputGroup}>
-            <label className={styles.label} htmlFor="principal">
-              Principal Amount ($)
-            </label>
-            <input
-              type="number"
-              className={styles.input}
-              placeholder="Enter Principal Amount"
-              id="principal"
-              value={principal}
-              onChange={(e) => {
-                const value = parseFloat(e.target.value);
-                if (!isNaN(value) && value > 0) {
-                  setPrincipal(value.toString());
-                }
-              }}
-            />
+            <Link
+              href="/calculators/repayment-calculatoe"
+              className="text-decoration-none"
+            >
+              <button className="btn btn-default btn-lg btn-block text-white fs-4 d-flex justify-content-center align-items-center m-auto">
+                Repayment Calculator
+              </button>
+            </Link>
           </div>
-          <div className={styles.inputGroup}>
-            <label className={styles.label} htmlFor="interestRate">
-              Interest Rate (%)
-            </label>
-            <input
-              type="number"
-              className={styles.input}
-              placeholder="Enter Interest Rate"
-              id="interestRate"
-              value={interestRate}
-              onChange={(e) => {
-                const value = parseFloat(e.target.value);
-                if (!isNaN(value) && value > 0) {
-                  setInterestRate(value.toString());
-                }
-              }}
-            />
-          </div>
-          <div className={styles.inputGroup}>
-            <label className={styles.label} htmlFor="loanTerm">
-              Loan Term (years)
-            </label>
-            <input
-              type="number"
-              className={styles.input}
-              placeholder="Enter Loan Term"
-              id="loanTerm"
-              value={loanTerm}
-              onChange={(e) => {
-                const value = parseFloat(e.target.value);
-                if (!isNaN(value) && value > 0) {
-                  setLoanTerm(value.toString());
-                }
-              }}
-            />
-          </div>
-          <div className={styles.radioGroup}>
-            <label className={styles.radioLabel}>Payment Frequency</label>
-            <div className={styles.radio}>
-              <input
-                type="radio"
-                id="monthly"
-                value="monthly"
-                checked={paymentFrequency === 'monthly'}
-                onChange={() => handleFrequencyChange('monthly', 'Monthly')}
-              />
-              <label className={styles.radioOption} htmlFor="monthly">
-                Monthly
-              </label>
-            </div>
-            <div className={styles.radio}>
-              <input
-                type="radio"
-                id="fortnightly"
-                value="fortnightly"
-                checked={paymentFrequency === 'fortnightly'}
-                onChange={() =>
-                  handleFrequencyChange('fortnightly', 'Fortnightly')
-                }
-              />
-              <label className={styles.radioOption} htmlFor="fortnightly">
-                Fortnightly
-              </label>
-            </div>
-            <div className={styles.radio}>
-              <input
-                type="radio"
-                id="weekly"
-                value="weekly"
-                checked={paymentFrequency === 'weekly'}
-                onChange={() => handleFrequencyChange('weekly', 'Weekly')}
-              />
-              <label className={styles.radioOption} htmlFor="weekly">
-                Weekly
-              </label>
-            </div>
-          </div>
-          {error && <div className={styles.error}>{error}</div>}
-          {paymentResult !== null && !isNaN(paymentResult) && (
-            <div className={styles.result}>
-              <h4 className={styles.resultText}>
-                {paymentFrequencyLabel} Payment: ${paymentResult.toFixed(2)}
-              </h4>
-            </div>
-          )}
         </div>
       </div>
-
+      {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default MortgageCalculator;
+export default CalculatorPage;

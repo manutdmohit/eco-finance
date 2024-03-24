@@ -13,13 +13,11 @@ const WhatsappButton = () => {
       href={waLink}
       className="whatsapp-button text-decoration-none font-bold"
     >
-      <p className="">
-        <img
-          src="./whatsapp.png"
-          alt="whatsapp"
-          className="img-fluid whatsapp-button"
-        />
-      </p>
+      <img
+        src="./whatsapp.png"
+        alt="whatsapp"
+        className="img-fluid whatsapp-button"
+      />
     </Link>
   );
 };

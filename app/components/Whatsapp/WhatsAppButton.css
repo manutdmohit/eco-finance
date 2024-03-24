@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  color: green !important;
   width: 15vw;
+  box-shadow: 0px 0px 20px rgba(255, 3, 3, 0.5); /* Adding a box shadow with blur radius of 10px and transparency */
 }
 
 @media (max-width: 992px) {
