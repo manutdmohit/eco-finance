@@ -103,7 +103,7 @@ const SearchParamsProvider = () => {
             ) : (
               <Button
                 variant="primary"
-                className="mt-3 mb-4 p-4 fs-5 btn-submit"
+                className="mt-3 mb-4 p-4 fs-6 btn-submit"
                 onClick={handleSubmit}
               >
                 No Thanks, NEXT

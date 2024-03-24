@@ -35,8 +35,8 @@ const SearchParamsProvider = () => {
   const propertyStatus = params.get('propertyStatus');
 
   return (
-    <>
-      <h1 className="text-center text-black">
+    <div className="mt-4">
+      <h1 className="text-center text-black mb-4">
         How will this property be used?
       </h1>
       <Row className="justify-content-center overflow-hidden">
@@ -77,7 +77,7 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 
