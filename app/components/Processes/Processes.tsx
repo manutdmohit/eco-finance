@@ -70,7 +70,7 @@ const Process = () => {
           </div>
         </div>
         <div className="section-footer">
-          <a href="/loan-products" className="view-loans-btn">
+          <a href="services" className="view-loans-btn">
             View Our Loans
           </a>
         </div>
