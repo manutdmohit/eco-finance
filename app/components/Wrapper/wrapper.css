@@ -211,10 +211,6 @@
   padding: 10px; /* Add padding to submenu items */
 }
 
-.mega-menu-item:hover .mega-sub-menu {
-  display: block; /* Show submenu on parent item hover */
-}
-
 .mega-sub-menu li {
   margin-bottom: 5px; /* Add margin between submenu items */
 }
@@ -245,11 +241,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for the submenu */
   z-index: 999;
   padding: 10px; /* Add padding to submenu items */
-}
-
-/* Show submenu on parent item hover */
-.mega-menu-item:hover .mega-sub-menu {
-  display: block;
 }
 
 /* Style submenu items */
@@ -285,11 +276,6 @@
   z-index: 999;
   padding: 10px; /* Add padding to submenu items */
   width: auto; /* Adjust width as needed */
-}
-
-/* Show submenu on parent item hover */
-.mega-menu-item:hover .mega-sub-menu {
-  display: block;
 }
 
 /* Style submenu items */
