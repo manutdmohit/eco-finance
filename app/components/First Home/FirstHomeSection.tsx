@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './FirstHomeSection.css'; // Ensure this path is correct
 
@@ -24,9 +26,12 @@ const FirstHomeSection = () => {
               first-time home-buyer or looking to downsize, we're here to guide
               you through the process.
             </p>
-            <Button variant="primary" size="lg">
-              Contact Us
-            </Button>
+
+            <Link href="/contact-us">
+              <Button variant="primary" size="lg">
+                Contact Us
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>
