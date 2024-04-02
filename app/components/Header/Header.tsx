@@ -1,119 +1,28 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-interface ServicesSubMenuProps {
-  showServicesSubMenu: boolean;
-  toggleServicesSubMenu: () => void;
-}
-
-const ServicesSubMenu: React.FC<ServicesSubMenuProps> = ({
-  showServicesSubMenu,
-  toggleServicesSubMenu,
-}) => {
-  const servicesSubMenuRef = useRef<HTMLDivElement>(null);
-
-  return (
-    <div
-      ref={servicesSubMenuRef}
-      className={`services-submenu ${showServicesSubMenu ? 'show' : ''}`}
-      style={{ position: 'absolute' }}
-    >
-      <ul className="sub-menu">
-        <li className="menu-item">
-          <Link
-            href="#"
-            className="text-decoration-none text-black submenu-link"
-          >
-            Home Loans & Investment Loans
-          </Link>
-        </li>
-        <li className="menu-item">
-          <Link
-            href="#"
-            className="text-decoration-none text-black submenu-link"
-          >
-            Refinance & Construction Loans
-          </Link>
-        </li>
-        <li className="menu-item">
-          <Link
-            href="#"
-            className="text-decoration-none text-black submenu-link"
-          >
-            Business & Commercial Loans
-          </Link>
-        </li>
-        <li className="menu-item">
-          <Link
-            href="#"
-            className="text-decoration-none text-black submenu-link"
-          >
-            Personal & Car Loans
-          </Link>
-        </li>
-        <li className="menu-item">
-          <Link
-            href="#"
-            className="text-decoration-none text-black submenu-link"
-          >
-            SMSF Home Loans
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+import ServicesSubMenu from './ServicesSubMenu';
 
 const Header: React.FC = () => {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [showServicesSubMenu, setShowServicesSubMenu] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleSubMenu = () => {
     setShowSubMenu(!showSubMenu);
-    setShowServicesSubMenu(false);
   };
 
   const toggleServicesSubMenu = () => {
-    setShowServicesSubMenu((prev) => !prev);
-    // Close the submenu if it's already open
-    if (showServicesSubMenu) {
-      setShowServicesSubMenu(false);
-    }
+    setShowServicesSubMenu(!showServicesSubMenu);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const servicesSubMenuElement =
-        document.querySelector('.services-submenu');
-
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node) &&
-        showServicesSubMenu
-      ) {
-        setShowServicesSubMenu(false);
-      } else if (
-        servicesSubMenuElement &&
-        !servicesSubMenuElement.contains(event.target as Node) &&
-        showServicesSubMenu
-      ) {
-        setShowServicesSubMenu(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [showServicesSubMenu]);
+  const closeServicesSubMenu = () => {
+    setShowServicesSubMenu(false);
+  };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark" ref={menuRef}>
+    <nav className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
         <div className="logo-toggler-container">
           <Link href="/" className="navbar-brand">
@@ -138,18 +47,22 @@ const Header: React.FC = () => {
         >
           <ul
             className="navbar-nav ms-auto mb-2 mb-lg-0"
-            style={{
-              backgroundColor: ' #0a5466',
-              marginTop: 'px',
-            }}
+            style={{ backgroundColor: '#0a5466' }}
           >
             <li className="nav-item">
-              <Link href="/" className="nav-link px-4">
+              <Link
+                href="/"
+                className="nav-link px-4"
+                onClick={() => {
+                  setShowSubMenu(false);
+                  closeServicesSubMenu();
+                }}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link
+              <a
                 className="nav-link dropdown-toggle px-4"
                 href="#"
                 onClick={(event) => {
@@ -158,26 +71,44 @@ const Header: React.FC = () => {
                 }}
               >
                 Services
-              </Link>
+              </a>
               {showServicesSubMenu && (
-                <ServicesSubMenu
-                  showServicesSubMenu={showServicesSubMenu}
-                  toggleServicesSubMenu={toggleServicesSubMenu}
-                />
+                <ServicesSubMenu showServicesSubMenu={showServicesSubMenu} />
               )}
             </li>
             <li className="nav-item">
-              <Link className="nav-link px-4" href="/about-us">
+              <Link
+                href="/about-us"
+                className="nav-link px-4"
+                onClick={() => {
+                  setShowSubMenu(false);
+                  closeServicesSubMenu();
+                }}
+              >
                 About Us
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link px-4" href="/calculators">
+              <Link
+                href="/calculators"
+                className="nav-link px-4"
+                onClick={() => {
+                  setShowSubMenu(false);
+                  closeServicesSubMenu();
+                }}
+              >
                 Calculators
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link px-4" href="/contact-us">
+              <Link
+                href="/contact-us"
+                className="nav-link px-4"
+                onClick={() => {
+                  setShowSubMenu(false);
+                  closeServicesSubMenu();
+                }}
+              >
                 Contact Us
               </Link>
             </li>
