@@ -1,28 +1,21 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import Link from 'next/link';
+
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import { Row, Col, Button } from 'react-bootstrap';
-
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
+import { Row, Col, Button, Container } from 'react-bootstrap';
 
 import '../loan-purpose/LoanPurpose.css';
 
 const CreditHistory = () => {
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
-      <Suspense fallback={<div>Loading ...</div>}>
-        <SearchParamsProvider />
-      </Suspense>
-
-      <Footer />
+    <div className="d-flex bg-light">
+      <Container style={{ marginTop: '7rem', marginBottom: '2rem' }}>
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SearchParamsProvider />
+        </Suspense>
+      </Container>
     </div>
   );
 };
@@ -43,25 +36,17 @@ const SearchParamsProvider = () => {
   const choosingALender = params.get('choosingALender');
 
   return (
-    <>
-      <h1 className="text-center text-black mt-4">
-        What's your credit history?
-      </h1>
+    <div className="bg-white p-5 rounded shadow">
+      <h1 className="text-center mb-4">What's your credit history?</h1>
       <p className="text-center text-black">
-        {' '}
         This helps us match the best loan for your scenario
       </p>
 
       <Row className="justify-content-center overflow-hidden mt-4">
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=
@@ -73,15 +58,10 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
 
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=Average - Paid default`
@@ -92,15 +72,10 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
 
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=${choosingALender}&creditHistory=Fair - Let's talk`
@@ -111,15 +86,10 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
 
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/refinance/employment-type?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&choosingALender=I don't know`
@@ -130,7 +100,7 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

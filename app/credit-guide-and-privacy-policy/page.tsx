@@ -4,11 +4,12 @@ import PrivacyPolicyContainer from '../privacy-policy/PrivacyPolicy';
 
 const CreditGuideAndPrivacyPolicy = () => {
   return (
-    <>
-      <CreateGuidePage />
-      <PrivacyPolicyContainer />
-      <Footer />
-    </>
+    <div className="overflow-hidden">
+      <div style={{ marginTop: '100px', marginBottom: '50px' }}>
+        <CreateGuidePage />
+        <PrivacyPolicyContainer />
+      </div>
+    </div>
   );
 };
 

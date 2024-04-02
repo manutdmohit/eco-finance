@@ -1,36 +1,23 @@
 'use client';
-
 import React, { Suspense } from 'react';
-import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-
-import { Row, Col, Button } from 'react-bootstrap';
-
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
-
-import '../loan-purpose/LoanPurpose.css';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const PropertyUse = () => {
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-      <Suspense fallback={<div>Loading...</div>}>
-        <SearchParamsProvider />
-      </Suspense>
-
-      <Footer />
+    <div className="d-flex vh-100 bg-light">
+      <Container style={{ marginTop: '11rem' }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <SearchParamsProvider />
+        </Suspense>
+      </Container>
     </div>
   );
 };
 
 const SearchParamsProvider = () => {
   const router = useRouter();
-
   const params = useSearchParams();
-
   const type = params.get('type');
   const loanAmount = params.get('loanAmount');
   const rate = params.get('rate');
@@ -39,21 +26,13 @@ const SearchParamsProvider = () => {
   const propertyValue = params.get('propertyValue');
 
   return (
-    <>
-      <h1 className="text-center text-black mt-4">
-        How will this property be used?
-      </h1>
-
-      <Row className="justify-content-center overflow-hidden mt-4">
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+    <div className="bg-white p-5 rounded shadow">
+      <h1 className="text-center mb-4">How will this property be used?</h1>
+      <Row className="justify-content-center">
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/refinance/lender-preferences?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=Decrease repayments&propertyUse=I will live there`
@@ -63,16 +42,10 @@ const SearchParamsProvider = () => {
             I will live there
           </Button>
         </Col>
-
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/refinance/lender-preferences?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=Decrease repayments&propertyUse=It's an investment`
@@ -83,7 +56,7 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

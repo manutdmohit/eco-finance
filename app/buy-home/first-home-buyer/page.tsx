@@ -3,23 +3,17 @@
 import React, { Suspense } from 'react';
 import { Button, Row, Col } from 'react-bootstrap';
 import { useRouter, useSearchParams } from 'next/navigation';
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
-import '../../refinance/loan-purpose/LoanPurpose.css';
+
+import { Container } from 'react-bootstrap';
 
 const BuyingPurpose = () => {
-  const router = useRouter();
-
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-      <Suspense fallback={<div>Loading...</div>}>
-        {/* Wrap useSearchParams in a Suspense boundary */}
-        <SearchParamsProvider />
-      </Suspense>
-      <Footer />
+    <div className="d-flex bg-light">
+      <Container style={{ marginTop: '7rem', marginBottom: '2rem' }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <SearchParamsProvider />
+        </Suspense>
+      </Container>
     </div>
   );
 };
@@ -34,20 +28,20 @@ const SearchParamsProvider = () => {
   const buyingSituation = params.get('buyingSituation');
 
   return (
-    <>
+    <div className="bg-white p-5 rounded shadow ">
       <h1 className="text-center text-black mt-4">
         Are you a first home buyer?
       </h1>
       <Row className="justify-content-center overflow-hidden">
         <Col
           xs={12}
-          md={12}
-          lg={12}
+          md={10}
+          lg={8}
           className="mb-3 d-flex align-items-stretch mt-4"
         >
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/property-status?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=Yes`
@@ -58,15 +52,10 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
 
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3 d-flex align-items-stretch">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/property-status?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=No`
@@ -77,7 +66,7 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

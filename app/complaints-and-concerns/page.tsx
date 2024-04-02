@@ -4,16 +4,14 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 import './ComplaintsAndConcerns.css';
-import Footer from '../components/Footer/Footer';
-import TopBar from '../components/Top/top';
-import Wrapper from '../components/Wrapper/wrapper';
 
 const ComplaintsAndConcerns = () => {
   return (
-    <div>
-      <TopBar />
-      <Wrapper />
-      <Container className="complaints-container">
+    <div className="overflow-hidden">
+      <Container
+        className="complaints-container"
+        style={{ marginTop: '130px', marginBottom: '50px' }}
+      >
         <Row className="justify-content-center">
           <Col md={8}>
             <Card>
@@ -81,7 +79,6 @@ const ComplaintsAndConcerns = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 };

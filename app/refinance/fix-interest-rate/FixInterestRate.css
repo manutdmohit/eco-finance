@@ -1,5 +1,6 @@
 .main-container {
   height: 60vh;
+  margin-top: 100px !important;
   overflow: none;
 }
 

@@ -4,15 +4,12 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 import './CreditGuide.css';
-import TopBar from '../components/Top/top';
-import Wrapper from '../components/Wrapper/wrapper';
+
 import Lenders from './Lender';
 
 const CreateGuidePage = () => {
   return (
     <div>
-      <TopBar />
-      <Wrapper />
       <div className="credit-guide-container">
         <Container>
           <Row>

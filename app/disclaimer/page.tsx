@@ -2,16 +2,14 @@
 
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import Footer from '../components/Footer/Footer';
-import TopBar from '../components/Top/top';
-import Wrapper from '../components/Wrapper/wrapper';
 
 const Disclaimer = () => {
   return (
-    <div>
-      <TopBar />
-      <Wrapper />
-      <Container className="disclaimer-container mt-5">
+    <div className="overflow-hidden">
+      <Container
+        className="disclaimer-container"
+        style={{ marginTop: '160px', marginBottom: '100px' }}
+      >
         <Row className="justify-content-center">
           <Col md={8}>
             <Card>
@@ -35,7 +33,6 @@ const Disclaimer = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 };

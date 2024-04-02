@@ -1,213 +1,95 @@
-/* Styling for each step item */
-.fincon-step-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 40px; /* Example margin-bottom between step items */
-  max-width: 300px; /* Example max-width for each step item */
-  /* height: 300px; */
-  /* width: 300px; */
-  width: 100%; /* Ensure each step item takes full width */
-}
-
-/* Styling for the number block */
-.number-block {
-  text-align: center; /* Center-align content within the number block */
-  font-size: 1.1rem;
-}
-
-/* Styling for the circle containing the number */
-.circle {
-  background-color: #cccccc; /* Example background color */
-  width: 60px; /* Example width */
-  height: 60px; /* Example height */
-  border-radius: 50%; /* Make it a circle */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px; /* Example margin */
-  margin: 10px auto;
-}
-
-/* Styling for the number */
-.number {
-  font-size: 24px; /* Example font size */
-  color: #ffffff; /* Example text color */
-}
-
-/* Styling for the number title */
-.number-title {
-  margin-top: 10px; /* Example margin-bottom */
-  font-size: 1.3rem;
-}
-
-/* Styling for the step description */
-.number-block p {
-  text-align: center; /* Center-align the step description */
-}
-
-.wpb_text_column.vc_custom_1691919978381 {
-  display: flex;
-  justify-content: center; /* Horizontally center-align */
-  align-items: center; /* Vertically center-align */
-  text-align: center; /* Center-align the text */
-  margin-top: 1.5rem;
-}
-
-.border {
-  border: 1px solid #dee4ee;
-}
-
-.loan-button {
-  font-size: 20px;
-  border-radius: 2px;
-  line-height: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 20px 30px;
-  border: none;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-bottom: 40px;
-  max-width: 300px;
-  /* height: 300px; */
-  /* width: 300px; */
-  width: 100%;
-  border: 1px solid #dee4ee;
-}
-
-.process {
-  /* border-bottom: none !important; */
-  background: #525252; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #3d72b4,
-    #525252
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #3d72b4,
-    #525252
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  margin-top: 45px;
-}
-
-.align-center {
-  font-size: 1.2rem;
-}
-
-/* ProcessSection.css */
 .process-section {
-  padding: 50px 0;
-  background: linear-gradient(90deg, #3d72b4, #525252);
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: #004d2d;
-}
-
-.section-intro {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 18px;
-  /* color: #fff; */
+  color: #343a40;
 }
 
 .process-steps {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .process-step {
-  /* background-color: #fff; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  width: 500px;
-  color: #fff;
-  background: #485563; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #29323c,
-    #485563
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #29323c,
-    #485563
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  flex: 1 1 200px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.step-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
 }
 
 .step-number {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff;
-  margin-bottom: 10px;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
 }
 
 .step-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  /* color: black; */
+  color: #343a40;
 }
 
 .step-details {
-  /* list-style: none; */
-  padding-left: 5px;
-  font-size: 1.1rem;
-  /* color: black; */
+  list-style: none;
+  padding: 0;
 }
 
 .section-footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 .view-loans-btn {
-  background: linear-gradient(270deg, #13adc7, #945dd6) !important;
-  border: 1px solid !important;
-  font-size: 20px;
-  border-radius: 2px;
-  line-height: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 20px 30px;
-  border: none;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 20px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
   text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
-  .process-step {
-    width: 425px;
-  }
+.view-loans-btn:hover {
+  background-color: #0056b3;
 }
 
-@media (max-width: 992px) {
-  .process-step {
-    max-width: 325px;
-  }
+.card {
+  height: 100% !important;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .card {
+    width: 75%;
+    margin: auto;
+  }
+
   .process-step {
-    max-width: 500px;
+    margin-bottom: 2rem;
   }
 }

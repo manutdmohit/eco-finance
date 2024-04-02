@@ -12,6 +12,8 @@
   max-height: 800px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase box shadow */
   background-color: #f0f0f0; /* Add background color */
+  margin-top: 8rem;
+  margin-bottom: 3rem;
 }
 
 .heading {

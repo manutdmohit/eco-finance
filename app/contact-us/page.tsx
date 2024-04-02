@@ -1,6 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './contact.css';
 
@@ -9,8 +12,10 @@ import TopBar from '../components/Top/top';
 import Footer from '../components/Footer/Footer';
 import Wrapper from '../components/Wrapper/wrapper';
 import Bank from '../components/Bank/Bank';
+import Header from '../components/Header/Header';
 
 interface FormData {
+  type: string;
   experience: string;
   situation: string;
   visaResidencyStatus: string;
@@ -27,6 +32,7 @@ interface FormData {
 
 export const Form = () => {
   const [formData, setFormData] = useState<FormData>({
+    type: 'contact',
     experience: '',
     situation: '',
     visaResidencyStatus: '',
@@ -59,16 +65,50 @@ export const Form = () => {
     });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    try {
+      const response = await axios.post(
+        'http://localhost:8000/api/send-email',
+        formData
+      );
+      console.log('Form submitted successfully');
+
+      // Reset the form state to its initial state
+      setFormData({
+        type: 'contact',
+        experience: '',
+        situation: '',
+        visaResidencyStatus: '',
+        potentialPurchase: '',
+        primaryOccupation: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        state: '',
+        heardAboutUs: '',
+        message: '',
+      });
+
+      // Display a success toast
+      toast.success('Form submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+
+      // Display an error toast
+      toast.error('Failed to submit form. Please try again.');
+    }
     // Handle form submission logic here (e.g., send data to a server)
   };
 
   return (
-    <div className="">
+    <div>
+      {/* <ToastContainer /> */}
       <h2 className="text-black text-center mt-5 font-bold">Connect With Us</h2>
       <div className="container mt-5 form-container">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="p-4 rounded shadow">
           <div className="row">
             <div className="col-md-6 mb-3">
               {/* Experience */}
@@ -376,7 +416,7 @@ export const Form = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary contact-button">
+          <button type="submit" className="btn btn-primary btn-lg">
             Request a Call Back
           </button>
         </form>
@@ -387,12 +427,14 @@ export const Form = () => {
 
 const ContactForm = () => {
   return (
-    <div className="connect-with-us">
-      <TopBar />
-      <Wrapper />
-      <Form />
-      <Footer />
-    </div>
+    <>
+      /*{' '}
+      <div className="connect-with-us">
+        {/* <TopBar />
+      <Wrapper /> */}
+        <Form />
+      </div>
+    </>
   );
 };
 

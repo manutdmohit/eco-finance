@@ -1,30 +1,22 @@
-.why-choose-us-section {
-  background: #da4453; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #89216b,
-    #da4453
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #89216b,
-    #da4453
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.why-choose-us-section * {
+  color: black;
 }
 
 .why-choose-us-section {
   margin-top: 35px;
+  background-color: rgb(229, 248, 246);
 }
 
 .why-choose-us-section h2 {
   text-align: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin-bottom: 35px;
 }
 
 .why-choose-us-section p {
   font-size: 1.2rem;
   line-height: 1.6;
+  letter-spacing: 0.1rem;
 }
 
 .equal-image {

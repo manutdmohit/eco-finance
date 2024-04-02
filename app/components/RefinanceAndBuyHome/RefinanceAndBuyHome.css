@@ -1,6 +1,10 @@
 .refinance {
   margin-right: 10px !important;
 }
+.refinance,
+.buy-home {
+  padding: 15px;
+}
 
 @media (max-width: 992px) {
   .refinance-buy-home {

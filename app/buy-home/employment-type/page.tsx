@@ -4,25 +4,16 @@ import React, { Suspense } from 'react';
 
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import { Row, Col, Button } from 'react-bootstrap';
-
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
-
-import '../../refinance/loan-purpose/LoanPurpose.css';
+import { Row, Col, Button, Container } from 'react-bootstrap';
 
 const EmploymentType = () => {
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
-      <Suspense fallback={<div>Loading ...</div>}>
-        <SearchParamsProvider />
-      </Suspense>
-
-      <Footer />
+    <div className="d-flex bg-light">
+      <Container style={{ marginTop: '7rem', marginBottom: '2rem' }}>
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SearchParamsProvider />
+        </Suspense>
+      </Container>
     </div>
   );
 };
@@ -45,21 +36,16 @@ const SearchParamsProvider = () => {
   console.log({ propertyUse });
 
   return (
-    <>
+    <div className="bg-white p-5 rounded shadow">
       <h1 className="text-center text-black mt-4">
         What is your employment type?
       </h1>
 
       <Row className="justify-content-center overflow-hidden mt-4">
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/applicant-contact-details?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employmentType=Employee`
@@ -70,15 +56,10 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
 
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/applicant-contact-details?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employment_type=Self-employed`
@@ -89,15 +70,10 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
 
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/applicant-contact-details?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=${propertyUse}&choosingALender=${choosingALender}&creditHistory=${creditHistory}&employmentType=Other`
@@ -108,7 +84,7 @@ const SearchParamsProvider = () => {
           </Button>
         </Col>
       </Row>
-    </>
+    </div>
   );
 };
 

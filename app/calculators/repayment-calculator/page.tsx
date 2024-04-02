@@ -62,10 +62,7 @@ const MortgageCalculator: React.FC = () => {
 
   return (
     <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
-      <div className={styles.container}>
+      <div className={`${styles.container}`}>
         <h2 className={styles.heading}>Repayment Calculator</h2>
         <div className={styles.calculator}>
           <div className={styles.inputGroup}>

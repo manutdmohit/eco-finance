@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import {
   Accordion,
   AccordionItem,
@@ -11,40 +12,15 @@ import {
 } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from 'react-icons/md';
-
-import './FAQ.css'; // Ensure this path is correct
-import TopBar from '../components/Top/top';
-import Wrapper from '../components/Wrapper/wrapper';
-import Footer from '../components/Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import data from './Data';
 
 const FAQ = () => {
-  // const data = [
-  //   {
-  //     question: 'What income documents will I need for a home loan?',
-  //     answer:
-  //       "For full-time PAYG, you can usually just provide your latest 2 payslips. For casual, you'll sometimes also need your last year's PAYG summary. Self-employed applicants will usually need to provide the full 2 years' financials: personal tax returns, Notice of Assessments, company tax returns, company profit & loss + balance sheet.",
-  //   },
-  //   {
-  //     question: 'How long does it take for a mortgage to be approved?',
-  //     answer:
-  //       'The time it takes for a mortgage application varies based on factors like application complexity and the lender. Simple applications with responsive lenders can be quick, while complex ones or slower lenders may take longer. Typically, it is approved within 14 days, sometimes even sooner if time is limited. We will provide an estimated timeline upon submission and keep you informed throughout. In general, most applications are settled within a month, often sooner.',
-  //   },
-  //   {
-  //     question: 'Is it better to apply for a mortgage through a broker?',
-  //     answer:
-  //       'Using a mortgage broker for your home loan has numerous benefits with no downside. We provide personalized care and access to top loan products from a wide range of lenders. In case of complex applications, our expertise ensures a thorough assessment and finding the ideal loan for you.',
-  //   },
-  // ];
-
   return (
-    <div>
-      <TopBar />
-      <Wrapper />
-
-      <div className="faq-container">
-        <p className="p-4 faq-intro">
+    <div className="container my-5 overflow-hidden">
+      <div className="text-center mb-5">
+        <p>
           Welcome to our comprehensive Frequently Asked Questions (FAQ) section.
           This section is designed to serve as a one-stop resource for all your
           inquiries about our services, products, and more. Whether you're a new
@@ -66,40 +42,46 @@ const FAQ = () => {
           to us directly. Your satisfaction is our top priority, and we're
           committed to making your experience with us as positive as possible.
         </p>
+      </div>
 
-        <section className="faq-section">
-          <div className="faq-image">
-            <img src="./assets/home-loans.jpg" alt="FAQ Image" />
+      <div className="row">
+        <div className="col-md-6 mb-4">
+          <div className="position-relative" style={{ height: '400px' }}>
+            <Image
+              src="/assets/home-loans.jpg"
+              alt="FAQ Image"
+              fill
+              style={{ objectFit: 'cover' }}
+            />
           </div>
+        </div>
 
-          <div className="faq-content">
-            <h2 className="faq-title">Frequently Asked Questions</h2>
-            <Accordion allowMultipleExpanded={false} allowZeroExpanded={true}>
-              {data.map((item, index) => (
-                <AccordionItem key={index} className="accordionItem">
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="accordionItemButton">
-                      <span>{item.question}</span>
-                      <AccordionItemState>
-                        {({ expanded }) =>
-                          expanded ? (
-                            <MdOutlineArrowDropUp size={20} />
-                          ) : (
-                            <MdOutlineArrowDropDown size={20} />
-                          )
-                        }
-                      </AccordionItemState>
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel className="accordionItemPanel">
-                    <p>{item.answer}</p>
-                  </AccordionItemPanel>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
-        <Footer />
+        <div className="col-md-6">
+          <h2 className="mb-4">Frequently Asked Questions</h2>
+          <Accordion allowMultipleExpanded={false} allowZeroExpanded={true}>
+            {data.map((item, index) => (
+              <AccordionItem key={index} className="mb-3">
+                <AccordionItemHeading>
+                  <AccordionItemButton className="accordion-button">
+                    <span>{item.question}</span>
+                    <AccordionItemState>
+                      {({ expanded }) =>
+                        expanded ? (
+                          <MdOutlineArrowDropUp size={20} />
+                        ) : (
+                          <MdOutlineArrowDropDown size={20} />
+                        )
+                      }
+                    </AccordionItemState>
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel className="accordion-body">
+                  <p>{item.answer}</p>
+                </AccordionItemPanel>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </div>
   );

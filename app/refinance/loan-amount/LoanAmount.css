@@ -4,6 +4,7 @@
   height: 50vh;
   display: flex;
   align-items: center;
+  margin-top: 80px !important;
 }
 
 .loan-amount-placeholder {

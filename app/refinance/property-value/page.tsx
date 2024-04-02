@@ -1,22 +1,19 @@
 'use client';
-
 import React, { FormEvent, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import './PropertyValue.css';
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
 
 const PropertyWorthForm: React.FC = () => {
   return (
-    <div>
-      <TopBar />
-      <Wrapper />
-      <Suspense fallback={<div>Loading...</div>}>
-        {/* Wrap useSearchParams in a Suspense boundary */}
-        <SearchParamsProvider />
-      </Suspense>
-      <Footer />
+    <div className="d-flex vh-100 bg-light">
+      <div className="container my-auto">
+        <div className="row justify-content-center">
+          <div className="col-md-8 col-lg-6">
+            <Suspense fallback={<div>Loading...</div>}>
+              <SearchParamsProvider />
+            </Suspense>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -25,7 +22,6 @@ const SearchParamsProvider: React.FC = () => {
   const [propertyValue, setPropertyValue] = useState('');
   const [submitted, setSubmitted] = useState<boolean>(false);
   const router = useRouter();
-
   const searchParams = useSearchParams();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -36,7 +32,6 @@ const SearchParamsProvider: React.FC = () => {
       return;
     }
 
-    // Perform redirect
     router.push(
       `/refinance/loan-purpose?type=${searchParams.get(
         'type'
@@ -50,7 +45,6 @@ const SearchParamsProvider: React.FC = () => {
     );
   };
 
-  // Access search parameters from searchParams
   const type = searchParams.get('type');
   const loanAmount = searchParams.get('loanAmount');
   const rate = searchParams.get('rate');
@@ -62,20 +56,15 @@ const SearchParamsProvider: React.FC = () => {
   };
 
   return (
-    <form
-      className="bg-light py-4 px-3 px-md-5 mt-4 property-value-container"
-      onSubmit={handleSubmit}
-    >
-      <div className="container">
-        <div className="text-center mb-4">
-          <h2 className="fw-bold text-black">
-            Approximately how much is your property worth?
-          </h2>
-        </div>
-        <div className="mb-4">
+    <div className="bg-white p-5 rounded shadow">
+      <h2 className="text-center mb-4">
+        Approximately how much is your property worth?
+      </h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
           <input
             type="number"
-            className="form-control property-amount-placeholder "
+            className="form-control"
             placeholder="$ Amount"
             value={propertyValue}
             onChange={propertyAmountValue}
@@ -83,21 +72,17 @@ const SearchParamsProvider: React.FC = () => {
           />
         </div>
         {Number(propertyValue) < Number(loanAmount) && (
-          <p className="text-center message">
-            property value should be greater than the loan amount
-          </p>
+          <div className="text-center text-danger mb-3">
+            Property value should be greater than the loan amount
+          </div>
         )}
-        {/* <p className="text-black text-center">Why do we ask this?</p> */}
-        <div className="d-grid gap-2">
-          <button
-            type="submit"
-            className="btn btn-primary btn-property-amount fs-4"
-          >
+        <div className="d-grid">
+          <button type="submit" className="btn btn-primary">
             Next
           </button>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

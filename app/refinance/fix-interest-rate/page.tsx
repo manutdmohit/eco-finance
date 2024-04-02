@@ -2,25 +2,20 @@
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-
 import { Switch } from 'antd';
-
-import './FixInterestRate.css';
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
 
 const YourRateForm: React.FC = () => {
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-
-      <Suspense fallback={<div>Loading ...</div>}>
-        <SearchParamsProvider />
-      </Suspense>
-
-      <Footer />
+    <div className="d-flex vh-100 bg-light">
+      <div className="container my-auto">
+        <div className="row justify-content-center">
+          <div className="col-md-8 col-lg-6">
+            <Suspense fallback={<div>Loading...</div>}>
+              <SearchParamsProvider />
+            </Suspense>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -28,29 +23,28 @@ const YourRateForm: React.FC = () => {
 const SearchParamsProvider = () => {
   const router = useRouter();
 
-  const [loanAmount, setLoanAmount] = useState<string>('');
+  const [loanAmount, setLoanAmount] = useState('');
   const params = useSearchParams();
 
   useEffect(() => {
     const initialLoanAmount = params.get('loanAmount');
-    setLoanAmount(initialLoanAmount || ''); // Set default empty string if not found
-  }, []); // Empty dependency array runs once on component
+    setLoanAmount(initialLoanAmount || '');
+  }, []);
 
   const type = params.get('type');
 
-  const [rate, setRate] = useState<string>('');
-  const [selectedOption, setSelectedOption] = useState<string>('');
-  const [showExpiryDate, setShowExpiryDate] = useState<boolean>(false);
-  const [submitted, setSubmitted] = useState<boolean>(false);
-  const [skip, setSkip] = useState<boolean>(false);
-  const [expiryDate, setExpiryDate] = useState<string>('');
+  const [rate, setRate] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
+  const [showExpiryDate, setShowExpiryDate] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [skip, setSkip] = useState(false);
+  const [expiryDate, setExpiryDate] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if ((!skip && !rate) || !selectedOption) {
       setSubmitted(true);
-
       return;
     }
 
@@ -59,9 +53,7 @@ const SearchParamsProvider = () => {
     );
   };
 
-  const handleRate = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleRate = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRate(event.target.value);
   };
 
@@ -79,120 +71,91 @@ const SearchParamsProvider = () => {
     setSkip(checked);
   };
 
-  // Function to handle changes in the expiry date input
   const handleExpiryDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setExpiryDate(e.target.value); // Update the expiryDate state with the new value
+    setExpiryDate(e.target.value);
   };
 
   return (
-    <>
-      <div className="main-container">
-        <form onSubmit={handleSubmit} className="refinance-fix-interest-rate">
-          <div className="container py-16 mx-auto max-w-[50%] sm:max-w-[66.6667%] md:max-w-[75%] lg:max-w-[60%] xl:max-w-[50%]">
-            <div className="flex flex-col justify-center mb-10 gap-y-8">
-              <h3 className="text-center text-black">
-                Tell us more about your current rate.
-              </h3>
-            </div>
-            <div className="grid grid-cols-12 gap-6">
-              <div className="col-span-12">
-                <div className="mb-2.5 flex-col">
-                  <div className="flex items-center justify-between">
-                    <p className="text-black">Estimate interest rate</p>
-                  </div>
-                </div>
-                <div className="flex">
-                  <input
-                    type="number"
-                    className="form-control"
-                    placeholder="Rate"
-                    value={skip === true ? '' : rate}
-                    disabled={skip === true}
-                    onChange={handleRate}
-                  />
-
-                  <div className="d-flex align-items-center">
-                    <Switch onChange={onChange} />
-                    <p className="text-black skip">skip</p>
-                  </div>
-                  {!skip && submitted && !rate && (
-                    <p className="provide-rate">
-                      Estimate interest rate is required
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="col-span-12">
-                <div className="mb-2.5 flex-col">
-                  <div className="flex items-center justify-between">
-                    <p className="text-black">
-                      Are you currently on a fixed rate?
-                    </p>
-                  </div>
-                </div>
-                <div className="flex">
-                  <label className="mr-2 text-black">
-                    <input
-                      type="radio"
-                      value="FIXED_RATE"
-                      checked={selectedOption === 'FIXED_RATE'}
-                      onChange={handleOptionChange}
-                      required
-                    />{' '}
-                    Yes
-                  </label>
-                  <label className="text-black variable">
-                    <input
-                      type="radio"
-                      value="VARIABLE"
-                      checked={selectedOption === 'VARIABLE'}
-                      onChange={handleOptionChange}
-                    />{' '}
-                    No
-                  </label>
-                </div>
-                {/* <button
-                  type="button"
-                  className="flex items-center mt-2 mb-4 text-[#00c0a5]"
-                >
-                  <div className="ml-1 text-sm font-bold text-black">
-                    Why do we ask this?
-                  </div>
-                </button> */}
-
-                {submitted && !selectedOption && (
-                  <p className="provide-rate">Please select interest rate</p>
-                )}
-              </div>
-              {showExpiryDate && (
-                <div className="col-span-12">
-                  <div className="mb-2.5 flex-col">
-                    <div className="flex items-center justify-between">
-                      <p className="text-black">Expiry Date</p>
-                    </div>
-                  </div>
-                  <input
-                    type="date"
-                    className="form-control"
-                    required
-                    value={expiryDate}
-                    onChange={handleExpiryDateChange}
-                  />
-                </div>
-              )}
-            </div>
-            <div className="mt-16 flex flex-col items-center gap-y-6">
-              <button
-                type="submit"
-                className="w-full sm:w-[66%] btn btn-primary submit-button mt-4"
-              >
-                Next
-              </button>
+    <div className="bg-white p-5 rounded shadow mt-5">
+      <h2 className="text-center mb-4">Tell us more about your current rate</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="rate" className="form-label">
+            Estimate interest rate
+          </label>
+          <div className="input-group">
+            <input
+              id="rate"
+              type="number"
+              className="form-control"
+              placeholder="Rate"
+              value={skip ? '' : rate}
+              disabled={skip}
+              onChange={handleRate}
+              required
+            />
+            <div className="input-group-append d-flex align-items-center">
+              <Switch onChange={onChange} className="ms-3" />
+              <span>skip</span>
             </div>
           </div>
-        </form>
-      </div>
-    </>
+          {!skip && submitted && !rate && (
+            <div className="text-danger">
+              Estimate interest rate is required
+            </div>
+          )}
+        </div>
+        <div className="mb-3">
+          <label className="form-label">
+            Are you currently on a fixed rate?
+          </label>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              value="FIXED_RATE"
+              checked={selectedOption === 'FIXED_RATE'}
+              onChange={handleOptionChange}
+              required
+            />
+            <label className="form-check-label">Yes</label>
+          </div>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              value="VARIABLE"
+              checked={selectedOption === 'VARIABLE'}
+              onChange={handleOptionChange}
+            />
+            <label className="form-check-label">No</label>
+          </div>
+          {submitted && !selectedOption && (
+            <div className="text-danger">Please select interest rate</div>
+          )}
+        </div>
+        {showExpiryDate && (
+          <div className="mb-3">
+            <label htmlFor="expiryDate" className="form-label">
+              Expiry Date
+            </label>
+            <input
+              id="expiryDate"
+              type="date"
+              className="form-control"
+              value={expiryDate}
+              onChange={handleExpiryDateChange}
+              required
+            />
+          </div>
+        )}
+        <div className="d-grid">
+          <button type="submit" className="btn btn-primary">
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

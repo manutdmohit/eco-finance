@@ -4,16 +4,14 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 import './TermsAndConditions.css';
-import TopBar from '../components/Top/top';
-import Footer from '../components/Footer/Footer';
-import Wrapper from '../components/Wrapper/wrapper';
 
 const TermsAndConditions = () => {
   return (
-    <div>
-      <TopBar />
-      <Wrapper />
-      <Container className="terms-container">
+    <div className="overflow-hidden">
+      <Container
+        className="terms-container"
+        style={{ marginTop: '120px', marginBottom: '50px' }}
+      >
         <Row className="justify-content-center">
           <Col md={8}>
             <Card>
@@ -131,7 +129,6 @@ const TermsAndConditions = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 };

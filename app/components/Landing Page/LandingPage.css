@@ -1,154 +1,82 @@
-.navbar-collapse {
-  justify-content: flex-end;
+/* Add styles for the container to make it look like a card */
+.form-container {
+  /* margin-top: 50px; */
+  padding: 20px;
+  border: 2px solid #dddddd; /* Add border */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(192, 55, 55, 0.1); /* Add shadow for depth */
+  margin: 0 auto; /* Center the card horizontally */
+  margin-bottom: 10px !important;
+  width: 70vw !important;
+  background: #4568dc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b06ab3,
+    #4568dc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b06ab3,
+    #4568dc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* LandingPage.css */
-
-/* Header Section */
-.header-section {
-  background-color: #f8f9fa;
+/* Update form elements to match the card design */
+.form-group {
+  margin-bottom: 20px;
 }
 
-.navbar-brand img {
-  max-height: 60px; /* Adjust the height as needed */
+.form-group label {
+  margin-bottom: 5px;
 }
 
-.navbar-toggler {
-  border: none;
-  background-color: transparent;
+/* Update button style */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  margin-bottom: 20px;
 }
 
-.navbar-toggler-icon {
-  color: #333; /* Adjust the color as needed */
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
-/* Navigation Links */
-.navbar-nav .nav-link {
-  color: #333; /* Adjust the color as needed */
-  margin-right: 20px; /* Adjust the spacing between links */
-  font-size: 1.2rem;
+.connect-with-us {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+  }
 }
 
-.navbar-nav .nav-link:hover {
-  color: #007bff; /* Adjust the hover color as needed */
+.form-container form {
+  margin-top: 1rem;
 }
 
-/* Hero Section */
-.hero-section {
-  background-color: #007bff; /* Adjust the background color as needed */
-  color: #fff; /* Adjust the text color as needed */
-  padding: 100px 0;
-  text-align: center;
+select.form-control {
+  width: 100%;
+  outline: none;
+  padding: 10px; /* Add padding */
+  font-size: 16px; /* Increase font size */
+  transition: border-color 0.3s; /* Add transition for border color */
+  color: black;
 }
 
-.hero-section h1 {
-  font-size: 36px; /* Adjust the font size as needed */
-  margin-bottom: 20px; /* Adjust the spacing as needed */
+.contact-button {
+  background: linear-gradient(
+    270deg,
+    rgb(19, 173, 199) 0%,
+    rgb(148, 93, 214) 100%
+  ) !important;
 }
 
-.hero-section p {
-  font-size: 1.2rem; /* Adjust the font size as needed */
-  margin-bottom: 40px; /* Adjust the spacing as needed */
+option {
+  color: black;
 }
 
-/* Services Section */
-.services-section {
-  background-color: #f8f9fa; /* Adjust the background color as needed */
-  padding: 20px 0;
-  text-align: center;
-}
-
-.services-section h2 {
-  font-size: 36px; /* Adjust the font size as needed */
-  margin-bottom: 40px; /* Adjust the spacing as needed */
-}
-
-.services-section p,
-.about-section,
-.contact-section p {
-  font-size: 1.2rem; /* Adjust the font size as needed */
-  text-align: left;
-}
-
-/* About Section */
-.about-section {
-  background-color: #f8f9fa; /* Adjust the background color as needed */
-  padding: 20px 0;
-  text-align: center;
-}
-
-.about-section h2 {
-  font-size: 36px; /* Adjust the font size as needed */
-  margin-bottom: 40px; /* Adjust the spacing as needed */
-}
-
-/* Contact Section */
-.contact-section {
-  background-color: #f8f9fa; /* Adjust the background color as needed */
-  padding: 100px 0;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 36px; /* Adjust the font size as needed */
-  margin-bottom: 40px; /* Adjust the spacing as needed */
-}
-
-/* Footer Section */
-.footer-section {
-  background-color: #333; /* Adjust the background color as needed */
-  color: #fff; /* Adjust the text color as needed */
-  padding: 50px 0;
-  text-align: center;
-}
-
-.footer-section p {
-  font-size: 16px; /* Adjust the font size as needed */
-  margin-bottom: 20px; /* Adjust the spacing as needed */
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-  .navbar-brand img {
-    max-height: 40px; /* Adjust the height as needed for smaller screens */
+  .form-container {
+    width: 80vw !important;
   }
-
-  .navbar-nav .nav-link {
-    margin-right: 10px; /* Reduce spacing between links for smaller screens */
-  }
-
-  .hero-section h1 {
-    font-size: 24px; /* Adjust the font size for smaller screens */
-  }
-
-  .hero-section p {
-    font-size: 16px; /* Adjust the font size for smaller screens */
-  }
-
-  .services-section h2,
-  .about-section h2,
-  .contact-section h2 {
-    font-size: 28px; /* Adjust the font size for smaller screens */
-  }
-}
-
-/* LandingPage.css */
-
-/* Hero Section */
-.hero-section {
-  background-color: #007bff; /* Adjust the background color as needed */
-  color: #fff; /* Adjust the text color as needed */
-  padding: 100px 0;
-  text-align: center;
-}
-
-.hero-section h1 {
-  font-size: 36px; /* Adjust the font size as needed */
-  margin-bottom: 20px; /* Adjust the spacing as needed */
-}
-
-.hero-section p {
-  font-size: 18px; /* Adjust the font size as needed */
-  margin-bottom: 40px; /* Adjust the spacing as needed */
-  text-align: left;
 }

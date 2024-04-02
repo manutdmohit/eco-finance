@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './Footer.css';
+import Link from 'next/link';
 import {
   FaFacebook,
   FaInstagram,
@@ -8,167 +7,138 @@ import {
   FaTwitter,
   FaTiktok,
 } from 'react-icons/fa';
-import Link from 'next/link';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer id="footer">
-      <div className="footer-top">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col-md-4 footer-links">
-              {' '}
-              {/* Updated to col-md-4 */}
-              <section id="nav_menu-2" className="widget widget_nav_menu">
-                <div className="menu-footer-one-container">
-                  <ul id="menu-footer-one" className="menu">
-                    <li id="menu-item-143" className="menu-item">
-                      <a rel="home" href="/home/">
-                        Home
-                      </a>
-                    </li>
-                    <li id="menu-item-144" className="menu-item ">
-                      <a href="/complaints-and-concerns/">
-                        Complaints and Concerns
-                      </a>
-                    </li>
-                    <li id="menu-item-145" className="menu-item ">
-                      <a href="/faqs/">Faqs</a>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </div>
-            <div className="col-lg-3 col-md-4 footer-links">
-              {' '}
-              {/* Updated to col-md-4 */}
-              <section id="nav_menu-3" className="widget widget_nav_menu">
-                <div className="menu-footer-two-container">
-                  <ul id="menu-footer-two" className="menu">
-                    <li
-                      id="menu-item-151"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.footerTop}>
+          <div className={styles.footerLinks}>
+            <section className={styles.section}>
+              <div>
+                <ul>
+                  <li>
+                    <Link href="/home/" className={styles.footerLink}>
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/complaints-and-concerns/"
+                      className={styles.footerLink}
                     >
-                      <a href="/terms-and-conditions/">Terms and Conditions</a>
-                    </li>
-                    <li id="menu-item-153" className="menu-item">
-                      <a href="/credit-guide-and-privacy-policy">
-                        Credit Guide and Privacy Policy
-                      </a>
-                    </li>
-                    <li
-                      id="menu-item-150"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"
-                    >
-                      <a href="/disclaimer/">Disclaimer</a>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </div>
-
-            <div className="col-lg-3 col-md-4 footer-links">
-              {' '}
-              {/* Updated to col-md-4 */}
-              <section id="nav_menu-4" className="widget widget_nav_menu">
-                <div className="menu-footer-three-container">
-                  <ul id="menu-footer-three" className="menu">
-                    <li
-                      id="menu-item-151"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151 address"
-                    >
-                      <p>39 George Street, Rockdale NSW 2216</p>
-                    </li>
-                    <li
-                      id="menu-item-152"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
-                    >
-                      <p>
-                        <a href="mailto:info@ecofinanceandhomeloans.com.au">
-                          info@ecofinanceandhomeloans.com.au
-                        </a>
-                      </p>
-                    </li>
-                    <li
-                      id="menu-item-152"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
-                    >
-                      <p>
-                        <a href="tel: 0421561785">0421561785</a>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </div>
-            <div className="col-lg-12 col-md-12">
-              <p className="text-white" id="description">
-                Anil Poudel (Credit Representative Number 555483) and Eco
-                Finance & Home Loans Pty Ltd ABN 11673747334 (Credit
-                Representative Number 555484) are credit representatives of
-                Purple Circle Financial Services Pty Ltd ABN 21611305170
-                Australian Credit License Number 486112.
-              </p>
-            </div>
+                      Complaints and Concerns
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faqs/" className={styles.footerLink}>
+                      FAQs
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </div>
+          <div className={styles.footerLinks}>
+            <section className={styles.section}>
+              <div>
+                <ul>
+                  <li>
+                    <Link
+                      href="/terms-and-conditions/"
+                      className={styles.footerLink}
+                    >
+                      Terms and Conditions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/credit-guide-and-privacy-policy"
+                      className={styles.footerLink}
+                    >
+                      Credit Guide and Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/disclaimer/" className={styles.footerLink}>
+                      Disclaimer
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div className={styles.footerLinks}>
+            <section className={styles.section}>
+              <div>
+                <ul>
+                  <li className={styles.address}>
+                    39 George Street, Rockdale NSW 2216
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:info@ecofinanceandhomeloans.com.au"
+                      className={styles.footerLink}
+                    >
+                      info@ecofinanceandhomeloans.com.au
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:0421561785" className={styles.footerLink}>
+                      0421561785
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div className={styles.description}>
+          <p>
+            Anil Poudel (Credit Representative Number 555483) and Eco Finance &
+            Home Loans Pty Ltd ABN 11673747334 (Credit Representative Number
+            555484) are credit representatives of Purple Circle Financial
+            Services Pty Ltd ABN 21611305170 Australian Credit License Number
+            486112.
+          </p>
         </div>
       </div>
 
-      {/* Social Icons */}
-      <div className="container mt-4">
-        <div className="row justify-content-center">
-          <div className="col-auto">
-            <Link
-              href="https://www.facebook.com/profile.php?id=61555013854956"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <FaFacebook />
-            </Link>
-          </div>
-          <div className="col-auto">
-            <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <FaTwitter />
-            </Link>
-          </div>
-          <div className="col-auto">
-            <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <FaInstagram />
-            </Link>
-          </div>
-          <div className="col-auto">
-            <Link
-              href="https://www.tiktok.com/@ecofinanceandhomeloans"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <FaTiktok />
-            </Link>
-          </div>
+      <div className={styles.socialIcons}>
+        <div className={styles.container}>
+          <Link
+            href="https://www.facebook.com/profile.php?id=61555013854956"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className={styles.socialIcon} />
+          </Link>
+          <Link href="#" target="_blank" rel="noopener noreferrer">
+            <FaTwitter className={styles.socialIcon} />
+          </Link>
+          <Link href="#" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className={styles.socialIcon} />
+          </Link>
+          <Link
+            href="https://www.tiktok.com/@ecofinanceandhomeloans"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok className={styles.socialIcon} />
+          </Link>
         </div>
       </div>
 
-      <div className="container">
-        <div className="copyright">
+      <div className={styles.copyright}>
+        <div className={styles.container}>
           <strong>
             © {new Date().getFullYear()}{' '}
-            <a href="">
+            <a href="" className={styles.copyrightLink}>
               <span>Eco Finance and Home Loans</span>
             </a>{' '}
           </strong>
-          <div className="credits">All Rights Reserved</div>
+          <div className={styles.copyrightText}>All Rights Reserved</div>
         </div>
       </div>
     </footer>

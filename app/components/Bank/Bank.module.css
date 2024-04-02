@@ -1,0 +1,43 @@
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.imageWrapper:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .imageGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

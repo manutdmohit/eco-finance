@@ -1,27 +1,20 @@
 'use client';
-
 import React, { useState, FormEvent, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Row, Col, Button, Form } from 'react-bootstrap';
-
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
-
-// import '../loan-purpose/LoanPurpose.css';
-import './LenderPreferences.css';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 
 const LenderPreferences: React.FC = () => {
   return (
-    <div className="overflow-hidden ">
-      <TopBar />
-      <Wrapper />
-
-      <Suspense fallback={<div>Loading ...</div>}>
-        <SearchParamsProvider />
-      </Suspense>
-
-      <Footer />
+    <div className="d-flex vh-100 bg-light">
+      <Container
+        style={{
+          marginTop: '9rem !important',
+        }}
+      >
+        <Suspense fallback={<div>Loading...</div>}>
+          <SearchParamsProvider />
+        </Suspense>
+      </Container>
     </div>
   );
 };
@@ -29,7 +22,6 @@ const LenderPreferences: React.FC = () => {
 const SearchParamsProvider = () => {
   const router = useRouter();
   const params = useSearchParams();
-
   const type = params.get('type');
   const loanAmount = params.get('loanAmount');
   const rate = params.get('rate');
@@ -38,7 +30,6 @@ const SearchParamsProvider = () => {
   const propertyValue = params.get('propertyValue');
   const purpose = params.get('purpose');
   const propertyUse = params.get('propertyUse');
-
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
   const handleOptionChange = (option: string) => {
@@ -53,7 +44,6 @@ const SearchParamsProvider = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-
     router.push(
       `/refinance/credit-history?type=${type}&loanAmount=${loanAmount}&rate=${rate}&selectedOption=${selectedOption}&expiryDate=${expiryDate}&propertyValue=${propertyValue}&purpose=${purpose}&propertyUse=${propertyUse}&choosingALender=${selectedOptions.join(
         ', '
@@ -62,41 +52,33 @@ const SearchParamsProvider = () => {
   };
 
   return (
-    <div className="loan-preference-form-container">
-      <h2 className="text-center text-black mt-4">
+    <div className="bg-white p-5 rounded shadow">
+      <h2 className="text-center mb-4">
         Are any of the following important to you when choosing a lender?
       </h2>
-      <p className="text-black text-center">
+      <p className="text-center mb-4">
         You can choose one or more options or can skip
       </p>
-
-      <div className="d-flex flex-row justify-content-center ">
-        <Form onSubmit={handleSubmit}>
-          <Row className=" mt-4 lender-preference">
-            {['Offset/Redraw', 'Fixed rate', 'Major lender', 'Mobile app'].map(
-              (option, index) => (
-                <Col
-                  key={index}
-                  xs={12}
-                  sm={12}
-                  md={6}
-                  lg={6}
-                  className="mb-3 options"
-                >
-                  <Form.Check
-                    type="checkbox"
-                    id={`option-${index}`}
-                    label={option}
-                    checked={selectedOptions.includes(option)}
-                    onChange={() => handleOptionChange(option)}
-                  />
-                </Col>
-              )
-            )}
+      <Form onSubmit={handleSubmit}>
+        <Row className="justify-content-center">
+          {['Offset/Redraw', 'Fixed rate', 'Major lender', 'Mobile app'].map(
+            (option, index) => (
+              <Col key={index} xs={12} md={6} className="mb-3">
+                <Form.Check
+                  type="checkbox"
+                  id={`option-${index}`}
+                  label={option}
+                  checked={selectedOptions.includes(option)}
+                  onChange={() => handleOptionChange(option)}
+                />
+              </Col>
+            )
+          )}
+          <Col xs={12} className="text-center">
             {selectedOptions.length > 0 ? (
               <Button
                 variant="primary"
-                className="mt-3 mb-4 p-4 fs-5 w-2 btn-submit"
+                className="mt-3 px-4 py-3 fs-5 rounded-pill btn-lg"
                 onClick={handleSubmit}
               >
                 NEXT
@@ -104,15 +86,15 @@ const SearchParamsProvider = () => {
             ) : (
               <Button
                 variant="primary"
-                className="mt-3 mb-4 p-4 fs-5 btn-submit"
+                className="mt-3 px-4 py-3 fs-5 rounded-pill"
                 onClick={handleSubmit}
               >
                 No Thanks, NEXT
               </Button>
             )}
-          </Row>
-        </Form>
-      </div>
+          </Col>
+        </Row>
+      </Form>
     </div>
   );
 };

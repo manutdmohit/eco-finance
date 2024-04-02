@@ -3,5 +3,163 @@
   padding: 0;
   box-sizing: border-box;
   /* background-color: rgb(15, 22, 36) !important; */
-  color: rgb(242, 245, 247);
+  /* color: rgb(242, 245, 247); */
+}
+
+.navbar {
+  background-color: #0a5466 !important;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 9999;
+}
+
+.navbar-brand img {
+  width: 75px;
+}
+
+/* Add this CSS to your existing stylesheet or style tag */
+.navbar-brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-nav .nav-link {
+    font-size: 1.6rem;
+  }
+}
+
+.sub-menu .menu-item a {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .sub-menu .menu-item a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sub-menu .menu-item a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sub-menu .menu-item a {
+    font-size: 1.3rem;
+  }
+}
+
+.sub-menu {
+  width: 100%;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.menu-item {
+  width: auto; /* Allow items to expand based on content */
+  margin-top: 5px;
+  margin-right: 10px; /* Add spacing between items */
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none !important;
+  list-style-type: none;
+  color: #fff !important;
+  letter-spacing: 0.08rem;
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+}
+
+.services-submenu {
+  background-color: ghostwhite;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border-radius: 8px;
+  /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); */
+  padding: 2rem;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 250px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.services-submenu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.submenu-link {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.submenu-link:hover {
+  background-color: #b17979 !important;
+  color: #000;
+}
+
+@media (max-width: 625px) {
+  .services-submenu {
+    padding: 5px;
+  }
+
+  .sub-menu -menu-item {
+    font-size: 1rem;
+  }
+
+  .submenu-link {
+    font-size: 18px !important;
+  }
+}
+
+.Toastify__toast-theme--light {
+  background-color: green !important;
+}
+
+@media (max-width: 992px) {
+  .logo-toggler-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
 }

@@ -1,0 +1,79 @@
+.whyChooseUsSection {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.sectionHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.featureRow {
+  margin-bottom: 3rem;
+}
+
+.featureCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.sectionParagraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureList li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkIcon {
+  color: #007bff;
+  margin-right: 0.5rem;
+}
+
+.solutionRow {
+  margin-bottom: 3rem;
+}
+
+.solutionContainer {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.whyUsContent {
+  max-width: 800px;
+  margin: 0 auto;
+}

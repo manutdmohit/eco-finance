@@ -7,16 +7,16 @@ import './RefinanceAndBuyHome.css';
 
 const RefinanceAndBuyHome = () => {
   return (
-    <div className="refinance-buy-home d-flex mt-5">
+    <div className="refinance-buy-home d-flex mt-5 mb-5">
       <Link
         href="refinance/loan-amount?type=refinance"
-        className="btn btn-default header-button refinance text-white"
+        className="btn btn-primary header-button refinance text-white"
       >
         I want to refinance
       </Link>
       <Link
         href="/buy-home/purchase-price?type=buy-home"
-        className="btn btn-default header-button buy-home text-white"
+        className="btn btn-primary header-button buy-home text-white"
       >
         I want to buy a home
       </Link>{' '}

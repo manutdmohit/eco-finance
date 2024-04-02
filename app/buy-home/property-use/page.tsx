@@ -3,22 +3,16 @@
 import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Row, Col, Button } from 'react-bootstrap';
-import TopBar from '@/app/components/Top/top';
-import Wrapper from '@/app/components/Wrapper/wrapper';
-import Footer from '@/app/components/Footer/Footer';
-import '../../refinance/loan-purpose/LoanPurpose.css';
+import { Row, Col, Button, Container } from 'react-bootstrap';
 
 const PropertyUse = () => {
   return (
-    <div className="overflow-hidden">
-      <TopBar />
-      <Wrapper />
-      <Suspense fallback={<div>Loading...</div>}>
-        {/* Wrap useSearchParams in a Suspense boundary */}
-        <SearchParamsProvider />
-      </Suspense>
-      <Footer />
+    <div className="d-flex bg-light">
+      <Container style={{ marginTop: '7rem', marginBottom: '2rem' }}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <SearchParamsProvider />
+        </Suspense>
+      </Container>
     </div>
   );
 };
@@ -35,20 +29,13 @@ const SearchParamsProvider = () => {
   const propertyStatus = params.get('propertyStatus');
 
   return (
-    <div className="mt-4">
-      <h1 className="text-center text-black mb-4">
-        How will this property be used?
-      </h1>
+    <div className="bg-white p-5 rounded shadow">
+      <h1 className="text-center  mb-4">How will this property be used?</h1>
       <Row className="justify-content-center overflow-hidden">
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3 d-flex align-items-stretch">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/lender-preferences?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=I will live there`
@@ -58,15 +45,10 @@ const SearchParamsProvider = () => {
             I will live there
           </Button>
         </Col>
-        <Col
-          xs={12}
-          md={12}
-          lg={12}
-          className="mb-3 d-flex align-items-stretch"
-        >
+        <Col xs={12} md={10} lg={8} className="mb-3 d-flex align-items-stretch">
           <Button
             variant="primary"
-            className="btn-purpose"
+            className="w-100 py-3 fs-5 rounded-pill"
             onClick={() =>
               router.push(
                 `/buy-home/lender-preferences?type=${type}&purchaseAmount=${purchaseAmount}&depositAmount=${depositAmount}&buyingSituation=${buyingSituation}&firstHomeBuyer=${firstHomeBuyer}&propertyStatus=${propertyStatus}&propertyUse=It's an Investment`
