@@ -5,14 +5,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Row, Col, Button, Form, Container } from 'react-bootstrap';
 
 // import '../loan-purpose/LoanPurpose.css';
-import './LenderPreferences.css';
+// import './LenderPreferences.css';
 
 const LenderPreferences: React.FC = () => {
   return (
     <div className="d-flex vh-100 bg-light">
       <Container
         style={{
-          marginTop: '9rem !important',
+          marginTop: '140px',
         }}
       >
         <Suspense fallback={<div>Loading...</div>}>
