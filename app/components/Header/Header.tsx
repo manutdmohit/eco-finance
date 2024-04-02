@@ -1,19 +1,24 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 interface ServicesSubMenuProps {
   showServicesSubMenu: boolean;
+  toggleServicesSubMenu: () => void;
 }
 
 const ServicesSubMenu: React.FC<ServicesSubMenuProps> = ({
   showServicesSubMenu,
+  toggleServicesSubMenu,
 }) => {
+  const servicesSubMenuRef = useRef<HTMLDivElement>(null);
+
   return (
     <div
-      className={`services-submenu  ${showServicesSubMenu ? 'show' : ''}`}
+      ref={servicesSubMenuRef}
+      className={`services-submenu ${showServicesSubMenu ? 'show' : ''}`}
       style={{ position: 'absolute' }}
     >
       <ul className="sub-menu">
@@ -65,27 +70,57 @@ const ServicesSubMenu: React.FC<ServicesSubMenuProps> = ({
 const Header: React.FC = () => {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [showServicesSubMenu, setShowServicesSubMenu] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleSubMenu = () => {
     setShowSubMenu(!showSubMenu);
-    setShowServicesSubMenu(false); // Close ServicesSubMenu when Services link is clicked
+    setShowServicesSubMenu(false);
   };
 
   const toggleServicesSubMenu = () => {
-    setShowServicesSubMenu(!showServicesSubMenu);
+    setShowServicesSubMenu((prev) => !prev);
+    // Close the submenu if it's already open
+    if (showServicesSubMenu) {
+      setShowServicesSubMenu(false);
+    }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const servicesSubMenuElement =
+        document.querySelector('.services-submenu');
+
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        showServicesSubMenu
+      ) {
+        setShowServicesSubMenu(false);
+      } else if (
+        servicesSubMenuElement &&
+        !servicesSubMenuElement.contains(event.target as Node) &&
+        showServicesSubMenu
+      ) {
+        setShowServicesSubMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showServicesSubMenu]);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark" ref={menuRef}>
       <div className="container">
         <div className="logo-toggler-container">
           <Link href="/" className="navbar-brand">
             <Image
               width={150}
               height={150}
-              // src="https://res.cloudinary.com/manutdmohit/image/upload/ECO_FINANCE_LOGO_ryqruv.png"
               src="/assets/eco-removed.png"
-              // src="/assets/ecologo.png"
               alt="logo"
               sizes="(max-width: 430px) 50vw, 430px"
             />
@@ -117,11 +152,19 @@ const Header: React.FC = () => {
               <Link
                 className="nav-link dropdown-toggle px-4"
                 href="#"
-                onClick={toggleServicesSubMenu}
+                onClick={(event) => {
+                  event.preventDefault();
+                  toggleServicesSubMenu();
+                }}
               >
                 Services
               </Link>
-              <ServicesSubMenu showServicesSubMenu={showServicesSubMenu} />
+              {showServicesSubMenu && (
+                <ServicesSubMenu
+                  showServicesSubMenu={showServicesSubMenu}
+                  toggleServicesSubMenu={toggleServicesSubMenu}
+                />
+              )}
             </li>
             <li className="nav-item">
               <Link className="nav-link px-4" href="/about-us">
