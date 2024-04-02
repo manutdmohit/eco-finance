@@ -2,24 +2,41 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 15vw;
-  box-shadow: 0px 0px 20px rgba(255, 3, 3, 0.5); /* Adding a box shadow with blur radius of 10px and transparency */
+  font-size: 2rem;
 }
 
-@media (max-width: 992px) {
-  .whatsapp-button {
-    width: 25vw;
+.whatsapp-icon {
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #25d366; /* WhatsApp green color */
+}
+
+/* Styles for the chat button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.chat-icon {
+  font-size: 1.5rem;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-}
-
-@media (max-width: 768px) {
-  .whatsapp-button {
-    width: 45vw;
+  50% {
+    transform: scale(1.2);
   }
-}
-
-@media (max-width: 425px) {
-  .whatsapp-button {
-    width: 50vw !important;
+  100% {
+    transform: scale(1);
   }
 }

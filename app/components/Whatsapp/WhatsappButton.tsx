@@ -1,25 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-
+import { FaCommentDots } from 'react-icons/fa';
 import './WhatsAppButton.css';
 
 const number = '+610421561785';
 
-const WhatsappButton = () => {
-  const waLink = `https://wa.me/${number}`; // Replace with your number
-
+const ChatButton = () => {
   return (
-    <Link
-      href={waLink}
-      className="whatsapp-button text-decoration-none font-bold"
-    >
-      <img
-        src="https://res.cloudinary.com/drtm8uqcp/image/upload/whatsapp_l9ulbp.png"
-        alt="whatsapp"
-        className="img-fluid whatsapp-button"
-      />
+    <Link href={`tel:${number}`} className="chat-button">
+      <FaCommentDots className="chat-icon" />
     </Link>
   );
 };
 
-export default WhatsappButton;
+export default ChatButton;
