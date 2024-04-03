@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+
 import {
   FaPhone,
   FaFileAlt,
@@ -98,9 +100,9 @@ const Process = () => {
       </div>
 
       <div className="text-center">
-        <a href="services" className="btn btn-primary">
+        <Link href="./services" className="btn btn-primary">
           View Our Loans
-        </a>
+        </Link>
       </div>
     </section>
   );
