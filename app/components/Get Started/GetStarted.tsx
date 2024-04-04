@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Image from 'next/image';
 import styles from './GetStarted.module.css';
 
-import { submitForm } from '@/api/submitForm';
+const url = 'https://drab-pink-dragonfly-tux.cyclic.app/api';
 
 interface FormData {
   type: string;
@@ -33,11 +33,7 @@ const GetStarted: React.FC = () => {
     event.preventDefault();
 
     try {
-      // const response = await axios.post(`${url}/send-email`, formData);
-
-      const response = await submitForm(formData);
-
-      console.log(response);
+      const response = await axios.post(`${url}/send-email`, formData);
 
       console.log('Form submitted successfully');
       toast.success('Email submitted successfully!');

@@ -1,11 +1,17 @@
-'use server';
+// 'use server';
 
-import axios from 'axios';
+// import dotenv from 'dotenv';
+// dotenv.config();
 
-const url = process.env.BACKEND_URL;
+// import axios from 'axios';
 
-export const submitForm = async (formData: any) => {
-  const response = await axios.post(`${url}/send-email`, formData);
+// const url = process.env.BACKEND_URL;
 
-  return response;
-};
+// export const submitForm = async (formData: any) => {
+//   const response = await axios.post(
+//     `https://drab-pink-dragonfly-tux.cyclic.app/api/send-email`,
+//     formData
+//   );
+
+//   return response;
+// };
