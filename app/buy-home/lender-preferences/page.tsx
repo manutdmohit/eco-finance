@@ -8,13 +8,8 @@ import './LenderPreferences.css';
 
 const LenderPreferences: React.FC = () => {
   return (
-    <div className="d-flex vh-100 bg-light main-container">
-      <Container
-        className="lender-container"
-        style={{
-          marginTop: '140px',
-        }}
-      >
+    <div className="d-flex vh-100 bg-light lender-container">
+      <Container>
         <Suspense fallback={<div>Loading...</div>}>
           <SearchParamsProvider />
         </Suspense>
@@ -58,7 +53,7 @@ const SearchParamsProvider = () => {
   };
 
   return (
-    <div className="bg-white p-5 rounded shadow">
+    <div className="bg-white p-5 rounded shadow" style={{ marginTop: '9rem' }}>
       <h2 className="text-center mb-4">
         Are any of the following important to you when choosing a lender?
       </h2>
