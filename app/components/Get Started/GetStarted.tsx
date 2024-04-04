@@ -26,11 +26,18 @@ const GetStarted: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     try {
       const response = await axios.post(
         'http://localhost:8000/api/send-email',
         formData
       );
+      // await sendEmail({
+      //   to: 'saudmohit@gmail.com', // Replace with the desired recipient email
+
+      //   subject: 'New subscription',
+      //   text: `Email: ${formData.email}`,
+      // });
       console.log('Form submitted successfully');
       toast.success('Email submitted successfully!');
       setFormData({ type: 'join', email: '' });

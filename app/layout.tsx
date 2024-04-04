@@ -35,7 +35,9 @@ export default function RootLayout({
         {/* <TopBar />
         <Wrapper />
         <Footer /> */}
+
         {children}
+
         <Footer />
 
         <WhatsappButton />

@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 const LoanPurpose = () => {
   return (
     <div className="d-flex bg-light">
-      <Container style={{ marginTop: '7rem', marginBottom: '2rem' }}>
+      <Container style={{ marginTop: '5rem', marginBottom: '4.5rem' }}>
         <Suspense fallback={<div>Loading...</div>}>
           <SearchParamsProvider />
         </Suspense>

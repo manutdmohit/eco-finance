@@ -4,13 +4,13 @@ import React, { useState, FormEvent, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Row, Col, Button, Form, Container } from 'react-bootstrap';
 
-// import '../loan-purpose/LoanPurpose.css';
-// import './LenderPreferences.css';
+import './LenderPreferences.css';
 
 const LenderPreferences: React.FC = () => {
   return (
-    <div className="d-flex vh-100 bg-light">
+    <div className="d-flex vh-100 bg-light main-container">
       <Container
+        className="lender-container"
         style={{
           marginTop: '140px',
         }}
