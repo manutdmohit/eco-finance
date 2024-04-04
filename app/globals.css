@@ -146,9 +146,9 @@ nav ul li a {
   }
 }
 
-.Toastify__toast-theme--light {
+/* .Toastify__toast-theme--light {
   background-color: green !important;
-}
+} */
 
 @media (max-width: 992px) {
   .logo-toggler-container {
