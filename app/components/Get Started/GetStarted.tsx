@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Image from 'next/image';
 import styles from './GetStarted.module.css';
 
-import { name } from '@/utils/variables';
 import { submitForm } from '@/api/submitForm';
 
 interface FormData {
