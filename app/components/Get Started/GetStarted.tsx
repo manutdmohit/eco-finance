@@ -1,11 +1,17 @@
 'use client';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Image from 'next/image';
 import styles from './GetStarted.module.css';
+
+import { name } from '@/utils/variables';
+import { submitForm } from '@/api/submitForm';
 
 interface FormData {
   type: string;
@@ -28,16 +34,12 @@ const GetStarted: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(
-        'http://localhost:8000/api/send-email',
-        formData
-      );
-      // await sendEmail({
-      //   to: 'saudmohit@gmail.com', // Replace with the desired recipient email
+      // const response = await axios.post(`${url}/send-email`, formData);
 
-      //   subject: 'New subscription',
-      //   text: `Email: ${formData.email}`,
-      // });
+      const response = await submitForm(formData);
+
+      console.log(response);
+
       console.log('Form submitted successfully');
       toast.success('Email submitted successfully!');
       setFormData({ type: 'join', email: '' });
