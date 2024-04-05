@@ -79,31 +79,32 @@ const WhyChooseUsSection: React.FC = () => {
               </div>
             </Col>
             <Col
+              xs={12}
               md={6}
               className={`${styles.featureCol} order-md-1 d-flex flex-column justify-content-center`}
             >
-              <ul className={styles.featureList}>
-                <li>
+              <ul className={`${styles.featureList} d-flex flex-column`}>
+                <li className="d-flex align-items-center">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    className={styles.checkIcon}
-                  />{' '}
+                    className={`${styles.checkIcon} me-2`}
+                  />
                   <strong>Experienced Team:</strong> Our experts have extensive
                   experience in mortgages.
                 </li>
-                <li>
+                <li className="d-flex align-items-center">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    className={styles.checkIcon}
-                  />{' '}
+                    className={`${styles.checkIcon} me-2`}
+                  />
                   <strong>Tailored Solutions:</strong> We create personalized
                   mortgage plans based on your needs.
                 </li>
-                <li>
+                <li className="d-flex align-items-center">
                   <FontAwesomeIcon
                     icon={faCheck}
-                    className={styles.checkIcon}
-                  />{' '}
+                    className={`${styles.checkIcon} me-2`}
+                  />
                   <strong>Outstanding Service:</strong> We provide top-notch
                   support from start to finish, making your mortgage process
                   smooth and stress-free.
@@ -131,7 +132,6 @@ const WhyChooseUsSection: React.FC = () => {
                   tailored service, steadfast support, and expert guidance
                   throughout every phase of your home-buying experience.
                 </p>
-                {/* ... rest of the content ... */}
               </div>
             </Col>
           </Row>

@@ -1,10 +1,11 @@
+/* General Styles */
 .whyChooseUsSection {
   padding: 4rem 0;
   background-color: #f8f9fa;
 }
 
 .sectionHeading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin-top: 3rem;
@@ -19,6 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .imageContainer {
@@ -35,7 +37,7 @@
 }
 
 .sectionParagraph {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;
@@ -48,7 +50,7 @@
 }
 
 .featureList li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   display: flex;
@@ -76,4 +78,34 @@
 .whyUsContent {
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .sectionHeading {
+    font-size: 1.8rem;
+  }
+
+  .sectionParagraph {
+    font-size: 0.9rem;
+  }
+
+  .featureList li {
+    font-size: 0.9rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575px) {
+  .featureCol {
+    margin-bottom: 3rem;
+  }
+
+  .solutionContainer {
+    max-width: 100%;
+  }
+
+  .whyUsContent {
+    max-width: 100%;
+  }
 }
