@@ -35,6 +35,8 @@ const GetStarted: React.FC = () => {
     try {
       const response = await axios.post(`${url}/send-email`, formData);
 
+      console.log(response);
+
       console.log('Form submitted successfully');
       toast.success('Email submitted successfully!');
       setFormData({ type: 'join', email: '' });

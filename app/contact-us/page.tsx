@@ -7,13 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './contact.css';
 
-import TopBar from '../components/Top/top';
-
-import Footer from '../components/Footer/Footer';
-import Wrapper from '../components/Wrapper/wrapper';
-import Bank from '../components/Bank/Bank';
-import Header from '../components/Header/Header';
-
 interface FormData {
   type: string;
   experience: string;
@@ -31,6 +24,8 @@ interface FormData {
 }
 
 export const Form = () => {
+  const url = 'https://drab-pink-dragonfly-tux.cyclic.app/api';
+
   const [formData, setFormData] = useState<FormData>({
     type: 'contact',
     experience: '',
@@ -69,10 +64,8 @@ export const Form = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(
-        'http://localhost:8000/api/send-email',
-        formData
-      );
+      const response = await axios.post(`${url}/send-email`, formData);
+
       console.log('Form submitted successfully');
 
       // Reset the form state to its initial state
@@ -105,7 +98,7 @@ export const Form = () => {
 
   return (
     <div>
-      {/* <ToastContainer /> */}
+      <ToastContainer />
       <h2 className="text-black text-center mt-5 font-bold">Connect With Us</h2>
       <div className="container mt-5 form-container">
         <form onSubmit={handleSubmit} className="p-4 rounded shadow">
