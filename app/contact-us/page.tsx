@@ -86,7 +86,9 @@ export const Form = () => {
       });
 
       // Display a success toast
-      toast.success('Form submitted successfully!');
+      toast.success(
+        'Thank you for your mortgage inquiry. Our team is reviewing your details and will be in touch shortly to assist you further. We look forward to helping you with your mortgage needs.'
+      );
     } catch (error) {
       console.error('Error submitting form:', error);
 
