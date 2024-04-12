@@ -21,10 +21,34 @@ import Header from './components/Header/Header';
 const barlow = Poppins({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Eco Finance and Home Loans || Invest With Confidence',
-  description: 'Invest With Confidence',
+  title: 'Eco Finance and Home Loans - Invest With Confidence',
+  description:
+    'Eco Finance is a leading provider of home loans and investment opportunities. Invest with confidence and explore our range of financial services.',
+  keywords:
+    'home loans, investment opportunities, finance, mortgages, real estate',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': 'https://www.ecofinanceandhomeloans.com.au',
+      es: 'https://es.ecofinanceandhomeloans.com.au',
+    },
+  },
+  openGraph: {
+    title: 'Eco Finance and Home Loans - Invest With Confidence',
+    description:
+      'Eco Finance is a leading provider of home loans and investment opportunities. Invest with confidence and explore our range of financial services.',
+    url: 'https://www.ecofinanceandhomeloans.com.au',
+    siteName: 'Eco Finance and Home Loans',
+    images: [
+      {
+        url: 'https://www.ecofinanceandhomeloans.com.au/_next/image?url=%2Fassets%2Feco-removed.png&w=640&q=75',
+        width: 1200,
+        height: 630,
+        alt: 'Eco Finance and Home Loans',
+      },
+    ],
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
