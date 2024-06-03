@@ -52,7 +52,10 @@ const SearchParamsProvider = () => {
 
     try {
       // Send POST request to the backend
-      await axios.post('http://localhost:8000/api/send-email', data);
+      await axios.post(
+        'https://eco-finance-backend.onrender.com/api/send-email',
+        data
+      );
 
       // Show success message
       toast.success('Email sent successfully', {

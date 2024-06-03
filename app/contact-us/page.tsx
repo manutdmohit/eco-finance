@@ -24,7 +24,7 @@ interface FormData {
 }
 
 export const Form = () => {
-  const url = 'https://drab-pink-dragonfly-tux.cyclic.app/api';
+  const url = 'https://eco-finance-backend.onrender.com/api';
 
   const [formData, setFormData] = useState<FormData>({
     type: 'contact',
